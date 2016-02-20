@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Xdmf xmlns:xi="http://www.w3.org/2001/XInclude" Version="2.86">
+  <Domain>
+    <Grid name="particle" Collection="None" GridType="Collection" Nmae="Collection">
+      <Grid>
+	<Topology Type="Polyvertex" NodesPerElement="100" Dimension=1">< /Topology>
+	<Geometry Type="XYZ">
+	  <DataItem ItemType="HyperSlab" Dimension="100 3" Type="HyperSlab">
+	    <DataItem Dimensions="2 3" Format="XML">
+	      0 0 
+	      1 1
+	      100 3
+	    </DataItem>
+	    <DataItem> DataType="Float" Dimensions="200 3" Format="HDF" Precision="8">result.h5:XYZ</DataItem>
+	  </DataItem>
+	</Geometry>
+
+	<Attribute Center="Node" Name="energy" Type="Scalar">
+	  <DataItem ItemType="HyperSlab" Dimensions="100" Type="HyperSlab">
+	    <DataItem Dimensions="1 3" Format="XML">
+	      0 1 100
+	    </DataItem>
+	    <DataItem DataType="Float" Dimensions="200" Format="HDF" Precision="8">result.h5:dat</DataItem>
+	  </DataItem>
+	</Attribute>
+      </Grid>
+      <Grid>
+	<Topology Type="Polyvertex" NodesPerElement="100" Dimension=1">< /Topology>
+	<Geometry Type="XYZ">
+	  <DataItem ItemType="HyperSlab" Dimension="100 3" Type="HyperSlab">
+	    <DataItem Dimensions="2 3" Format="XML">
+	      100 0 
+	      1 1
+	      100 3
+	    </DataItem>
+	    <DataItem> DataType="Float" Dimensions="200 3" Format="HDF" Precision="8">result.h5:XYZ</DataItem>
+	  </DataItem>
+	</Geometry>
+
+	<Attribute Center="Node" Name="energy" Type="Scalar">
+	  <DataItem ItemType="HyperSlab" Dimensions="100" Type="HyperSlab">
+	    <DataItem Dimensions="1 3" Format="XML">
+	      100 1 100
+	    </DataItem>
+	    <DataItem DataType="Float" Dimensions="200" Format="HDF" Precision="8">result.h5:dat</DataItem>
+	  </DataItem>
+	</Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>
