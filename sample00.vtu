@@ -1,0 +1,65 @@
+<VTKFile type="UnstructuredGrid" version="2.0" byte_order="LittleEndian" header_type="UInt64">
+  <UnstructuredGrid>
+    <Piece NumberOfPoints="2" NumberOfCells="2">
+      <!--> 
+	  Begins to write particle data like scalar, vector, tensor, ... 
+	  "dummy" is dummy in <PointData> definition. Paraview will assign name items from <DataArray>
+	  <-->
+      <PointData Scalars="dummy" GlobalIds="__d3_id__">
+	<DataArray type="Float64" Name="dummy" Format="ascii" RangeMin="0.0" RangeMax="10.0">
+	  1.0 0.5
+	</DataArray>
+	<DataArray type="Float64" Name="dummy2" Format="ascii" RangeMin="0.0" RangeMax="10.0">
+	  0.5 0.7
+	</DataArray>
+	<DataArray type="Int64" Name="vtkGhostType" Format="ascii" RangeMin="0" RangeMax="0">
+	  0 0
+	</DataArray>
+	 <!--> 
+	     __d3_id__ is the id of each particle when filted using D3. In other words, this is the
+	     global id and the RangeMax must be the (total number of particles - 1) over all VTU files.
+	     Note that index in VTK begins as 0 (zero).
+	  <-->
+	 <DataArray type="Int64" Name="__d3_id__" Format="ascii" RangeMin="0" RangeMax="100">
+	  0 15
+	</DataArray>
+      </PointData>
+      <!--> 
+	  PointData definition is completed here.
+	  CellData definition begins now. Even though particle simulations don't have any element or Cell
+	  definition, a dummy definition is required as VTK grammar.
+	  <-->
+      <CellData>
+	<DataArray type="Int64" Name="vtkOriginalCellIds" Format="ascii" RangeMin="0" RangeMax="100">
+	  5 55
+	</DataArray>
+	<!--> 
+	    Note that vtkGhostType is repeated in CellData region 
+	    <-->
+	<DataArray type="Int64" Name="vtkGhostType" Format="ascii" RangeMin="0" RangeMax="0">
+	  0 0
+	</DataArray>
+      </CellData>
+      <Points>
+	<!--> 
+	    This section describes the position data of particles.
+	    2D seems not supported as of Feb 2016 
+	    <-->
+	<DataArray type="Float64" Name="Points" NumberOfComponents="3" Format="ascii" RangeMin="0.0" RangeMax="5.0e3">
+	  1.0 5.0 15. 35. 15. 20.
+	</DataArray>
+      </Points>
+      <Cells>
+	<DataArray type="Int64" Name="connectivity" Format="ascii" RangeMin="0" RangeMax="1">
+	  0 1
+	</DataArray>
+	<DataArray type="Int64" Name="offsets" Format="ascii" RangeMin="1" RangeMax="2">
+	  1 2
+	</DataArray>
+	<DataArray type="UInt8" Name="types" Format="ascii" RangeMin="2" RangeMax="2">
+	  2 2
+	</DataArray>
+      </Cells>
+    </Piece>
+  </UnstructuredGrid>
+</VTKFile>

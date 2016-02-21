@@ -1,0 +1,8 @@
+<VTKFile type="vtkMultiBlockDataSet" version="1.0" byte_order="LittleEndian" header_type="UInt64">
+  <vtkMultiBlockDataSet>
+    <Piece index="0" name="Grid0">
+      <DataSet index="0" file="aaa/dat_00.vtu"></DataSet>     
+      <DataSet index="1" file="aaa/dat_01.vtu"></DataSet>
+    </Piece>
+  </vtkMultiBlockDataSet>
+</VTKFile>
