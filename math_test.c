@@ -134,6 +134,20 @@ int main()
   e_time = clock();
   printf("optimized eqn sum %f %f \n", (e_time - s_time)/(double) CLOCKS_PER_SEC, x);
 
+  // 2nd optimized equation
+  s_time = clock();
+  x = 0.0;
+  for (i=0;i<nmax;i++){
+    for (j=0;j<nmax;j++) {
+      dx = abs(v1[i] - v2[j]);
+      x += c*dx;
+      dx = dx*dx;
+      x += dx*(b + dx*a);
+    }
+  }
+  e_time = clock();
+  printf("2nd optimized eqn sum %f %f \n", (e_time - s_time)/(double) CLOCKS_PER_SEC, x);
+
   free(v1);
   free(v2);
   return 0;
