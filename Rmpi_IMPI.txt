@@ -1,0 +1,14 @@
+1) untar src
+2) edit configure, configure.ac, -lmpich to -lmpi in the section of INTEL MPI
+3) replace MD5 using $ md5sum configure/configure.ac
+4) tar -cvzf rmpi_custom.tar.gz Rmpi
+5) R CMD INSTALL mpi_custom.tar.gz --configure-args="--with-Rmpi-include=/opt/in
+tel/impi.../include64 --with-Rmpi-libpath=/opt/intel/impi..../lib64 --with-Rmpi-
+type=INTELMPI CC=icc" --no-test-load
+
+# pbdMPI
+1) R CMD INSTALL rlecuyer_0.3-4.tar.gz
+2) R CMD INSTALL pbdMPI_0.3-3.tar.gz --configure-args="--with-mpi-include=/opt/i
+ntel.../include64 --with-mpi-libpath=/opt/intel/impi.../lib64  --with-mpi-type=I
+NTELMPI --with-mpi=/opt/inte.../impi/2017" --no-test-load
+
