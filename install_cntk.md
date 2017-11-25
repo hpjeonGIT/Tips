@@ -44,4 +44,13 @@ make -j 20
 This step will make wheel files at  pip3 install /usr/nic/apps/cntk/build/release/python/cntk-2.2-cp36-cp36m-linux_x86_64.whl
 
 
-
+* cntk 2.2 with intel MPI
+Edit Source/Common/CrossProcessMutex.h, line 131: /var/lock/ to /tmp/
+Ref: https://github.com/Microsoft/CNTK/issues/62
+mkdir build_dbg/release -p; cd build_dbg/release
+source /usr/nic/compiler/intel/18.0/impi/2018.0.128/bin64/mpivars.sh 
+Edit configure script line48: include64/mpi.h
+Edit Makefile line 82: bin64/mpicxx
+../../configure --cuda=yes --python=yes --mpi=yes --gdr=yes --with-cuda=/usr/nic/libs/cuda/8.0 --with-cub=/usr/nic/libs/cub/cub-1.4.1 --with-gdk-include=/usr/nic/libs/cuda/8.0/include --with-gdk-nvml-lib=/usr/lib64 --with-cudnn=/usr/nic/libs/cudnn/6.0/cuda_8.0/ --with-mkl=/usr/nic/libs/CNTKcustomMKL --with-kaldi=/usr/nic/libs/kaldi/kaldi-5.1 --with-opencv=/usr/nic/libs/opencv/330_p2_fastmath --with-libzip=/usr/nic/libs/libzip/1.3.0 --with-boost=/usr/nic/libs/boost/1.65 --with-protobuf=/usr/nic/libs/protobuf/3.4 --with-py-versions='27 36' --with-py27-path=/usr/nic/apps/python_data_analytics/2.7.13 --with-py36-path=/usr/nic/apps/python_data_analytics/3.6.2 --with-swig=/usr/nic/apps/swig/3.0.12 --with-mpi=/usr/nic/compiler/intel/18.0/impi/2018.0.128  --1bitsgd=yes
+In order to use multiple nodes/multilpe gpus, use --1bitsgd=yse
+make -j 24
