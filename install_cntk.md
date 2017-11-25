@@ -54,3 +54,15 @@ Edit Makefile line 82: bin64/mpicxx
 ../../configure --cuda=yes --python=yes --mpi=yes --gdr=yes --with-cuda=/usr/nic/libs/cuda/8.0 --with-cub=/usr/nic/libs/cub/cub-1.4.1 --with-gdk-include=/usr/nic/libs/cuda/8.0/include --with-gdk-nvml-lib=/usr/lib64 --with-cudnn=/usr/nic/libs/cudnn/6.0/cuda_8.0/ --with-mkl=/usr/nic/libs/CNTKcustomMKL --with-kaldi=/usr/nic/libs/kaldi/kaldi-5.1 --with-opencv=/usr/nic/libs/opencv/330_p2_fastmath --with-libzip=/usr/nic/libs/libzip/1.3.0 --with-boost=/usr/nic/libs/boost/1.65 --with-protobuf=/usr/nic/libs/protobuf/3.4 --with-py-versions='27 36' --with-py27-path=/usr/nic/apps/python_data_analytics/2.7.13 --with-py36-path=/usr/nic/apps/python_data_analytics/3.6.2 --with-swig=/usr/nic/apps/swig/3.0.12 --with-mpi=/usr/nic/compiler/intel/18.0/impi/2018.0.128  --1bitsgd=yes
 In order to use multiple nodes/multilpe gpus, use --1bitsgd=yse
 make -j 24
+
+
+* cntk 2.3
+Adjust configure and makefile as done in 2.2
+mkl => mkl-dnn; sudo mkdir /usr/nic/libs/mklml; sudo wget https://github.com/01org/mkl-dnn/releases/download/v0.11/mklml_lnx_2018.0.1.20171007.tgz 
+module load cuda/8.0 cudnn/v6.0_cuda8 nccl python_data_analytics/2.7.13 python_data_analytics/3.6.3_pyqt4  openmpi/3.0.0-Cuda8
+git checkout v2.3; git submodule update --init -- Source/1BitSGD; git submodule update --init Source/Multiverso
+mkdir build/release -p; cd build/release
+../../configure --cuda=yes --python=yes --mpi=yes --gdr=yes --with-cuda=/usr/nic/libs/cuda/8.0 --with-cub=/usr/nic/libs/cub/cub-1.4.1 --with-gdk-include=/usr/nic/libs/cuda/8.0/include --with-gdk-nvml-lib=/usr/lib64/nvidia  --with-cudnn=/usr/nic/libs/cudnn/6.0/cuda_8.0/  --with-nccl=/usr/nic/libs/nccl/2.0.5 --with-mkl=/usr/nic/libs/mklml/mklml_lnx_2018.0.1.20171007  --with-kaldi=/usr/nic/libs/kaldi/kaldi-5.1 --with-opencv=/usr/nic/libs/opencv/330_p2_fastmath --with-libzip=/usr/nic/libs/libzip/1.3.0 --with-boost=/usr/nic/libs/boost/1.65 --with-protobuf=/usr/nic/libs/protobuf/3.4 --with-py-versions='27 36' --with-py27-path=/usr/nic/apps/python_data_analytics/2.7.13 --with-py36-path=/usr/nic/apps/python_data_analytics/3.6.3 --with-swig=/usr/nic/apps/swig/3.0.12 --with-mpi=/usr/nic/mpi/openmpi/3.0.0_cuda8 --1bitsgd=yes --asgd=yes
+make -j 20
+Thsi will make wheel files at pip3 install /usr/nic/apps/cntk/build/release/python/cntk-2.2-cp36-cp36m-linux_x86_64.whl
+Slower than openmpi in AVA
