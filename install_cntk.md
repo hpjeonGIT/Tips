@@ -1,12 +1,12 @@
 # prerequisite
 
 ## Kaldi
-* # No installation step. Unzip at the install location; install apr, apr-util, subversion
-* # proxy_config is necessry. Or setup https
-* cd tools ; export PATH+=:/usr/nic/apps/subversion/1.9.7/bin
-* export LD_LIBRARY_PATH+=:/usr/nic/apps/subversion/1.9.7/lib
-* extras/check_dependencies.sh ;  make -j 8 CXX=g++-4.8
-* cd ../src; ./configure --shared --use-cuda --cudatk-dir=/usr/nic/libs/cuda/8.0  --mkl-root=/usr/nic/libs/mkl/2017/mkl; make -j 20
+#### No installation step. Unzip at the install location; install apr, apr-util, subversion
+#### proxy_config is necessry. Or setup https
+cd tools ; export PATH+=:/usr/nic/apps/subversion/1.9.7/bin
+export LD_LIBRARY_PATH+=:/usr/nic/apps/subversion/1.9.7/lib
+extras/check_dependencies.sh ;  make -j 8 CXX=g++-4.8
+cd ../src; ./configure --shared --use-cuda --cudatk-dir=/usr/nic/libs/cuda/8.0  --mkl-root=/usr/nic/libs/mkl/2017/mkl; make -j 20
 
 
 ## protobuf
