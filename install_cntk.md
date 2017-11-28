@@ -1,8 +1,8 @@
 # prerequisite
 
 ## Kaldi
-* No installation step. Unzip at the install location; install apr, apr-util, subversion *
-* proxy_config is necessry. Or setup https *
+*No installation step. Unzip at the install location; install apr, apr-util, subversion*
+*proxy_config is necessry. Or setup https*
 - cd tools ; export PATH+=:/usr/nic/apps/subversion/1.9.7/bin
 - export LD_LIBRARY_PATH+=:/usr/nic/apps/subversion/1.9.7/lib
 - extras/check_dependencies.sh ;  make -j 8 CXX=g++-4.8
@@ -10,10 +10,10 @@
 
 
 ## protobuf
-* # proxy_config or https setup for firewall over-ride is required
-* cd protobuf-3.1.0 ; ./autogen.sh 
-* ./configure CFLAGS=-fPIC CXXFLAGS=-fPIC --disable-shared --prefix=/usr/nic/libs/protobuf/3.4
-* make -j 20; make install 
+*proxy_config or https setup for firewall over-ride is required*
+- cd protobuf-3.1.0 ; ./autogen.sh 
+- ./configure CFLAGS=-fPIC CXXFLAGS=-fPIC --disable-shared --prefix=/usr/nic/libs/protobuf/3.4
+- make -j 20; make install 
 
 
 ## Boost
@@ -58,6 +58,7 @@
 
 * cntk 2.3
 - Adjust configure and makefile as done in 2.2
+- edit bindings/pythoncntk/train/distributed.py line 16 with current mpi.so.# (40 for openmpi/3.0.0-Cuda8)
 - mkl => mkl-dnn; sudo mkdir /usr/nic/libs/mklml; sudo wget https://github.com/01org/mkl-dnn/releases/download/v0.11/mklml_lnx_2018.0.1.20171007.tgz 
 -module load cuda/8.0 cudnn/v6.0_cuda8 nccl python_data_analytics/2.7.13 python_data_analytics/3.6.3_pyqt4  openmpi/3.0.0-Cuda8
 - git checkout v2.3; git submodule update --init -- Source/1BitSGD; git submodule update --init Source/Multiverso
