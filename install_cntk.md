@@ -44,7 +44,7 @@
 - This step will make wheel files at  pip3 install /usr/nic/apps/cntk/build/release/python/cntk-2.2-cp36-cp36m-linux_x86_64.whl
 
 
-* cntk 2.2 with intel MPI
+## cntk 2.2 with intel MPI
 - Edit Source/Common/CrossProcessMutex.h, line 131: /var/lock/ to /tmp/
 - Ref: https://github.com/Microsoft/CNTK/issues/62
 - mkdir build_dbg/release -p; cd build_dbg/release
@@ -56,7 +56,7 @@
 - make -j 24
 
 
-* cntk 2.3
+## cntk 2.3
 - Adjust configure and makefile as done in 2.2
 - edit bindings/pythoncntk/train/distributed.py line 16 with current mpi.so.# (40 for openmpi/3.0.0-Cuda8)
 - mkl => mkl-dnn; sudo mkdir /usr/nic/libs/mklml; sudo wget https://github.com/01org/mkl-dnn/releases/download/v0.11/mklml_lnx_2018.0.1.20171007.tgz 
