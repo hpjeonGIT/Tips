@@ -6,6 +6,6 @@
 ./bootstrap --help; 
  ./bootstrap --prefix=/opt/cmake/3.11.4 ;
  make -j16 ;
-# If –ltinfo is not found, then edit Source/CMakeFiles/ccmake.dir/link.txt and add -L/opt/ncurses/6.1/lib in the left of -ltinfo
+### If –ltinfo is not found, then edit Source/CMakeFiles/ccmake.dir/link.txt and add -L/opt/ncurses/6.1/lib in the left of -ltinfo
  make install
 
