@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+
+<!--
+$Id: hdf5.xdmf 411 2017-05-18 11:46:09Z mexas $
+
+See http://xdmf.org for details.
+Dimensions are specified with the slowest varying dimension first (i.e. KJI order).
+-->
+
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" [
+<!ENTITY model "3096 3096 3096">
+]>
+
+<Xdmf Version="2.1" xmlns:xi="http://www.w3.org/2003/XInclude">
+  <Domain Name="brick">
+
+
+    <Grid Name="zzz" GridType="Uniform">
+      <Topology name="topo" TopologyType="3DCoRectMesh"
+		Dimensions = "1548 3096 3096" > </Topology>
+      <Geometry name="geo" Type="ORIGIN_DXDYDZ">
+	<DataItem Format="XML" Dimensions="3">0.0 0.0 0.0</DataItem>
+	<DataItem Format="XML" Dimensions="3">1.0 1.0 1.0</DataItem>
+      </Geometry>
+      <Attribute Name="img" Center="Node">
+	<DataItem ItemType="HyperSlab" Dimensions="1548 3096 3096" Type="HyperSlab">
+          <DataItem Dimensions="3 3" FORMAT="XML" PRECISION="4">
+	    0 0 0
+	    1 1 1
+	    1548 3096 3096
+	  </DataItem>
+          <DataItem Format="HDF" DataType="Int" Precision="4"
+                    Dimensions="3096 3096 3096">zf150.h5:/IntArray</DataItem>
+	</DataItem>
+      </Attribute>
+    </Grid>
+
+
+    <Grid Name="zzz" GridType="Uniform">
+      <Topology name="topo" TopologyType="3DCoRectMesh"
+		Dimensions = "1548 3096 3096" > </Topology>
+      <Geometry name="geo" Type="ORIGIN_DXDYDZ">
+	<DataItem Format="XML" Dimensions="3">0.0 0.0 1548.0</DataItem>
+	<DataItem Format="XML" Dimensions="3">1.0 1.0 1.0</DataItem>
+      </Geometry>
+      <Attribute Name="img" Center="Node">
+	<DataItem ItemType="HyperSlab" Dimensions="1548 3096 3096" Type="HyperSlab">
+          <DataItem Dimensions="3 3" FORMAT="XML" PRECISION="4">
+	    1548 0 0
+	    1 1 1
+	    3096 3096 3096
+	  </DataItem>
+          <DataItem Format="HDF" DataType="Int" Precision="4"
+                    Dimensions="3096 3096 3096">zf150.h5:/IntArray</DataItem>
+	</DataItem>
+      </Attribute>
+    </Grid>
+
+
+  </Domain>
+</Xdmf>
