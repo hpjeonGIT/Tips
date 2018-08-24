@@ -2,6 +2,7 @@
 - ./configure –prefix=/opt/libs/nasm/2.13.03; make –j 20; make install
 
 ## install x264 ##
+- Update PATH and LD_LIBRARY_WITH nasm/yasm
 - ./configure --prefix=/opt/libs/x264  --enable-shared --enable-static; make –j 20; make install
 
 ## install ffmpeg4 ##
