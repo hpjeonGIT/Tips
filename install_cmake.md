@@ -9,9 +9,9 @@
  make -j16 ;
 ### If –ltinfo is not found, then edit Source/CMakeFiles/ccmake.dir/link.txt and add -L/opt/ncurses/6.1/lib in the left of -ltinfo
 ### or edit Modules/FindCurses.cmake of the main source files
-set( CMAKE_INCLUDE_PATH "/usr/nic/libs/ncurses/6.1/include)
+set( CMAKE_INCLUDE_PATH "/opt/libs/ncurses/6.1/include)
 
-set( CMAKE_LIBRARY_PATH "/usr/nic/libs/ncurses/6.1/lib/libncurses.so")
+set( CMAKE_LIBRARY_PATH "/opt/libs/ncurses/6.1/lib/libncurses.so")
 ### if signal.c:(.text+0x1370): undefined reference to `pthread_atfork' => in CMakeCache.txt, convert -lpthread into -pthread then run make
 
 make install
