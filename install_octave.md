@@ -6,7 +6,7 @@ export LD_LIBRARY_PATH+=:/opt/libs/blas
 
 
 
-# using MKL will crash in matrix inversion #
+# using MKL may crash in matrix inversion #
 ## octave with MKL ##
 ### configure LD_LIBRARY with lib/intel64 and mkl/lib/intel645
 export LD_LIBRARY_PATH+=:/opt/intel/18.0/mkl/lib/intel64:/opt/intel/18.0/lib/intel64
