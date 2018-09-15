@@ -1,3 +1,11 @@
+# install using gnu and netlib blas and lapack #
+## lapack must be cleaned and compiled with -fPIC and liblapack.so is necessary
+export LD_LIBRARY_PATH+=:/opt/libs/blas
+
+./configure --prefix=/usr/nic/apps/octave/4.4.1 --with-blas="-L/usr/nic/libs/blas -lblas" --with-lapack=" -L/usr/nic/libs/lapack/lapack-3.8.0 -llapack" ;  make -j 32 ;    make check ;   make install
+
+
+
 # using MKL will crash in matrix inversion #
 ## octave with MKL ##
 ### configure LD_LIBRARY with lib/intel64 and mkl/lib/intel645
