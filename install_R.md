@@ -1,0 +1,16 @@
+## using intel compiler ##
+export CPP='icpc -E';export CC='icc'; export CXX='icpc' ; export F77=ifort; export FC=ifort
+
+export C_INCLUDE_PATH+=:/opt/libs/zlib/1.2.8/gcc_447/include:/opt/libs/bzip2/1.0.6_gcc447/include:/opt/libs/xz/5.2.2_gcc447/include:/opt/libs/pcre/8.39_gcc447/include:/opt/libs/curl/7.50.3_gcc447/include
+
+export INCLUDE_PATH=$C_INCLUDE_PATH
+
+export LD_LIBRARY_PATH+=:/opt/libs/zlib/1.2.8/gcc_447/lib:/opt/libs/bzip2/1.0.6_gcc447/lib:/opt/libs/xz/5.2.2_gcc447/lib:/opt/libs/pcre/8.39_gcc447/lib::/opt/libs/curl/7.50.3_gcc447/lib
+ export LDFLAGS="-L/opt/libs/bzip2/1.0.6_gcc447/lib -lbz2 -L/opt/libs/xz/5.2.2_gcc447/lib -llzma -L/opt/libs/curl/7.50.3_gcc447/lib -lcurl -L/opt/libs/pcre/8.39_gcc447/lib -lpcre"
+./configure --prefix=/opt/apps/R/3.5.1/intel18  --with-cairo=yes --with-libpng=yes --with-jpeglib=yes --with-libtiff=yes  --with-x=yes --with-readline=yes --enable-R-shlib --enable-memory-profiling --with-blas=" -mkl=parallel  -L/opt/compiler/intel/18.0/mkl/lib/intel64 -L/opt/compiler/intel/18.0/lib/intel64 -lmkl_intel_lp64 -lmkl_lapack95_lp64 -lmkl_blas95_lp64 -lmkl_intel_thread -lmkl_core -lpthread -liomp5" --with-lapack=" -mkl=parallel  -L/opt/compiler/intel/18.0/mkl/lib/intel64 -L/opt/compiler/intel/18.0/lib/intel64  -lmkl_intel_lp64  -lmkl_lapack95_lp64 -lmkl_blas95_lp64 -lmkl_intel_thread -lmkl_core -lpthread -liomp5"
+
+### In lib64./R/etc/Makeconf, add CXXFLAGS += -wd308
+
+## Using gnu compiler and MKL
+./configure --prefix=/opt/apps/R/3.5.1 --with-cairo=yes --with-libpng=yes --with-jpeglib=yes --with-libtiff=yes  --with-x=yes --with-readline=yes --enable-R-shlib --enable-memory-profiling --with-blas=" -L/opt/compiler/intel/18.0/mkl/lib/intel64 -L/opt/compiler/intel/18.0/lib/intel64 -lmkl_gf_lp64 -lmkl_lapack95_lp64 -lmkl_blas95_lp64 -lmkl_gnu_thread -lmkl_core -lpthread -liomp5" --with-lapack=" -L/opt/compiler/intel/18.0/mkl/lib/intel64 -L/opt/compiler/intel/18.0/lib/intel64  -lmkl_gf_lp64  -lmkl_lapack95_lp64 -lmkl_blas95_lp64 -lmkl_gnu_thread -lmkl_core -lpthread -liomp5"
+
