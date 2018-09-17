@@ -12,5 +12,13 @@ export LD_LIBRARY_PATH+=:/opt/libs/zlib/1.2.8/gcc_447/lib:/opt/libs/bzip2/1.0.6_
 ### In lib64./R/etc/Makeconf, add CXXFLAGS += -wd308
 
 ## Using gnu compiler and MKL
+### install bzip2, xz, curl, pcre. For pcre: ./configure --prefix=/usr/nic/apps/pcre/8.42 --enable-utf8 
+export C_INCLUDE_PATH=/opt/pbs/include:/opt/utilities/include:/opt/libs/ffi/3.2.1/lib/libffi-3.2.1/include:/opt/libs/bzip2/1.0.6/include:/opt/libs/xz/5.2.4/include:/opt/apps/curl/7.61.1/include:/opt/apps/pcre/8.42/include
+
+export INCLUDE=$C_INCLUDE_PATH
+
+export LDFLAGS="-L/opt/libs/bzip2/1.0.6/lib -lbz2 -L/opt/libs/xz/5.2.4/lib -llzma -L/opt/apps/curl/7.61.1/lib -lcurl -L/opt/apps/pcre/8.42/lib -lpcre"
+
 ./configure --prefix=/opt/apps/R/3.5.1 --with-cairo=yes --with-libpng=yes --with-jpeglib=yes --with-libtiff=yes  --with-x=yes --with-readline=yes --enable-R-shlib --enable-memory-profiling --with-blas=" -L/opt/compiler/intel/18.0/mkl/lib/intel64 -L/opt/compiler/intel/18.0/lib/intel64 -lmkl_gf_lp64 -lmkl_lapack95_lp64 -lmkl_blas95_lp64 -lmkl_gnu_thread -lmkl_core -lpthread -liomp5" --with-lapack=" -L/opt/compiler/intel/18.0/mkl/lib/intel64 -L/opt/compiler/intel/18.0/lib/intel64  -lmkl_gf_lp64  -lmkl_lapack95_lp64 -lmkl_blas95_lp64 -lmkl_gnu_thread -lmkl_core -lpthread -liomp5"
 
+make -j 32; make install
