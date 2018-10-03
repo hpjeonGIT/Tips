@@ -25,3 +25,12 @@ export LDFLAGS="-L/opt/libs/bzip2/1.0.6/lib -lbz2 -L/opt/libs/xz/5.2.4/lib -llzm
 ./configure --prefix=/opt/apps/R/3.5.1 --with-cairo=yes --with-libpng=yes --with-jpeglib=yes --with-libtiff=yes  --with-x=yes --with-readline=yes --enable-R-shlib --enable-memory-profiling --with-blas=" -L/opt/compiler/intel/18.0/mkl/lib/intel64 -L/opt/compiler/intel/18.0/lib/intel64 -lmkl_gf_lp64 -lmkl_lapack95_lp64 -lmkl_blas95_lp64 -lmkl_gnu_thread -lmkl_core -lpthread -liomp5" --with-lapack=" -L/opt/compiler/intel/18.0/mkl/lib/intel64 -L/opt/compiler/intel/18.0/lib/intel64  -lmkl_gf_lp64  -lmkl_lapack95_lp64 -lmkl_blas95_lp64 -lmkl_gnu_thread -lmkl_core -lpthread -liomp5"
 
 make -j 32; make install
+
+## Add R into jupyter notebook
+install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'), dependencies=TRUE) 
+
+devtools::install_github('IRkernel/IRkernel')
+
+IRkernel::installspec() 
+
+### This will make ir folder in /home/__user__/.local/share/jupyter/kernels. Then copy the ir folder into /opt/python/3.6.6/share/jupyter/kernels/
