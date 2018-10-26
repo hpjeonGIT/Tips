@@ -1,0 +1,34 @@
+export MEEP_HOME="/opt/apps/meep/16_gcc73"
+export MEEP_VER="1.6"
+export LIBCTL_VER="4.1.3"
+export HARMINV_VER="1.4.1"
+export CC="gcc -fPIC" ; export CXX="g++ -fPIC" ;  export FC="gfortran -fPIC" ;  export F77="gfortran -fPIC"
+# libctl
+mkdir m4 ; ./autogen.sh ; ./configure --prefix=${MEEP_HOME} ; make - j 4; make all ; make install
+# harminv
+# configure OPENBLAS for PATH and LD_LIBRARY_PATH
+export BLAS_PATH=/opt/libs/openblas/0.2.20_gcc73/lib ;  export BLAS=" -L${BLAS_PATH} -lopenblas "
+export LDFLAGS="${BLAS}" ; ./autogen.sh;  ./configure --enable-maintainer-mode --prefix=${MEEP_HOME} ;  make -j4 ; make install
+# meep
+git clone https://github.com/stevengj/meep.git
+export PATH=${MEEP_HOME}/bin:$PATH
+export LD_LIBRARY_PATH=${MEEP_HOME}/lib:$LD_LIBRARY_PATH:/usr/lib64
+# configure fftw and hdf5 for PATH and LD_LIBRARY_PATH
+export HDF5=/opt/libs/hdf5/hdf5-1.10.1-linux-centos7-x86_64-gcc485-shared ; export C_INCLUDE_PATH=${HDF5}/include:$C_INCLUDE_PATH
+# regular build
+export PYTHON=/opt/python/3.6.4/bin/python3; export LD_LIBRARY_PATH=/opt/compiler/gcc/7.3.0/lib64:$LD_LIBRARY_PATH
+export PATH=/opt/apps/swig/3012_gcc48/bin:$PATH
+./autogen.sh
+./configure --enable-maintainer-mode --prefix=${MEEP_HOME} --enable-shared --with-libctl=${MEEP_HOME}/share/libctl CXX=mpicxx CC=mpicc \
+F77=mpif77 CPPFLAGS="-I${MEEP_HOME}/include -I${HDF5}/include -I/opt/libs/fftw/337_gcc73/include \
+-I/opt/python/3.6.4/include/python3.6m \
+-I${INCLUDE} -DH5_USE_16_API=1"  LDFLAGS="${BLAS}  -L${MEEP_HOME}/lib -L${LD_LIBRARY_PATH} -L${HDF5}/lib -lhdf5" 
+## not necessary => Edit python/Makefile adding " -I$(top_srcdir)/libpympb \" to line 585
+make -j8; make all; make install
+make clean
+./configure --enable-maintainer-mode --prefix=${MEEP_HOME} --enable-shared --with-libctl=${MEEP_HOME}/share/libctl CXX=mpicxx CC=mpicc \
+F77=mpif77 CPPFLAGS="-I${MEEP_HOME}/include -I${HDF5}/include -I/usr/nic/libs/fftw/337_gcc73/include \
+-I${INCLUDE} -DH5_USE_16_API=1" LDFLAGS="${BLAS}  -L${MEEP_HOME}/lib -L${LD_LIBRARY_PATH} -L${HDF5}/lib -lhdf5" --with-mpi
+make -j8; make all; make install
+ sudo ln -s /opt/apps/meep/16_gcc73/lib/python/site-packages/meep /opt/python/3.6.4/lib/python3.6/site-packages/
+
