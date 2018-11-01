@@ -3,7 +3,9 @@
 - May need tnsnames.ora and sql.ora at install_location/network/admin
 - export TNS_ADMIN=__install_folder__/network/admin
 - export ORACLE_HOME=__install_folder__
-- Run odbcinst -j and check if odbcinst is for local or central. If central odbcinst is required, install unixODBC at a central location. Then edit unixODBC/etc/odbcinst.ini as:
+- Run odbcinst -j and check if odbcinst is for local or central. If central odbcinst is required, install unixODBC at a central location. 
+- $PATH must have the central unixODBC/bin in the head. If the local odbcinst is executed prior to the central odbcinst, local driver will be initiated
+- Edit unixODBC/etc/odbcinst.ini as:
 
 [OracleDB]
 
