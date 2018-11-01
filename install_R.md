@@ -27,7 +27,7 @@ export LDFLAGS="-L/opt/libs/bzip2/1.0.6/lib -lbz2 -L/opt/libs/xz/5.2.4/lib -llzm
 make -j 32; make install
 
 ## Add R into jupyter notebook
-install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'), dependencies=TRUE) 
+install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'), dependencies=TRUE, lib="/opt/R/3.5.1/lib64/R/library") 
 
 devtools::install_github('IRkernel/IRkernel')
 
