@@ -5,7 +5,7 @@
 ## if libcurl header or library is required
 - edit qt/X.X/mkspecs/common/linux.conf
 - QMAKE_INCDIR          = /usr/nic/apps/curl/7.61.1/include
-- QQMAKE_LIBS              = -L/usr/nic/apps/curl/7.61.1/lib/
+- QMAKE_LIBS              = -L/usr/nic/apps/curl/7.61.1/lib/
 
 
 ## with qt 5.11 - not working
