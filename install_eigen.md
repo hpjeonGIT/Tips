@@ -4,6 +4,8 @@ export MKLROOT=/opt/compiler/intel/18.0/mkl;
 Line 160: BLAS = -L$(MKLROOT)/lib/intel64 -lmkl_intel_lp64 -lmkl_core -lmkl_intel_t    hread -lpthread -lm
 ### 5.20. requires gcc>4.9 and corresponding cmake
 make install INSTALL=/opt/libs/suitesparse/4.5.6
+### if intel compiler is coupled, use:
+export CC=icc; export FC=ifort; export F77=ifort; export CMAKE_CXX_COMPILER=icpc; export CMAKE_C_COMPILER=icc
 
 ## SuperLU_MT
 cp MAKE_INC/make.linux.openmp make.inc; make blaslib; make
