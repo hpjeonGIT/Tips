@@ -15,3 +15,21 @@ http://bitbucket.org/eigen/eigen/get/3.3.4.tar.gz
 
 cd build; cmake -DCMAKE_INSTALL_PREFIX=/opt/libs/eigen/3.3.4  -DBoost_LIBRARY_DIR=/opt/libs/boost/1.54.0/lib -DBoost_INCLUDE_DIR=/opt/libs/boost/1.54.0/include -DCHOLMOD_INCLUDES=/opt/libs/suitesparse/4.5.6/include -DCHOLMOD_LIBRARIES=/opt/libs/suitesparse/4.5.6/lib/ libcholmod.so -DUMFPACK_INCLUDES=/opt/libs/suitesparse/4.5.6/include -DUMFPACK_LIBRARIES=/opt/libs/suitesparse/4.5.6/lib/ libumfpack.so  -DSPQR_INCLUDES=/opt/libs/suitesparse/4.5.6/include -DSPQR_LIBRARIES=/opt/libs/suitesparse/4.5.6/lib/ libspqr.so  -DSUPERLU_INCLUDES=/opt/libs/SuperLU/5.2.1/include -DSUPERLU_LIBRARIES=/opt/libs/SuperLU/5.2.1/lib64/libsuperlu.a -DBoost_NO_BOOST_CMAKE=BOOL:ON  ..
 
+
+
+### Installing SuiteSparse using intel compiler 18
+1)	sudo yum install gcc-c++-4.8.5-28.el7.x86_64 (note that vector cluster has older version of gcc4.8.5)
+2)	module load cmake intel18
+3)	export CC=icc; export FC=ifort; export F77=ifort; export CMAKE_CXX_COMPILER=icpc; export CMAKE_C_COMPILER=icc
+4)	export MKLROOT=/opt/compiler/intel/18.0/mkl;
+
+5)	Edit SuiteSparse_config/SuiteSparse_config.mk for the location of MKL library
+Line 160: BLAS = -L$(MKLROOT)/lib/intel64 -lmkl_intel_lp64 -lmkl_core -lmkl_intel_t hread -lpthread -lm 
+Adjust -openmp into -qopenmp
+6)	make install INSTALL=/opt/libs/SuiteSparse/5.3.0_intel18 CC=icc FC=ifort 
+7)	Mongoose fails to compile and edit CMakeCache.txt at Mongoose for SUITESPARSE_CONFIG_LIBRARY:FILEPATH=/opt/libs/SuiteSparse/5.3.0_intel18/lib/libsuitesparseconfig.so. Repeating 6)
+8)	In UMFPACK, there might be an error of internal error: 04010002_12240
+Then adjust the level of optimization from -O3 to -O1 and manually compile at Lib
+icc -D_GNU_SOURCE -mkl    -O1 -fexceptions -fPIC  -I/usr/nic/compiler/intel/18.0/mkl/include  -I../Include -I../Source -I../../AMD/Include -I../../SuiteSparse_config -I../../CHOLMOD/Include -DZLONG -c ../Source/umf_scale_column.c -o umf_zl_scale_column.o
+
+
