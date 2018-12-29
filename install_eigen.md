@@ -25,6 +25,7 @@ cd build; cmake -DCMAKE_INSTALL_PREFIX=/opt/libs/eigen/3.3.4  -DBoost_LIBRARY_DI
 
 5)	Edit SuiteSparse_config/SuiteSparse_config.mk for the location of MKL library
 Line 160: BLAS = -L$(MKLROOT)/lib/intel64 -lmkl_intel_lp64 -lmkl_core -lmkl_intel_t hread -lpthread -lm 
+Or adjust LD_LIBRARY_PATH and use the default (dynamic link)
 Adjust -openmp into -qopenmp
 6)	make install INSTALL=/opt/libs/SuiteSparse/5.3.0_intel18 CC=icc FC=ifort 
 7)	Mongoose fails to compile and edit CMakeCache.txt at Mongoose for SUITESPARSE_CONFIG_LIBRARY:FILEPATH=/opt/libs/SuiteSparse/5.3.0_intel18/lib/libsuitesparseconfig.so. Repeating 6)
