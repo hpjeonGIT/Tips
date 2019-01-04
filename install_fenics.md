@@ -1,6 +1,7 @@
 # Prerequisite
 - load the module of mpi like openmpi
 - Need ply module in python ;pip3 install ply
+- ##### adjust LD_LIBRARY_PATH and INCLUDE for boost
 
 # pybind11
 - git clone https://github.com/pybind/pybind11.git
@@ -23,9 +24,10 @@
 
 # mshr
 - git clone https://bitbucket.org/fenics-project/mshr.git
+- git checkout 2018.1.0; mkdir build; cd build; 
+- ccmake .. # make CMAKE_INSTALL_PREFIX as dolfin install directory
+- make -j2; make install; cd ../python 
+- export CPPFLAGS='-I/usr/nic/libs/boost/1.68.0_gcc485/include/' ; pip3 install .
+
 # Fenics
 - git clone https://bitbucket.org/fenics-project/fenics.git
-- git checkout 2018.1.0; mkdir build; cd build; 
-- # adjust LD_LIBRARY_PATH and INCLUDE for boost
-- ccmake .. # make CMAKE_INSTALL_PREFIX as dolfin install directory
-- make -j2; make install; cd ../python ; pip3 install .
