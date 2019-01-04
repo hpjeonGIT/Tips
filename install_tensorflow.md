@@ -21,3 +21,5 @@ CPU_COMPILER = ('/usr/bin/gcc')
 GCC_HOST_COMPILER_PATH = ('/usr/bin/gcc')  
 
 - bazel build --config=opt --config=mkl --copt=-march=native --config=cuda --verbose_failures //tensorflow/tools/pip_package:build_pip_package
+- ./bazel-bin/tensorflow/tools/pip_package/build_pip_package ./WHEEL
+- pip3 install ./WHEEL/tensorflow-1.12.0-cp36-cp36m-linux_x86_64.whl 
