@@ -1,9 +1,11 @@
 # 1.12 with CUDA 9.2 in Centos7
 
 ## bazel
-- download bazel 0.18.0 (the newest may not work)
+- download bazel 0.15.0 (the newest may not work)
 - ./compile.sh --cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0"
-- cp output/bazel /opt/apps/bazel/0.18.0/
+- cp output/bazel /opt/apps/bazel/0.15.0/
+#### bazel >= 0.18 has issues with http_proxy
+
 
 ## TF
 - export PATH+=:/opt/apps/bazel/0.18.0; export TEST_TMPDIR=/tmp/TMP_BZL
