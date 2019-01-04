@@ -1,4 +1,6 @@
 # 1.12 with CUDA 9.2 in Centos7
+## upgrade setuptools
+pip3 install --upgrade setuptools
 
 ## bazel
 - download bazel 0.15.0 (the newest may not work)
