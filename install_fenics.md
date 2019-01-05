@@ -14,10 +14,10 @@
 - then do: git checkout 2018.1.0; python3 setup.py install. This will install components into pyhon3 folder
 - downgrade sympy as 1.1(pip3 install sympy==1.1)
 
-# Dolfin
+# Dolfin - boost 1.68 yielded incompatible libdolfin.so. Use 1.56
 - git clone dolfin. This is a stand-alone, not python3 component
 - git checkout 2018.1.0; mkdir build; cd build; ccmake .. # setup prefix, eigen3 include, boost include, python3, swig, mpi lib
-- make -j 4; make install; cd ../python; 
+- make -j 4; make install; cd ../python;  
 - export pybind11_DIR=/opt/libs/pybind11/2.2.4/share/cmake/pybind11/
 - export DOLFIN_DIR=/usr/nic/apps/dolfin/2018.1.0/share/dolfin/cmake/
 - pip3 install .
