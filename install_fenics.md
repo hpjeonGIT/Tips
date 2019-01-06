@@ -16,7 +16,8 @@
 
 # Dolfin - boost 1.68 yielded incompatible libdolfin.so. Use 1.56
 - git clone dolfin. This is a stand-alone, not python3 component
-- git checkout 2018.1.0; mkdir build; cd build; ccmake .. # setup prefix, eigen3 include, boost include, python3, swig, mpi lib
+- export PETSC_DIR=/opt/libs/petsc/3.10.3
+- git checkout 2018.1.0; mkdir build; cd build; ccmake .. # setup prefix, eigen3 include, boost include, python3, swig, mpi lib, petsc
 #### if scotch is to be connected, it must be compiled as shared library (*.so)
 - make -j 4; make install; cd ../python;  
 - export pybind11_DIR=/opt/libs/pybind11/2.2.4/share/cmake/pybind11/
