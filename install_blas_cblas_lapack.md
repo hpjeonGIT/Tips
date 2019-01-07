@@ -1,15 +1,21 @@
-# Download  blas.tgz from netlib : http://www.netlib.org/blas/blas-3.8.0.tgz
+# BLAS
+- Download  blas.tgz from netlib : http://www.netlib.org/blas/blas-3.8.0.tgz
 - cd BLAS
-## static
+#### static
 - gfortran -c -O3 *.f;  ar rv libblas.a *.o; sudo cp libblas.a /opt/somewhere
-## dynamic
+#### dynamic
 - gfortran -shared -fPIC -O3 *.f -o libblas.so
+
 # CBLAS
-## download http://www.netlib.org/blas/blast-forum/cblas.tgz
-## Edit Makefile.in # blas library is required
+### download http://www.netlib.org/blas/blast-forum/cblas.tgz
+### Edit Makefile.in # blas library is required
 - make
+
 # lapack
-## Download http://www.netlib.org/lapack/lapack-3.8.0.tar.gz
-cp make.inc.example make.inc; vi make.inc
-# Edit BLAS and CBLAS location
-make
+#### Download http://www.netlib.org/lapack/lapack-3.8.0.tar.gz
+- cp make.inc.example make.inc; vi make.inc
+#### Edit BLAS and CBLAS location
+- make
+## or use cmake 
+- mkdir build ; cd build ; ccmake .. # enable shared library
+- make -j 32; make install
