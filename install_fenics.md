@@ -23,6 +23,10 @@
 - export pybind11_DIR=/opt/libs/pybind11/2.2.4/share/cmake/pybind11/
 - export DOLFIN_DIR=/usr/nic/apps/dolfin/2018.1.0/share/dolfin/cmake/
 - pip3 install .
+#### when coupled with petsc
+- Error found saying SNESTEST is not declared. Disable the source code at {"test",         {"Tool to verify Jacobian approximation", SNESTEST}},
+
+
 
 # mshr
 - git clone https://bitbucket.org/fenics-project/mshr.git
