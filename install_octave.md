@@ -5,6 +5,10 @@ export LD_LIBRARY_PATH+=:/opt/libs/blas
 ./configure --prefix=/usr/nic/apps/octave/4.4.1 --with-blas="-L/usr/nic/libs/blas -lblas" --with-lapack=" -L/usr/nic/libs/lapack/lapack-3.8.0 -llapack" ;  make -j 32 ;    make check ;   make install
 
 ### For grahics, adjust PATH for gnuplot or fltk-config executable. When install fltk, -fPIC option is necessary for c/cxx compiler
+export PATH+=:/opt/libs/fltk/3.4.2/bin/  
+export PATH+=:/opt/compiler/llvm/4.0.1/bin # when JIT is required
+./configure --enable-jit --prefix=/usr/nic/apps/octave/4.4.1 --with-blas="-L/usr/nic/libs/netlib/3.8.0/lib64/ -lblas" --with-lapack="-L/usr/nic/libs/netlib/3.8.0/lib64/ -llapack"
+
 
 # using MKL may crash in matrix inversion #
 ## octave with MKL ##
