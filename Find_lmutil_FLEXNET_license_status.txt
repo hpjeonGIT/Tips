@@ -1,0 +1,4 @@
+- lmutil is a common utility for network license like FLEXNET. Would be available in matlab, pgi compiler, ...
+- Even though lmutil might not be available in app, if flexnet or network license is used, an external lmutil can be used to figure out license status
+- lmutil lmstat -a -c port_number@license_server will print the license status
+- Couple with grep, awk and find the number of licenses
