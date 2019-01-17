@@ -2,3 +2,50 @@
 - Even though lmutil might not be available in app, if flexnet or network license is used, an external lmutil can be used to figure out license status
 - lmutil lmstat -a -c port_number@license_server will print the license status
 - Couple with grep, awk and find the number of licenses
+
+- Sample PBS script with lmutil
+#!/bin/bash
+#PBS -l walltime=168:00:00
+#PBS -l select=1:ncpus=32:mpiprocs=32:ompthreads=1:mem=150gb
+#PBS -q @ServerName
+#
+# REF: https://wiki.hpcc.msu.edu/display/~colbrydi@msu.edu/2011/06/08/HFSS+script
+#
+
+################# DO NOT EDIT BELOW ############
+. /etc/profile.d/modules.sh
+export NNODES=`sort $PBS_NODEFILE | uniq | wc -l`
+export NPROCS=`wc -l < $PBS_NODEFILE`
+cd $PBS_O_WORKDIR
+################## DO NOT EDIT ABOVE ###########
+
+## license check
+export NSOLVER=`lmutil lmstat -a -c port@server  |grep 'Users of hfss_solve:' |awk '{ print $6}' `
+export NCURRENT=`lmutil lmstat -a -c port@server  |grep 'Users of hfss_solve:' |awk '{ print $11}' `
+echo 'HFSS_SOLVE LICENSE = ' $NCURRENT ' out of ' $NSOLVER
+
+export NHPC=`lmutil lmstat -a -c port@server  |grep 'Users of hfsshpc:' |awk '{ print $6}' `
+export NUSE=`lmutil lmstat -a -c port@server  |grep 'Users of hfsshpc:' |awk '{ print $11}' `
+NAVL=$((NHPC - NUSE))
+NBASE=4 # hfss doesn't use hpc license up to 4 cpus
+NREQ=$((NPROCS - NBASE))
+echo 'HFSSHPC LICENSE = ' $NAVL ' out of ' $NHPC
+
+if [ "$NCURRENT" -ge "$NSOLVER" ]
+then
+   echo "HFSS SOLVE license is exhausted \n"
+else
+    if [ "$NAVL" -ge "$NREQ" ]
+    then
+        module load hfss
+        export ANSYSEM_HOST_FILE=$PBS_NODEFILE
+        export AnsTempDir=/work/$USER/tmp
+        ansysedt -distributed -machinelist numcores=$NPROCS -auto -monitor -ng -batchsolve -batchoptions "HFSS/HPCLicenseType=pool"  coaxial.aedt | tee pbs.log
+    else
+        echo "HFSSHPC license is exhausted \n"
+    fi
+fi
+
+        
+fi
+
