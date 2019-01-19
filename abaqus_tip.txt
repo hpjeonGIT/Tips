@@ -62,8 +62,10 @@ In windows, check C:\Program Files\Dassault Systemes\SimulationServices\V6R2017x
 # Installing scipy 
 - Download Linux binary wheel of scipy 0.9 (0.10.1 works as well) from PyPi
 - Unzip
-- Copy scipy folder to /usr/nic/apps/abaqus/2017/SIMULIA/CAE/2017/linux_a64/tools/SMApy/python2.7/lib/python2.7/site-packages
-* match the version of scipy with built-in numpy of abaqus. Find the version made in similar time (Q3 Y2013?)
+- Copy scipy folder to SIMULIA/CAE/2017/linux_a64/tools/SMApy/python2.7/lib/python2.7/site-packages
+- Copy or make a static link the same scipy into SimulationServices/V6R2019x/linux_a64/tools/SMApy/python2.7/lib/python2.7/site-packages SIMULIA/Tosca/2019/linux_a64/tools/SMApy/python2.7/lib/python2.7/site-packages
+* match the version of scipy with built-in numpy of abaqus. Find the version made in similar time
+EX: in abaqus 2019, numpy.__version__ = 1.6.2 => May 2012 => scipy 0.10.1 as of Feb 2012
 
 # In Python scripting
 ## Face vs FaceArray
