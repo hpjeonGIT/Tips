@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -l select=100:ncpus=40:mpiprocs=40:ompthreads=1
+#PBS -l walltime=10:00:00
+#PBS -N Test
+#PBS -q @server_name
+
+cd $PBS_O_WORKDIR
+export NNODES=`sort $PBS_NODEFILE | uniq | wc -l`
+export NPROCS=`wc -l < $PBS_NODEFILE`
+#uniq $PBS_NODEFILE | awk '{for(i=0;i<40;i++)print}' > mfile
+. /etc/profile.d/modules.sh
+
+module load openmpi
+export exe=/share/sw_local/IOR/bin/ior
+cd /tmp/TMP
+for chunk in 1m 2m 4m 8m; do
+  for stripe in 1 2 4 8; do
+	      lfs setstripe -S $chunk -c $stripe .
+        mpirun -n $NPROCS $exe -t 1m -b 16m -s 16 -F  > "${NPROCS}.${chunk}.${stripe}.txt"
+  done
+done 
