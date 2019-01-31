@@ -4,12 +4,14 @@ export LIBCTL_VER="4.1.3"
 export HARMINV_VER="1.4.1"
 export CC="gcc -fPIC" ; export CXX="g++ -fPIC" ;  export FC="gfortran -fPIC" ;  export F77="gfortran -fPIC"
 # libctl
+## Add guile executable to PATH
 mkdir m4 ; ./autogen.sh ; ./configure --prefix=${MEEP_HOME} ; make - j 4; make all ; make install
 # harminv
 # configure OPENBLAS for PATH and LD_LIBRARY_PATH
 export BLAS_PATH=/opt/libs/openblas/0.2.20_gcc73/lib ;  export BLAS=" -L${BLAS_PATH} -lopenblas "
 export LDFLAGS="${BLAS}" ; ./autogen.sh;  ./configure --enable-maintainer-mode --prefix=${MEEP_HOME} ;  make -j4 ; make install
 # meep
+### add openblas/lib into LD_LIBRARY_PATH
 git clone https://github.com/stevengj/meep.git
 export PATH=${MEEP_HOME}/bin:$PATH
 export LD_LIBRARY_PATH=${MEEP_HOME}/lib:$LD_LIBRARY_PATH:/usr/lib64
@@ -32,3 +34,4 @@ F77=mpif77 CPPFLAGS="-I${MEEP_HOME}/include -I${HDF5}/include -I/usr/nic/libs/ff
 make -j8; make all; make install
  sudo ln -s /opt/apps/meep/16_gcc73/lib/python/site-packages/meep /opt/python/3.6.4/lib/python3.6/site-packages/
 
+## Python will need mpi4py for parallel run of meep
