@@ -34,3 +34,10 @@ Then adjust the level of optimization from -O3 to -O1 and manually compile at Li
 icc -D_GNU_SOURCE -mkl    -O1 -fexceptions -fPIC  -I/usr/nic/compiler/intel/18.0/mkl/include  -I../Include -I../Source -I../../AMD/Include -I../../SuiteSparse_config -I../../CHOLMOD/Include -DZLONG -c ../Source/umf_scale_column.c -o umf_zl_scale_column.o
 
 
+### Update with 5.4
+sudo yum install gcc-c++-4.8.5-28.el7.x86_64 
+module load cmake intel
+export CC=icc; export FC=ifort; export F77=ifort; export CMAKE_CXX_COMPILER=icpc; export CMAKE_C_COMPILER=icc
+make config
+make
+make install INSTALL=/usr/nic/libs/SuiteSparse/5.4.0_intel18 CC=icc FC=ifort
