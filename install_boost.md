@@ -1,2 +1,0 @@
-./boostrap.sh  
-./b2 install --prefix=/opt/lib/boost/x.xx threading=multi --layout=tagged  -j32

@@ -1,0 +1,11 @@
+# Default SMP configuration
+./boostrap.sh  
+./b2 install --prefix=/opt/lib/boost/x.xx threading=multi --layout=tagged  -j32
+
+
+# Using MPI
+- Ref: https://www.boost.org/doc/libs/1_61_0/doc/html/mpi/getting_started.html
+- After running boostrap.sh, add "
+using mpi
+   /share/ompi/4.0.0/bin/mpicc ;
+" into project-config.jam
