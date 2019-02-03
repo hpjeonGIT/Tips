@@ -1,0 +1,2 @@
+- ./configure --with-shared --with-termlib=tinfo --prefix=/share/libs/ncurses/6.1
+- make –j24; make install
