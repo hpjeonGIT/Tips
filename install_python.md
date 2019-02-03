@@ -8,6 +8,7 @@
 - unzip
 - make -f Makefile-libbz2_so
 - make install PREFIX=/opt/bzip2/1.0.6
+- Manually copy libbz2.so* into /opt/bzip2/1.0.6/lib
 
 ## Python ##
 - make sure readline library is installed
