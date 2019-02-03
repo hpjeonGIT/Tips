@@ -23,6 +23,21 @@
 - export PYTHONHOME=/share/apps/python_da/3.6.8
 - export PYTHONVERSION=3.6
 - export USE_PYTHON64=y
+- export MKLROOT=/usr/nic/compiler/intel/19.1/mkl
+- export MKLLIB="${MKLROOT}/lib/intel64"
+- export MKLINC="${MKLROOT}/include"
+- export HAS_BLAS=y
+- export BLAS_SIZE=8
+- export BLASOPT="-L${MKLROOT}/lib/intel64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -liomp5 -lpthread -lm -ldl"
+- export LAPACK_SIZE=8
+- export LAPACK_LIB="$BLASOPT"
+- export LAPACK_LIBS="$BLASOPT"
+- export LAPACKOPT="$BLASOPT"
+- export USE_SCALAPACK=y
+- export SCALAPACK_SIZE=8
+- export SCALAPACK="-L${MKLROOT}/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -lmkl_blacs_intelmpi_ilp64 -liomp5 -lpthread -lm -ldl"
+- export SCALAPACK_LIB="$SCALAPACK"
+- export SCALAPACK_LIBS="$SCALAPACK"
 - cd src
 - make realclean
 - make nwchem_config FC=gfortran CC=gcc
