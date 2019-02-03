@@ -3,24 +3,24 @@
 #### Unpack the source and locate into NWCHEM_TOP
 
 
-- export NWCHEM_TOP=/usr/nic/apps/nwchem/6.8_gcc74
+- export NWCHEM_TOP=/share/apps/nwchem/6.8_gcc74
 - export NWCHEM_TARGET=LINUX64
 - export NWCHEM_MODULES=all
-- export MPI_LOC=/usr/nic/mpi/ompi/400_gcc74
+- export MPI_LOC=/share/mpi/ompi/400_gcc74
 - export MPI_LIB=$MPI_LOC/lib
 - export MPI_INCLUDE=$MPI_LOC/include
-- export LIBMPI="-I/usr/nic/mpi/ompi/400_gcc74/include \
--I/usr/nic/mpi/ompi/400_gcc74/lib -L/opt/pbs/lib \
+- export LIBMPI="-I/share/mpi/ompi/400_gcc74/include \
+-I/share/mpi/ompi/400_gcc74/lib -L/opt/pbs/lib \
 -L/opt/mellanox/sharp/lib -L/opt/mellanox/hcoll/lib -L/opt/mellanox/mxm/lib -Wl,-rpath -Wl,/opt/pbs/lib \
 -Wl,-rpath -Wl,/opt/mellanox/fca/lib -Wl,-rpath -Wl,/opt/mellanox/mxm/lib \
--Wl,-rpath -Wl,/usr/nic/mpi/ompi/400_gcc74/lib -Wl,--enable-new-dtags \
--L/usr/nic/mpi/ompi/400_gcc74/lib -lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi"
+-Wl,-rpath -Wl,/share/mpi/ompi/400_gcc74/lib -Wl,--enable-new-dtags \
+-L/share/mpi/ompi/400_gcc74/lib -lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi"
 - export USE_MPI=y
 - export USE_MPIF=y
 - export USE_MPIF4=y
 - export USE_64TO32=yes
 - export NWCHEM_MODULES="all python" 
-- export PYTHONHOME=/usr/nic/apps/python_da/3.6.8
+- export PYTHONHOME=/share/apps/python_da/3.6.8
 - export PYTHONVERSION=3.6
 - export USE_PYTHON64=y
 - cd src
