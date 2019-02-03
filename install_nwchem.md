@@ -38,7 +38,8 @@
 - export SCALAPACK="-L${MKLROOT}/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -lmkl_blacs_intelmpi_ilp64 -liomp5 -lpthread -lm -ldl"
 - export SCALAPACK_LIB="$SCALAPACK"
 - export SCALAPACK_LIBS="$SCALAPACK"
-### update C_INCLUDE_PATH and INCLUDE for Python.h 
+### update C_INCLUDE_PATH and INCLUDE for Python.h
+### Edit config/makefile.h and makefile-legacy.h , python-config => python3-config
 - cd src
 - make realclean
 - make nwchem_config FC=gfortran CC=gcc
