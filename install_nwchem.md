@@ -1,5 +1,5 @@
 
-#### run mpif90 –show and use the info into LIBMPI
+#### run mpiifort –show and use the info into LIBMPI
 #### Unpack the source and locate into NWCHEM_TOP
 
 
