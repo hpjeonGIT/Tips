@@ -28,7 +28,7 @@
 - export MKLINC="${MKLROOT}/include"
 - export HAS_BLAS=y
 - export BLAS_SIZE=8
-- export BLASOPT="-L${MKLROOT}/lib/intel64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -liomp5 -lpthread -lm -ldl"
+- export BLASOPT="-L${MKLROOT}/lib/intel64 -lmkl_gf_ilp64 -lmkl_gnu_thread -lmkl_core -L${MKLROOT}/../lib/intel64 -liomp5 -lpthread -lm -ldl"
 - export LAPACK_SIZE=8
 - export LAPACK_LIB="$BLASOPT"
 - export LAPACK_LIBS="$BLASOPT"
