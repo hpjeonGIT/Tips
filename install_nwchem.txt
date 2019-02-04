@@ -43,7 +43,9 @@ export FC=ifort
 export USE_64TO32=y
 export C_INCLUDE_PATH+=:/usr/nic/apps/python_da/3.6.8/include/Python3.6m
 
-# Edit config/makefile.h and makefile-legacy.h , python-config => python3-config, lib64/python => lib/python, (PYTHONVERSION).$(PYTHONLIBTYPE) => (PYTHONVERSION)m.$(PYTHONLIBTYPE)
+# Edit config/makefile.h and makefile-legacy.h , python-config => python3-config, lib64/python => lib/python, (PYTHONVERSION).$(PYTHONLIBTYPE) => (PYTHONVERSION)m.$(PYTHONLIBTYPE) => This still makes trouble as makefile.h looks for *.so
+# CORE_LIBS += $(PYTHONHOME)/lib/libpython$(PYTHONVERSION)m.$(PYTHONLIBTYPE) => removes any config location and link to libpython3.6m.so
+
 cd $NWCHEM_TOP/src
 #make realclean
 make nwchem_config
