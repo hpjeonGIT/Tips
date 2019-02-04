@@ -13,4 +13,13 @@ make –j 32; make install;
 make –j 32; make install;
 
 ## Or without llvm
-./configure --prefix=/opt/libs/mesa/17.3.9 --with-gallium-drivers= --enable-osmesa
+#### xcb-proto
+ ./configure --prefix=/usr/nic/libs/xcb/proto-1.13; make -j10; make all ;make install
+export PKG_CONFIG_PATH=/usr/nic/libs/xcb/proto-1.13/lib/pkgconfig/
+#### xcb
+./configure --prefix=/usr/nic/libs/xcb/1.13; make -j10; make all ;make install
+#### libxshmfence
+./configure --prefix=/usr/nic/libs/xshmfence/1.3; make -j10; make all ;make install
+### mesa
+export PKG_CONFIG_PATH=/usr/nic/libs/xcb/proto-1.13/lib/pkgconfig:/usr/nic/libs/xshmfence/1.3/lib/pkgconfig/
+./configure --prefix=/usr/nic/libs/mesa/18.3.3 --enable-opengl --disable-gles1 --disable-gles2   --disable-va --disable-xvmc --disable-vdpau --enable-shared-glapi --disable-texture-float --with-gallium-drivers=swrast --disable-dri --with-dri-drivers=  --disable-egl --with-egl-platforms= --disable-gbm  --disable-glx --disable-osmesa --enable-gallium-osmesa; make -j10; make all; make install
