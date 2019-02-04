@@ -22,6 +22,7 @@
 - export NWCHEM_MODULES="all python" 
 - export PYTHONHOME=/share/apps/python_da/3.6.8
 - export PYTHONVERSION=3.6
+- export PYTHONCONFIGDIR=config-x86_64-linux-gnu
 - export USE_PYTHON64=y
 - export MKLROOT=/usr/nic/compiler/intel/19.1/mkl
 - export MKLLIB="${MKLROOT}/lib/intel64"
@@ -39,7 +40,7 @@
 - export SCALAPACK_LIB="$SCALAPACK"
 - export SCALAPACK_LIBS="$SCALAPACK"
 ### update C_INCLUDE_PATH and INCLUDE for Python.h
-### Edit config/makefile.h and makefile-legacy.h , python-config => python3-config
+### Edit config/makefile.h and makefile-legacy.h , python-config => python3-config, lib64/python => lib/python
 - cd src
 - make realclean
 - make nwchem_config FC=gfortran CC=gcc
