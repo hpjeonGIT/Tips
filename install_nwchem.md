@@ -22,7 +22,7 @@
 - export NWCHEM_MODULES="all python" 
 - export PYTHONHOME=/share/apps/python_da/3.6.8
 - export PYTHONVERSION=3.6
-- export PYTHONCONFIGDIR=config-x86_64-linux-gnu
+- export PYTHONCONFIGDIR=config-3.6m-x86_64-linux-gnu
 - export USE_PYTHON64=y
 - export MKLROOT=/usr/nic/compiler/intel/19.1/mkl
 - export MKLLIB="${MKLROOT}/lib/intel64"
