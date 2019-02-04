@@ -6,7 +6,7 @@
 - export NWCHEM_TOP=/usr/nic/apps/nwchem/6.8_intel19
 - export NWCHEM_TARGET=LINUX64
 - export NWCHEM_MODULES=all
-- export MPI_LOC=/usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64   # /share/mpi/ompi/400_gcc74
+- export MPI_LOC=/usr/nic/compiler/intel/19.1/impi/2019.1.144   # /share/mpi/ompi/400_gcc74
 - export MPI_LIB=$MPI_LOC/intel64/lib
 - export MPI_INCLUDE=$MPI_LOC/intel64/include
 - export LIBMPI="-I/usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/include \
