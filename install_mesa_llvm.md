@@ -12,3 +12,5 @@ make –j 32; make install;
 ./configure --prefix=/opt/mesa/18.1.1 --enable-llvm --with-llvm-prefix=/opt/compiler/llvm/6.0.0 --enable-opengl --disable-gles1 --disable-gles2   --disable-va --disable-xvmc --disable-vdpau --enable-shared-glapi --disable-texture-float --enable-gallium-llvm --enable-llvm-shared-libs --with-gallium-drivers=swrast,swr --disable-dri --with-dri-drivers=  --disable-egl --with-egl-platforms= --disable-gbm  --disable-glx --disable-osmesa --enable-gallium-osmesa;
 make –j 32; make install;
 
+## Or without llvm
+./configure --prefix=/opt/libs/mesa/17.3.9 --with-gallium-drivers= --enable-osmesa
