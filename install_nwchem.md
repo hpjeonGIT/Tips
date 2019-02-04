@@ -40,7 +40,7 @@
 - export SCALAPACK_LIB="$SCALAPACK"
 - export SCALAPACK_LIBS="$SCALAPACK"
 ### update C_INCLUDE_PATH and INCLUDE for Python.h
-### Edit config/makefile.h and makefile-legacy.h , python-config => python3-config, lib64/python => lib/python
+### Edit config/makefile.h and makefile-legacy.h , python-config => python3-config, lib64/python => lib/python, (PYTHONVERSION).$(PYTHONLIBTYPE) => (PYTHONVERSION)m.$(PYTHONLIBTYPE)
 - cd src
 - make realclean
 - make nwchem_config FC=gfortran CC=gcc
