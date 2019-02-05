@@ -1,7 +1,7 @@
 ef: https://linuxcluster.wordpress.com/2018/10/12/compiling-with-nwchem-6-8-with-intel-mpi-2018u3/
 . /usr/nic/compiler/intel/19.1/mkl/bin/mklvars.sh intel64 
 . /usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/bin/mpivars.sh
-
+### Python3 is not supported
 export NWCHEM_TOP=/usr/nic/apps/nwchem/6.8_intel19
 export NWCHEM_MODULES=pnnl
 export NWCHEM_TARGET=LINUX64
