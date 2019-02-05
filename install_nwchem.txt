@@ -1,6 +1,64 @@
 Ref: https://linuxcluster.wordpress.com/2018/10/12/compiling-with-nwchem-6-8-with-intel-mpi-2018u3/
 . /usr/nic/compiler/intel/19.1/mkl/bin/mklvars.sh intel64 
 . /usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/bin/mpivars.sh
+
+export NWCHEM_TOP=/usr/nic/src/apps/nwchem/nwchem
+export NWCHEM_MODULES="all python"
+export NWCHEM_TARGET=LINUX64
+export NWCHEM_LONG_PATHS=y
+export USE_NOFSCHECK=y
+export TCGRSH=/usr/bin/ssh
+export LARGE_FILES=y
+export PYTHONHOME=/usr/nic/apps/python_da/2.7.15
+export PYTHONVERSION=2.7
+export PYTHONLIBTYPE=so
+export USE_PYTHON64=y
+export USE_PYTHONCONFIG=Y 
+export USE_MPI=y
+export USE_MPIF=y
+export USE_MPIF4=y
+export MPI_LOC="/usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64"
+export MPI_INCLUDE="/usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/include"
+export MPI_LIB="/usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/lib/release_mt -L/usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/lib"
+export LIBMPI="-I/usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/include -I/usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/include -L/usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/lib/release -L/usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/lib -Xlinker --enable-new-dtags -Xlinker -rpath -Xlinker /usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/lib/release -Xlinker -rpath -Xlinker /usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/lib -Xlinker -rpath -Xlinker /opt/intel/mpi-rt/2017.0.0/intel64/lib/release -Xlinker -rpath -Xlinker /opt/intel/mpi-rt/2017.0.0/intel64/lib -lmpifort -lmpi -ldl -lrt -lpthread"
+export USE_OPENMP=y
+export MKLROOT=/usr/nic/compiler/intel/19.1/mkl
+export MKLLIB="${MKLROOT}/lib/intel64"
+export MKLINC="${MKLROOT}/include"
+export HAS_BLAS=y
+export BLAS_SIZE=8
+export BLASOPT="-L${MKLROOT}/lib/intel64 -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -L/usr/nic/compiler/intel/19.1/lib/intel64 -liomp5 -lpthread -lm -ldl"
+export LAPACK_SIZE=8
+export LAPACK_LIB="$BLASOPT"
+export LAPACK_LIBS="$BLASOPT"
+export LAPACKOPT="$BLASOPT"
+export USE_SCALAPACK=y
+export SCALAPACK_SIZE=8
+export SCALAPACK="-L${MKLROOT}/lib/intel64 -lmkl_scalapack_ilp64 -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -lmkl_blacs_intelmpi_ilp64 -L/usr/nic/compiler/intel/19.1/lib/intel64 -liomp5 -lpthread -lm -ldl"
+export SCALAPACK_LIB="$SCALAPACK"
+export SCALAPACK_LIBS="$SCALAPACK"
+export CC=icc
+export FC=ifort
+export USE_64TO32=y
+export C_INCLUDE_PATH+=:/usr/nic/apps/python_da/2.7.15/include/python2.7/
+
+#add "-I/usr/nic/apps/python_da/2.7.15/include/python2.7" to the end of NW_MODULE_LIBS of config/nwchem_config.hcoll/lib
+
+
+#KNOWN_MODULE_LIBS of config/make_nwchem_config
+
+# Edit config/makefile.h and makefile-legacy.h , python-config => python3-config, lib64/python => lib/python, (PYTHONVERSION).$(PYTHONLIBTYPE) => (PYTHONVERSION)m.$(PYTHONLIBTYPE)
+cd $NWCHEM_TOP/src
+make realclean
+make nwchem_config
+make 64_to_32
+make CC=icc FC=ifort FOPTIMIZE=-O3
+
+
+------------------- old test below -------------------------
+Ref: https://linuxcluster.wordpress.com/2018/10/12/compiling-with-nwchem-6-8-with-intel-mpi-2018u3/
+. /usr/nic/compiler/intel/19.1/mkl/bin/mklvars.sh intel64 
+. /usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/bin/mpivars.sh
 ### Python3 is not supported
 
 export NWCHEM_TOP=/usr/nic/src/apps/nwchem/nwchem
