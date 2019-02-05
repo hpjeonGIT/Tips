@@ -1,19 +1,19 @@
-ef: https://linuxcluster.wordpress.com/2018/10/12/compiling-with-nwchem-6-8-with-intel-mpi-2018u3/
+Ref: https://linuxcluster.wordpress.com/2018/10/12/compiling-with-nwchem-6-8-with-intel-mpi-2018u3/
 . /usr/nic/compiler/intel/19.1/mkl/bin/mklvars.sh intel64 
 . /usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/bin/mpivars.sh
 ### Python3 is not supported
-export NWCHEM_TOP=/usr/nic/apps/nwchem/6.8_intel19
+
+export NWCHEM_TOP=/usr/nic/src/apps/nwchem/nwchem
 export NWCHEM_MODULES=pnnl
 export NWCHEM_TARGET=LINUX64
 export NWCHEM_LONG_PATHS=y
-export PYTHONHOME=/usr/nic/apps/python_da/3.6.8
-export PYTHONVERSION=3.6
-export PYTHONLIBTYPE=so
-export PYTHONCONFIGDIR=config-3.6m-x86_64-linux-gnu
-export USE_PYTHON64=y
 export USE_NOFSCHECK=y
 export TCGRSH=/usr/bin/ssh
 export LARGE_FILES=y
+export PYTHONHOME=/usr/nic/apps/python_da/2.7.15
+export PYTHONVERSION=2.7
+export PYTHONLIBTYPE=so
+export USE_PYTHON64=y
 export USE_MPI=y
 export USE_MPIF=y
 export USE_MPIF4=y
@@ -21,7 +21,6 @@ export MPI_LOC="/usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64"
 export MPI_INCLUDE="/usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/include"
 export MPI_LIB="/usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/lib/release_mt -L/usr/nic/compiler/intel/19.1/impi/2019.1.144/intel64/lib"
 export LIBMPI="-I/usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/include -I/usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/include -L/usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/lib/release -L/usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/lib -Xlinker --enable-new-dtags -Xlinker -rpath -Xlinker /usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/lib/release -Xlinker -rpath -Xlinker /usr/nic/compiler/intel/19.1//compilers_and_libraries_2019.1.144/linux/mpi/intel64/lib -Xlinker -rpath -Xlinker /opt/intel/mpi-rt/2017.0.0/intel64/lib/release -Xlinker -rpath -Xlinker /opt/intel/mpi-rt/2017.0.0/intel64/lib -lmpifort -lmpi -ldl -lrt -lpthread"
-"-lmpifort -lmpi -lmpigi -ldl -lrt -lpthread"
 export USE_OPENMP=y
 export MKLROOT=/usr/nic/compiler/intel/19.1/mkl
 export MKLLIB="${MKLROOT}/lib/intel64"
@@ -41,16 +40,16 @@ export SCALAPACK_LIBS="$SCALAPACK"
 export CC=icc
 export FC=ifort
 export USE_64TO32=y
-export C_INCLUDE_PATH+=:/usr/nic/apps/python_da/3.6.8/include/Python3.6m
+export C_INCLUDE_PATH+=:/usr/nic/apps/python_da/2.7.15/include/python2.7/
 
-# Edit config/makefile.h and makefile-legacy.h , python-config => python3-config, lib64/python => lib/python, (PYTHONVERSION).$(PYTHONLIBTYPE) => (PYTHONVERSION)m.$(PYTHONLIBTYPE) => This still makes trouble as makefile.h looks for *.so
-# CORE_LIBS += $(PYTHONHOME)/lib/libpython$(PYTHONVERSION)m.$(PYTHONLIBTYPE) => removes any config location and link to libpython3.6m.so
 
+# Edit config/makefile.h and makefile-legacy.h , python-config => python3-config, lib64/python => lib/python, (PYTHONVERSION).$(PYTHONLIBTYPE) => (PYTHONVERSION)m.$(PYTHONLIBTYPE)
 cd $NWCHEM_TOP/src
-#make realclean
+make realclean
 make nwchem_config
 make 64_to_32
 make CC=icc FC=ifort FOPTIMIZE=-O3
+### Installation steps are later:
 
 
 ####################################################################################
