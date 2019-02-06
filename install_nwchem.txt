@@ -42,12 +42,7 @@ export FC=ifort
 export USE_64TO32=y
 export C_INCLUDE_PATH+=:/usr/nic/apps/python_da/2.7.15/include/python2.7/
 
-#add "-I/usr/nic/apps/python_da/2.7.15/include/python2.7" to the end of NW_MODULE_LIBS of config/nwchem_config.hcoll/lib
-
-
-#KNOWN_MODULE_LIBS of config/make_nwchem_config
-
-# Edit config/makefile.h and makefile-legacy.h , python-config => python3-config, lib64/python => lib/python, (PYTHONVERSION).$(PYTHONLIBTYPE) => (PYTHONVERSION)m.$(PYTHONLIBTYPE)
+# run python-config --ldflags and check if python library is loaded by -L option. If not, hardcode the path in the python-config script
 cd $NWCHEM_TOP/src
 make realclean
 make nwchem_config
