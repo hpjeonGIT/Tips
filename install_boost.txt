@@ -9,6 +9,8 @@ using python
   : /usr/nic/apps/python_da/3.6.6/include/python3.6m
   : /usr/nic/apps/python_da/3.6.6/lib
  ;
+### If /lstr/applications/focus_v7/libs/boost/1.68.0_gcc485/lib/libboost_python36-mt.so exists, libboost_python search in cmake may fail.
+### Then edit CMakeLists.txt, COMPONENTS python-py34 => COMPONENTS python36-mt
 
 # Using MPI
 - Ref: https://www.boost.org/doc/libs/1_61_0/doc/html/mpi/getting_started.html
