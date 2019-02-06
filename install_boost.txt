@@ -1,10 +1,14 @@
 # Default SMP configuration
 ./boostrap.sh  
-./b2 install --prefix=/opt/lib/boost/x.xx threading=multi --layout=tagged  -j32
+./b2 install --prefix=/opt/lib/boost/x.xx threading=multi --layout=tagged  -j32 --with-python # needs python environment in LD_LIBRARY_PATH
 
 ## add python
-using python : 3.6 : /share/python_custom/3.6/bin/python3
-
+using python
+  : 3.6
+  : /usr/nic/apps/python_da/3.6.6/bin/python3
+  : /usr/nic/apps/python_da/3.6.6/include/python3.6m
+  : /usr/nic/apps/python_da/3.6.6/lib
+ ;
 
 # Using MPI
 - Ref: https://www.boost.org/doc/libs/1_61_0/doc/html/mpi/getting_started.html
