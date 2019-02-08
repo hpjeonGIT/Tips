@@ -1,6 +1,9 @@
 ## download source
 - wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.0.tar.gz
 
+## openucx
+- ./autogen.sh; ./configure --prefix=/share/openucx/1.4.0 ; make -j40; make all; make install
+
 ## With gcc
  ./configure --prefix=/share/mpi/ompi/300_gcc48 --disable-dependency-tracki
 ng --disable-silent-rules --enable-binaries --enable-mpi-cxx --enable-mpi-cxx-se
@@ -8,7 +11,7 @@ ek --enable-shared --enable-openib-rdmacm --enable-fast-install --with-devel-hea
 ders --with-hwloc=internal --with-tm=/opt/pbs/ --with-verbs=auto --with-file-sys
 tem=ufs+nfs+lustre --enable-oshmem --with-knem=/opt/knem-1.1.2.90mlnx3 --with-mx
 m=/opt/mellanox/mxm --with-platform=contrib/platform/mellanox/optimized --with-h
-coll=/opt/mellanox/hcoll
+coll=/opt/mellanox/hcoll --with-ucx=/share/openucx/1.4.0
 
 ## With intel
   $ ./configure --prefix=/share/mpi/ompi/400_intel18 --disable-dependency-trac
