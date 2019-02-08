@@ -10,7 +10,7 @@
 - ./autogen.sh; ./configure --prefix=/share/libs/libfabric/1.6.2 --enable-mlx=/share/libs/openucx/1.3.1
 
 ## With gcc
-#### update LD_LIBRARY_PATH with of openucx and openfabric
+#### update LD_LIBRARY_PATH with of openucx and openfabric. Also if /usr/lib64 has ucx libs, then let /usr/lib64 to the end of LD_LIBRARY_PATH
  ./configure --prefix=/share/mpi/ompi/300_gcc48 --disable-dependency-tracki
 ng --disable-silent-rules --enable-binaries --enable-mpi-cxx --enable-mpi-cxx-se
 ek --enable-shared --enable-openib-rdmacm --enable-fast-install --with-devel-hea
