@@ -15,8 +15,8 @@ cd $PBS_O_WORKDIR
 
 module load hfss
 export ANSYSEM_HOST_FILE=$PBS_NODEFILE
-export AnsTempDir=/wrk/$USER/tmp  # scratch folder
-ansysedt -distributed -machinelist numcores=$NPROCS -auto -monitor -ng -batchsolve -batchoptions "HFSS/HPCLicenseType=pool"  coaxial.aedt | tee pbs.log
+# export AnsTempDir=/wrk/$USER/tmp  # scratch folder this doesn't work
+ansysedt -distributed -machinelist numcores=$NPROCS -auto -monitor -ng -batchsolve -batchoptions "HFSS/HPCLicenseType=pool tempdirectory=/scratch/myscratch"  coaxial.aedt | tee pbs.log
 
 ## ansys mechanical  ---------------------------------------------------------------------
 #!/bin/bash
