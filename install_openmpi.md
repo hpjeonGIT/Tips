@@ -8,6 +8,8 @@
 ## openfabric
 #### it refers ucm_config_modify(), which is deprecated since openucx 1.4x. Install openucx1.3.1
 - ./autogen.sh; ./configure --prefix=/share/libs/libfabric/1.6.2 --enable-mlx=/share/libs/openucx/1.3.1
+- or
+- ./configure --prefix=/usr/nic/libs/libfabric/intel19 CC=icc --enable-mlx=no --enable-verbs=dl --enable-rxm=dl # this will make separate libverbs-fi.so and librxm-fi.so
 
 ## libibverbs
 - configure/make/make install
