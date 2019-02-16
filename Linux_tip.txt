@@ -1,0 +1,373 @@
+# mic0
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/mic:~/mic/lib
+export PATH=$PATH:~/mic/bin
+# VNC server setting
+ vncserver -geometry 1425x865
+vncserver -geometry  1920x1200
+New desktop is ws.server.com:29
+## copy the frontend name:number
+# at interactive queue session
+# 1. vncserver -geometry 1425x865
+# 2. then run vnc enterprise from windows
+# how to kill vnc
+$ vncserver -kill :37
+display# can be found at ~/.vnc/
+#
+#
+## intel vtune
+# compile with -g -debug
+module load  DE/intel_openmpi/13.0
+ source /usr/nic/DE/intel/13.0/vtune_amplifier_xe_2013/amplxe-vars.sh
+#amplxe-gui
+# to debug division by zero, use -fpe0 for fflags at ifort
+
+
+# gprof
+# compile and link with -pg  (-p for ifort)
+# a.out -> gmon.out comes
+# gprof ./a.out > out.txt
+#
+#
+#gdb with pipe
+# gdb a.out
+# /run < pipe_name
+#
+# to setup break point,
+# b main.f90:122
+# loading core file
+gdb a.out core.dump
+> bt full
+> frame #
+> list
+> info locals
+> up #
+> down #
+
+#
+# # abaqus cae/viewer on interactive queue
+abaqus cae -mesa
+abaqus viewer -mesa
+# abaqus plugin
+Just copy directory to /usr/nic/apps/abaqus/6.14-5/code/python2.7/lib/abaqus_plugins/
+# matlab gui on interactive queue
+# make java.opts and add line: -Dsun.java2d.pmoffscreen=false 
+
+MATLAB stand alone
+>> mcrinstaller shows the location of zip file. Unzip and run install. Then
+ ./main_function_jeonb/for_testing/run_main_function_jeonb.sh ~/sw_local/MATLAB_Runtime/v85
+
+# This might not be required: export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jeonb/sw_local/MATLAB_Runtime/v85/runtime/glnxa64:/home/jeonb/sw_local/MATLAB_Runtime/v85/bin/glnxa64:/home/jeonb/sw_local/MATLAB_Runtime/v85/sys/os/glnxa64
+
+#
+#
+# gdb with mpi
+#  mpirun -n 2 xterm -e gdb  ./pericorn_mpi < input.txt
+#
+
+#### OpenMP
+#in a coupled loop calculations,
+# schedule(guided,20) yields 3% faster than schedule(static)
+
+# xmgrace install
+./configure --prefix=/home/jeonb/sw_local CC=icc FC=ifort
+  294  make
+  296  make all
+  297  make install
+# xmgr symbol
+# \cE\C for angstrom
+# \x\c1 for plusminus
+# \x\c4 for cross product Strain energy(\x\c4\C\010\S-3\NJ)
+# \cW\C for cross product
+### intel phi
+module load DE/intel_openmpi/13.0
+source /usr/nic/DE/intel/13.0/bin/compilervars.sh intel64
+
+/usr/bin/micsmc for monitoring
+
+module load DE/intel_openmpi/14.1
+source /usr/nic/DE/intel/14.1/composerxe/bin/compilervars.sh intel64
+
+export LD_LIBRARY_PATH=/home/jeonb/TEMP/intel/mic_lib:/home/jeonb/TEMP/intel/mkl_mic
+
+### spooles library install
+#1. SPOOLES.2.2/Tree/src/makeGlobalLib , drawTree.c -> draw.c
+#2. make lib
+
+
+# making animated gif using jmol
+write frames {*} "all.jpg"
+# convert -delay 50 -loop 0 all*.jpg animated.gif
+#
+# jmol color change
+# in script, color hydrogen blue, set background white
+
+# convert all images to different format
+# mogrify -format png *.bmp
+mogrify -resize 50% -path . -format png /work/jeonb/*.bmp
+
+
+# ansys
+# runwb2 for workbench
+# launcher140 for struct
+# ansys150 -g yes
+#
+ 
+# e a SA
+# jeonb aisa pal #
+#
+# gnuplot
+# range of data file
+# splot '<head -2083 out_.dat' u 1:2:4
+# data operation
+# splot "tmp.dat" u 1:2:($8*cos($6*3.14/90.))
+gnuplot> plot "snap0000200.xyz" u 2:3:5 pal  pt 5
+gnuplot> plot "snap0000200.xyz" u 2:3:5 pal  ps 10
+# dump function data into txt
+> set table "sin.dat"
+> plot sin(x)
+> unset table
+# plotting csv file
+set datafile separator ","
+
+#
+# allinea ddt
+> ddt -start -n 2 ./a.out
+
+# change words in many files
+# sed -i 's/old_world/new_word/g' *.f90
+
+# topology of cpu id
+# lstopo
+
+
+# fortran loop
+#  do i=1,n
+#   do j=1,m
+#    a(i,j) = f(i,j)
+#   end do
+#  end do
+#
+#  change into
+#  do j=1,m
+#    do i=1,n
+#      a(i,j) = f(i,j)
+#    end do
+#  end do
+
+
+# memory leak check using valgrind for mpi
+mpirun -n 2 valgrind --error-limit=no -q ./a.out
+#fort openmp
+# valgrind --tool=drd --error-limit=no a.out 
+
+
+# emacs change font size
+shift + mouse button 1, then menu pops up
+# to change line break into ","
+# edit -> replace Regexp -> ctrl-q ctrl-j enter ","
+
+# vi change words
+# :%s/aaa/bbg/g
+#
+#  cut by column
+#  awk '{print $1 " " $2 " " $3}' aaa.dat  > new.dat 
+# 
+# add words in the first column
+# awk '{print "/work/jeonb/IMAGE/"$0}' train_map.txt > tmp.txt
+#
+#
+#  NaN at fortran
+use ieee_arithmetic
+ if (ieee_is_nan(heatfs(i))) stop
+
+# utility
+facter uptime, facter operatingsystem, htop, bmon, cat /proc/pid/cmdline, nfsiostat 5 /home
+
+# exclusive grep
+grep aaa input.dat |grep -v bbb
+
+# combinatio of sed and awk
+# sed -i 's/_MIN/'"$(awk '{print $2}' min.dat)"'/g' syy.py
+#
+# sum of column data
+cat aaa.dat |awk '{sum+=$4} END {print sum}'
+# sample every 1000 line
+awk 'NR%1000==1' aaa.inp
+# average
+grep wall log* | awk -F ' '  '{sum+=$5} END {print "AVG=",sum/NR}'
+
+
+# print hostname in mpi
+INTEGER(GN):: ierr, iprov, resultlen
+CHARACTER*(MPI_MAX_PROCESSOR_NAME):: name
+call MPI_INIT_THREAD(MPI_THREAD_FUNNELED, iprov, ierr)
+call MPI_COMM_RANK(MPI_COMM_WORLD, mpivar%gid, ierr)
+call MPI_COMM_SIZE(MPI_COMM_WORLD, mpivar%Nproc, ierr)
+call MPI_GET_PROCESSOR_NAME(name, resultlen, ierr)
+print *, mpivar%gid, name
+
+
+# ffmpeg
+$ ffmpeg -r 5 -b 1800 -i tail%04d.jpg test.mp4
+$ ffmpeg -i test.mp4 -vcodec msmpeg4v2 -acodec pcm_s16le output.avi
+$ ffplay test.mp4
+ ffmpeg -r 3 -b 1800 -i f%04d.jpg f_toughened.avi
+
+ffmpeg -r 3 -b 1800   -i tail_parab%04d.jpg  -vcodec msmpeg4v3 aaa.avi
+
+
+# check installed sw
+#repoquery --list tkinter
+
+# using file content as command line argument
+# cp "$(< pwd.txt)"/tmp.out aaa.out
+
+# pbs node check 
+# pbsnodes -l
+# qstat -s => verbose qstat
+# qdel -W force id => brute force delete
+# qalter xxxx -l walltime=10:00:00 -> change wall time
+# win Feb 2015 Shiawase7!
+# gi t pasu wo do jeonb_git!
+
+# gitlab command
+# git add *.f90; git commit -m "comment on this "; git push
+# when download: git clone git@gitservercom:someone/someproject.git
+# To download; git init; git clone remote git@.... ; git fetch; git checkout -b branch_name
+#  git add *.R ; git commit -m "message"; git push origin HEAD:branch_name
+# Enforce
+git fetch --all
+git reset --hard origin/master
+git add Makefile dynamics.f90
+git commit -m "call setPDparms by the allocation status of PDnov"
+git push origin HEAD:by_jeonb
+
+
+
+# kill processes of range
+#  kill -9 `ps -ef |grep keyword1 |grep keyword2 |grep -v grep |awk '{print $2}'`
+
+
+# trace application
+# strace -rtv a.out
+#
+#
+# system monitoring tool
+# $ vmstat 10 10 ; for virtual memory
+# ibstat ; for infiniband
+# ibdev2netdev
+# pbsnodes -l
+# smem -u (shows who uses mem/swap, sudo is recommended)
+
+# java memory test - 1GB stack test - http://stackoverflow.com/questions/11597563/how-to-set-jvm-to-have-more-1gb-stack-size
+java -Xss2g -Xmx100g Test
+
+# hybrid in openmpi
+#
+# $ export OMP_NUM_THREADS=2
+# $mpirun -n 6 --bind-to socket ../../PDama_MPI
+#
+# or 
+#
+# $ export OMP_NUM_THREADS=2
+# $mpirun -n 6 --map-by socket:pe=2 ../../PDama_MPI (not recommneded)
+#
+# in ava 2017
+# mpirun --map-by socket:pe=NOMP ./PDama_MPI
+# Actual MPI ranks = N. cpus per socket/NOMP
+# To find realname from username
+# getent passwd 
+#
+#
+# License server
+# ssh cvcv5fl21
+# /usr/local/apps/comsol/license/glnxa64
+
+# get walltime consumed
+/usr/bin/time -p colt aaa.py
+
+# Module swap
+# module swap pbs pbs_apollo
+#
+
+# xauth issue in sudo
+
+$ xauth list $DISPLAY
+$ some.server.org:17  MIT-MAGIC-COOKIE-1  aabc92c96519f29....
+$ sudo su -
+{152}#xauth add some.server.org:17  MIT-MAGIC-COOKIE-1  aabc92c96519f29....
+
+
+# when pbs job submission fails
+qstat -f -x jobid
+tracejob -n 5 jobid (PBS id)
+tail -1000 /var/spool/PBS/mom_logs/20160505
+
+# col/lines in the terminal
+$ tput cols $ tput lines
+# current vnc resolution
+$ xrandr --current
+
+# when DCVD is not running
+# $ dcv on
+
+
+# Lustre stripe control
+# $ lfs getstripe ./aaa.h5 # check the stripe size and count of the file
+# $ lfs setstripe -s 4m -c 8 . # set the current path as 4M stripe size and 8 stripe count
+
+
+# Linux check directory size
+du -h --max-depth=1
+
+
+# bash looop
+for i in `seq 1 32` ; do echo 'hello' >> lists; done
+
+# json parsor
+jq '.' aaa.json # print all
+jq 'keys' aaa.json # print keys
+jq '.id' aaa.json # print value of key = id
+jq '.[] | .stuff["info-spec"]' xample.json # when xample.json is surrounded by []
+jq '.[].stuff["info-spec"]' xample.json # when xample.json is surrounded by []
+jq '.id' aaa.json # when aaa.json is surrounded by {}
+jq '.data.dr[][]|select(.tag |contains("SEQ_STATE"))' N612-H6D4.json  # nested json
+
+
+
+
+## redirection of time result
+(time python3 keras_mnist.py) |& tee 1gpu.log
+
+# how to check centos version
+ cat /etc/centos-release
+hostnamectl
+
+
+# move files by their numbers in filename
+mv ../../train/dog/dog.{10000..12500}.jpg .
+# rename files with numbers
+find . -name '*.gif' | gawk 'BEGIN{ a=1 }{ printf "mv \"%s\" t%04d.gif\n", $0, a++ }' | bash
+# delete *.o files only
+find . -type f -name '*.o' -exec rm {} +
+
+
+# when wget doesn't work well, use quote mark around http address
+
+# count number of files per minute
+find . -maxdepth 1 -printf '%CY%Cm%Cd.%CH%CM\n' |sort |uniq -c
+
+# change folder access as 755
+find /opt/lampp/htdocs -type d -exec chmod 755 {} \;
+#To change all the files to 644 (-rw-r--r--):
+find /opt/lampp/htdocs -type f -exec chmod 644 {} \;
+
+## find installed packages
+rpm -qa |grep emacs # find emacs packages
+rpm -ql emacs-filesystem-24.3-19.el7_3.noarch # find the location
+
+# when the window in gnome is larger than screen
+1) click the window
+2) alt+F7
+3) move the mouse then the window will be resized.
+
