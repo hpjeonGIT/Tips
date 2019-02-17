@@ -32,3 +32,5 @@ library(reticulate)
 use_python("/opt/apps/python_data_analytics/3.6.0/bin/python3")  
 install.packages('kerasR')  
 
+## install Rmpi with openmpi
+R CMD INSTALL Rmpi_0.6-9.tar.gz --configure-args="--with-Rmpi-include=/share/mpi/ompi/400_gcc48/include --with-Rmpi-libpath=/share/mpi/ompi/400_gcc48/lib --with-Rmpi-type=OPENMPI" --no-test-load
