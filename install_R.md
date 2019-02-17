@@ -34,3 +34,7 @@ install.packages('kerasR')
 
 ## install Rmpi with openmpi
 R CMD INSTALL Rmpi_0.6-9.tar.gz --configure-args="--with-Rmpi-include=/share/mpi/ompi/400_gcc48/include --with-Rmpi-libpath=/share/mpi/ompi/400_gcc48/lib --with-Rmpi-type=OPENMPI" --no-test-load
+
+## install pbdMPI with openmpi
+### Requires install.packages('rlecuyer')
+R CMD INSTALL pbdMPI_0.3-8.tar.gz --configure-args="--with-mpi-include=/share/mpi/ompi/400_gcc48/include --with-mpi-libpath=/share/mpi/ompi/400_gcc48/lib --with-mpi-type=OPENMPI --with-mpi=/share/mpi/ompi/400_gcc48" --no-test-load
