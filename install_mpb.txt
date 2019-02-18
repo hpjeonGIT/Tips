@@ -1,0 +1,38 @@
+# base
+export MPB_HOME="/share/apps/mpb/180_gcc48"
+export MPB_VER="1.8.0"
+export LIBCTL_VER="4.2.0"
+export HARMINV_VER="1.4.1"
+# libctl - autoconf required
+mkdir m4 ; ./autogen.sh
+./configure --prefix=${MPB_HOME}; make -j 4; make all ; make install
+# harminv
+./autogen.sh;  export BLAS_PATH=/share/libs/openblas/0.2.20_gcc73/lib
+export LD_LIBRARY_PATH=${BLAS_PATH}:$LD_LIBRARY_PATH
+export BLAS=" -L${BLAS_PATH} -lopenblas "
+./configure --enable-maintainer-mode --prefix=${MPB_HOME} --with-blas="${BLAS}" --with-lapack="${BLAS}" ; make -j4 ; make install
+# mpb
+git clone https://github.com/stevengj/mpb.git
+export PATH=${MPB_HOME}/bin:$PATH ; export LD_LIBRARY_PATH=${MPB_HOME}/lib:$LD_LIBRARY_PATH ; export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64
+module load  fftw/3.3.7_gcc73  hdf5/1.10.1_prebuilt ; export HDF5=/share/libs/hdf5/hdf5-1.10.1-linux-centos7-x86_64-gcc485-shared 
+export C_INCLUDE_PATH=${HDF5}/include:$C_INCLUDE_PATH
+
+export MPICC=mpicc; export MPICXX=mpicpc ;
+export CFLAGS="-O3 " ; export FFLAGS="-O3 " ;  export CXXFLAGS="-O3 " ; 
+export LDFLAGS="-L${MPB_HOME}/lib -lctl -L${LD_LIBRARY_PATH} ${BLAS} -L${HDF5}/lib -lhdf5 -L/share/libs/fftw/337_gcc73/lib -lfftw3" ; 
+./autogen.sh  --with-hdf5=${HDF5}/lib  # serial installation
+./configure --enable-maintainer-mode --prefix=${MPB_HOME} --enable-shared --with-libctl=${MPB_HOME}/share/libctl CPPFLAGS="-I${MPB_HOME}/include -I${INCLUDE} -DH5_USE_16_API=1"
+make -j32; make all; make install; make clean
+./configure --enable-maintainer-mode --prefix=${MPB_HOME} --enable-shared --with-libctl=${MPB_HOME}/share/libctl \
+CPPFLAGS="-I${MPB_HOME}/include -I${INCLUDE} -DH5_USE_16_API=1" --with-inv-symmetry
+make -j32; make all; make install; make clean
+# mpi version installation
+./autogen.sh  --with-hdf5=${HDF5}/lib
+./configure --enable-maintainer-mode --prefix=${MPB_HOME} --enable-shared --with-libctl=${MPB_HOME}/share/libctl \
+CPPFLAGS="-I${MPB_HOME}/include -I${INCLUDE} -DH5_USE_16_API=1" --with-mpi 
+make -j32; make all; make install
+make clean
+./configure --enable-maintainer-mode --prefix=${MPB_HOME} --enable-shared --with-libctl=${MPB_HOME}/share/libctl \
+CPPFLAGS="-I${MPB_HOME}/include -I${INCLUDE} -DH5_USE_16_API=1" --with-mpi --with-inv-symmetry
+make -j32; make all; make install
+
