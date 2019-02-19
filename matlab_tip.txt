@@ -3,6 +3,7 @@
 - maxNumCompThreads will be deprecated in future release
 - feature('numThreads',str2num(getenv('OMP_NUM_THREADS')))
 - or  feature('numThreads',6)
+- matlab -singleCompThread will enforce to use one thread / one core only
 
 ## Checking License status
 ### Windows
