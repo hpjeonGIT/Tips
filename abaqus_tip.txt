@@ -1,7 +1,7 @@
 # Changing license server from the client
 In windows laptop
 Edit c:\Program files \Abaqus\6.8.x\site\abaqus_v6.env
-abaquslm_license_file="XXXX@YYY.corning.com" into new one
+abaquslm_license_file="XXXX@YYY.abc.org" into new one
 
 # N. of license tokens
 http://optimaldevice.com/blog/abaqus-licensing/
