@@ -39,8 +39,8 @@ else
     then
         module load hfss
         export ANSYSEM_HOST_FILE=$PBS_NODEFILE
-        export AnsTempDir=/work/$USER/tmp
-        ansysedt -distributed -machinelist numcores=$NPROCS -auto -monitor -ng -batchsolve -batchoptions "HFSS/HPCLicenseType=pool"  coaxial.aedt | tee pbs.log
+        #export AnsTempDir=/work/$USER/tmp # AnsTempDir is not hornored
+        ansysedt -distributed -machinelist numcores=$NPROCS -auto -monitor -ng -batchsolve -batchoptions "HFSS/HPCLicenseType=pool tempdirectory=/myscratch/tmp"  coaxial.aedt | tee pbs.log
     else
         echo "HFSSHPC license is exhausted \n"
     fi
