@@ -19,7 +19,7 @@
 # HFSS
 - copy ansoft/AnsysEM19/1/Linux64/Examples/HFSS/RF\ Microwave/coaxial_resonator.aedt to $WORK
 -  ~~AnsTempDir=/lustre/tmp~~ # this is not honored
-ansysedt -distributed -machinelist numcores=2 -auto -monitor -ng -batchsolve -batchoptions "HFSS/HPCLicenseType=pool tempdirectory=/work/jeonb/tmp" coaxial_resonator.aedt
+- ansysedt -distributed -machinelist numcores=2 -auto -monitor -ng -batchsolve -batchoptions "HFSS/HPCLicenseType=pool tempdirectory=/work/jeonb/tmp" coaxial_resonator.aedt
 - ansysedt  # GUI, open coaxial_resondator and Check Filed Overlays
 
 # Abaqus
