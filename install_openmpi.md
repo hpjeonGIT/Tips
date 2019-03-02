@@ -26,11 +26,5 @@
 #### no ofi with oenmpi - libnl libnl-3 link simultaneously and no solution at this moment: https://github.com/ofiwg/libfabric/issues/1756
 
 ## With intel
-  $ ./configure --prefix=/share/mpi/ompi/400_intel18 --disable-dependency-trac
-king --disable-silent-rules --enable-binaries --enable-mpi-cxx --enable-mpi-cxx-
-seek --enable-shared --enable-openib-rdmacm --enable-fast-install --with-devel-h
-eaders --with-hwloc=internal --with-tm=/opt/pbs/ --with-verbs=auto --with-file-s
-ystem=ufs+nfs+lustre --enable-oshmem --with-knem=/opt/knem-1.1.2.90mlnx3 --with-
-mxm=/opt/mellanox/mxm --with-platform=contrib/platform/mellanox/optimized --with
--hcoll=/opt/mellanox/hcoll CC=icc CXX=icpc FC=ifort F77=ifort
+  $ ./configure --prefix=/share/mpi/ompi/400_intel18 --disable-dependency-tracking --disable-silent-rules --enable-binaries --enable-mpi-cxx --enable-mpi-cxx-seek --enable-shared --enable-openib-rdmacm --enable-fast-install --with-devel-headers --with-hwloc=internal --with-tm=/opt/pbs/ --with-verbs=auto --with-file-system=ufs+nfs+lustre --enable-oshmem --with-knem=/opt/knem-1.1.2.90mlnx3 --with-mxm=/opt/mellanox/mxm --with-platform=contrib/platform/mellanox/optimized --with-hcoll=/opt/mellanox/hcoll CC=icc CXX=icpc FC=ifort F77=ifort
 
