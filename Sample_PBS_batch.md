@@ -1,6 +1,6 @@
 # Samples of PBS batch command for application
 
-## HFSS ---------------------------------------------------------------------
+## HFSS 
 ```bash
 #!/bin/bash
 #PBS -l walltime=168:00:00
@@ -19,7 +19,7 @@ export ANSYSEM_HOST_FILE=$PBS_NODEFILE
 # export AnsTempDir=/wrk/$USER/tmp  # scratch folder this doesn't work
 ansysedt -distributed -machinelist numcores=$NPROCS -auto -monitor -ng -batchsolve -batchoptions "HFSS/HPCLicenseType=pool tempdirectory=/scratch/myscratch"  coaxial.aedt | tee pbs.log
 ```
-## ansys mechanical  ---------------------------------------------------------------------
+## ansys mechanical  
 ```bash
 #!/bin/bash
 #PBS -l walltime=168:00:00
@@ -39,7 +39,7 @@ ansys191 -i YOURINPUT.dat -dir $WORK/$PBS_JOBID -dis -p ansys -np ${NPROCS} -o f
 # Scratch folder locationis given from -dir. Or use TMPDIR variables in the bash
 ```
 
-# Fluent ---------------------------------------------------------------------
+## Fluent 
 ```bash
 #!/bin/bash
 #PBS -l walltime=168:00:00
@@ -57,7 +57,7 @@ lfs setstripe -S 1m -c 8 . # Lustre setup
 fluent 3ddp -mpi=intel -g -ssh -t${NPROCS} -cnf=${PBS_NODEFILE} -i input.jou  -pib  -feature_parallel_preferred=anshpc_pack > log.out
 ## -feature_parallel_preferred=anshpc for anshpc license. Choose pack for very large scale run
 ```
-# Abaqus ---------------------------------------------------------------------
+## Abaqus 
 ```bash
 #!/bin/bash
 #PBS -l select=1:ncpus=32:mpiprocs=32:ompthreads=1:mem=150gb
@@ -71,7 +71,7 @@ export NPROCS=`wc -l < $PBS_NODEFILE`
 module load abaqus 
 abaqus job=__inp_file_name__ cpus=$NPROCS inter scratch=$WORK/tmp
 ```
-# Comsol ---------------------------------------------------------------------
+## Comsol 
 ```bash
 #!/bin/bash
 #PBS -N Q1
@@ -86,7 +86,7 @@ module load comsol
 comsol batch -nn $NPROCS -f $PBS_NODEFILE  -np $OMP_NUM_THREADS -tmpdir $WORK/tmp -study std4 -inputfile ${JNAME}.mph  -outputfile output.mph -batchlog log.txt
 ```
 
-# RSoft FullWave
+## RSoft FullWave
 ```bash
 #!/bin/bash
 #PBS -l select=1:ncpus=16:mpiprocs=16:ompthreads=1
