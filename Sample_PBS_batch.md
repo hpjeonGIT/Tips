@@ -93,12 +93,14 @@ comsol batch -nn $NPROCS -f $PBS_NODEFILE  -np $OMP_NUM_THREADS -tmpdir $WORK/tm
 #PBS -l walltime=2:00:00
 #PBS -N rsoft_fullwave
 #PBS -q @servername
-
+# Ref: https://opus.nci.org.au/display/Help/FullWAVE
+# May need to edit ~/.xbcad_ini
+#
 cd $PBS_O_WORKDIR
-
+#
 export NNODES=`sort $PBS_NODEFILE | uniq | wc -l`
 export NPROCS=`wc -l < $PBS_NODEFILE`
-
+#
 module load rsoft
 rslmd -start
 export P4_RSHCOMMAND=rshlocal
