@@ -44,13 +44,13 @@ make -j 32; make install
 - Ref:http://www.stats.uwo.ca/faculty/yu/Rmpi/
 - Use MS-MPI: https://msdn.microsoft.com/en-us/library/windows/desktop/bb524831%28v=vs.85%29.aspx
 - Install MSMpiSetup.exe and msmpisdk.msi
- - Edit control panel -> Edit the system environment variables for MPI_HOME and PATH
-  - MPI_HOME as "C:\Program Files(x86)\Microsoft SDKs\MPI"
-  - Add C:\Program Files\R\R-3.4.1\bin to PATH
+    - Edit control panel -> Edit the system environment variables for MPI_HOME and PATH
+        - MPI_HOME as "C:\Program Files(x86)\Microsoft SDKs\MPI"
+    - Add C:\Program Files\R\R-3.4.1\bin to PATH
 - Open R as admin
- - .libPaths("C:/Program Files/R/R-3.4.1/library")
-  - Adjust path accordingly
- - install.packages("Rmpi")
+    - .libPaths("C:/Program Files/R/R-3.4.1/library")
+    - Adjust path accordingly
+    - install.packages("Rmpi")
 - Open cmd windows
- - mpiexec -n 2 Rscript Rmpi_hello.r
+    - mpiexec -n 2 Rscript Rmpi_hello.r
 
