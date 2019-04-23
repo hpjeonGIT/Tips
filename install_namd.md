@@ -30,6 +30,7 @@
       TCL=$(TCLINCL) $(TCLFLAGS)
       ```
   - ./config Linux-x86_64-icc --with-mkl --charm-base ./charm-6.8.2 --charm-arch mpi-linux-x86_64
+  	- --with-mkl will use arch/Linux-x86_64.mkl
   - cd Linux-x86_64-icc/
   - make -j 32
   - *namd2* is produced
