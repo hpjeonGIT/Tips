@@ -10,7 +10,7 @@
 - make intel18 -j 16
 - Sample Makefile.intel18
 ```
-# Atom cluster customization
+# skylake cpu customization
 SHELL = /bin/sh
 CC =        mpiicpc
 OPTFLAGS =      -xCORE-AVX512 -O2 -fp-model fast=2 -no-prec-div -qoverride-limits
@@ -63,3 +63,6 @@ fastdep.exe: ../DEPEND/fastdep.c
 cc -O -o $@ $<
 sinclude .depend
 ```
+- Sample run command
+  - export OMP_NUM_THREADS=1
+  - mpirun -np 32 /src/lmp_intel18 < in.rhodo
