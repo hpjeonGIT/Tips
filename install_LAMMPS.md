@@ -70,7 +70,11 @@ sinclude .depend
 
 # GPU package with Nvidia CUDA
 - Ref: https://lammps.sandia.gov/doc/Build_extras.html#gpu
+
 # USER-CUDA
+- Deprecated. May not be supported anymore
 
 # LAMMPS KOKKOS
 - REF: http://www.hpcadvisorycouncil.com/pdf/LAMMPS_KOKKOS_Best_Practices.pdf
+- In cmake: -D KOKKOS=yes
+- In Make: make yes-KOKKOS
