@@ -21,3 +21,9 @@
 # With CUDA/nvcc
 - Ref: http://manual.gromacs.org/documentation/current/install-guide/index.html
 - cmake .. -DGMX_GPU=ON -DGMX_MPI=ON -DCMAKE_INSTALL_PREFIX=/home/marydoe/programs
+- https://www.nvidia.com/en-us/data-center/gpu-accelerated-applications/gromacs/
+- mkdir gromacs-VERSION-build
+- cd gromacs-VERSION-build
+- $ CC=gcc CXX=g++ cmake <GROMACS_SRC_DIR> -DGMX_OPENMP=ON -DGMX_GPU=ON \
+-DGPU_DEPLOYMENT_KIT_ROOT_DIR=<GDK_PATH> -DGMX_BUILD_OWN_FFTW=ON \
+-DGMX_PREFER_STATIC_LIBS=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=<GROMACS_INSTALL_DIR>
