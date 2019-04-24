@@ -38,3 +38,8 @@
 - Download *apoa1.tar.gz* from https://www.ks.uiuc.edu/Research/namd/utilities/
 - export LD_LIBRARY_PATH+=:/share/libs/tcl/8.6.9/lib
 - mpirun -n 40 ../NAMD_Git-2019-04-23_Source/Linux-x86_64-icc/namd2 apoa1.namd
+
+### with cuda
+- https://www.nvidia.com/en-us/data-center/gpu-accelerated-applications/namd/
+- Single node:./config Linux-x86_64-icc --charm-arch multicore-linux64-icc --with-cuda --cuda-prefix /usr/local/cuda 
+- Distributed nodes:./config Linux-x86_64-icc --charm-arch verbs-linux-x86_64-smp-icc --with-cuda --cuda-prefix /usr/local/cuda 
