@@ -1,3 +1,4 @@
+# CPU installation using intel compiler
 - Reference: https://software.intel.com/en-us/articles/recipe-building-and-running-gromacs-on-intel-processors
 - Download the latest gromacs (2019.2 as of April 2019
 - Set up intel compiler, mpi, mkl
@@ -17,3 +18,6 @@
 	- export OMP_NUM_THREADS=1
 	- mpirun -np 8 /myproject/MD/gromacs-2019.2/build/bin/gmx_mpi mdrun -s ion_channel.tpr -maxh 0.5  -noconfout -nsteps 10000 -g logfile
 
+# With CUDA/nvcc
+- Ref: http://manual.gromacs.org/documentation/current/install-guide/index.html
+- cmake .. -DGMX_GPU=ON -DGMX_MPI=ON -DCMAKE_INSTALL_PREFIX=/home/marydoe/programs
