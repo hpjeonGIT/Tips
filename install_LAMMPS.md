@@ -66,3 +66,11 @@ sinclude .depend
 - Sample run command
   - export OMP_NUM_THREADS=1
   - mpirun -np 32 /src/lmp_intel18 < in.rhodo
+
+
+# GPU package with Nvidia CUDA
+- Ref: https://lammps.sandia.gov/doc/Build_extras.html#gpu
+# USER-CUDA
+
+# LAMMPS KOKKOS
+- REF: http://www.hpcadvisorycouncil.com/pdf/LAMMPS_KOKKOS_Best_Practices.pdf
