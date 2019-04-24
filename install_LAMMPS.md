@@ -70,11 +70,14 @@ sinclude .depend
 
 # GPU package with Nvidia CUDA
 - Ref: https://lammps.sandia.gov/doc/Build_extras.html#gpu
+- http://www.afs.enea.it/software/lammps/doc17/html/accelerate_gpu.html
+- May not need nvcc. Just link CUDA
 
 # USER-CUDA
 - Deprecated. May not be supported anymore
 
 # LAMMPS KOKKOS
 - REF: http://www.hpcadvisorycouncil.com/pdf/LAMMPS_KOKKOS_Best_Practices.pdf
+- http://www.afs.enea.it/software/lammps/doc17/html/accelerate_kokkos.html
 - In cmake: -D KOKKOS=yes
 - In Make: make yes-KOKKOS
