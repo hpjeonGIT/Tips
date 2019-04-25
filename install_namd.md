@@ -39,7 +39,59 @@
 - export LD_LIBRARY_PATH+=:/share/libs/tcl/8.6.9/lib
 - mpirun -n 40 ../NAMD_Git-2019-04-23_Source/Linux-x86_64-icc/namd2 apoa1.namd
 
-### with cuda
-- https://www.nvidia.com/en-us/data-center/gpu-accelerated-applications/namd/
-- Single node:./config Linux-x86_64-icc --charm-arch multicore-linux64-icc --with-cuda --cuda-prefix /usr/local/cuda 
-- Distributed nodes:./config Linux-x86_64-icc --charm-arch verbs-linux-x86_64-smp-icc --with-cuda --cuda-prefix /usr/local/cuda 
+## verbs - infiniband version
+- CHARM
+	- cd charm-6.8.2
+	- Edit *src/arch/mpi-linux-x86_64/cc-mpicxx.sh* and *src/arch/mpi-linux-x86_64/conv-mach.sh*
+		- Convert all mpicxx -> mpiicpc, mpicc -> mpiicc, gcc-> icc, g++-> icpc, mpif77 -> mpiifort, mpif90 -> mpiifort, f95 -> ifort, g77 -> ifort
+	- ./build charm++ verbs-linux-x86_64 icc # for infinibands - slightly faster than MPI
+- NAMD
+	- Edit arch/Linux-x86_64-icc.arch
+```bash
+AMD_ARCH = Linux-x86_64
+CHARMARCH = verbs-linux-x86_64-icc #mpi-linux-x86_64
+FLOATOPTS = -ip -xCORE-AVX512  -O3 -g -fp-model fast=2 -no-prec-div -qoverride-limits -DNAMD_DISABLE_SSE
+CXX = icpc -std=c++11
+CXXOPTS = -static-intel -O2 $(FLOATOPTS)
+CXXNOALIASOPTS = -O2 -fno-alias $(FLOATOPTS)
+CXXCOLVAROPTS = -O2 -ip
+CC = icc
+COPTS = -static-intel -O2 $(FLOATOPTS)
+```
+	- ./config Linux-x86_64-icc --with-mkl --charm-base ./charm-6.8.2 --charm-arch verbs-linux-x86_64-icc
+	- cd Linux-x86_64-icc/
+	- make -j 40
+	- *namd2* is produced
+- Run command
+	- charm-6.8.2/bin/charmrun +p 40  Linux-x86_64-icc/namd2 apoa1.namd
+
+## NAMD with CUDA or GPU computing
+- Ref: https://www.nvidia.com/en-us/data-center/gpu-accelerated-applications/namd/
+- CHARM
+	- `cd charm-6.8.2`
+	- `./build charm++ verbs-linux-x86_64 smp --with-production' 
+- NAMD
+	- Edit arc/Linux-x86_64-g++.arch
+```
+NAMD_ARCH = Linux-x86_64
+CHARMARCH = verbs-linux-x86_64_smp
+CXX = g++ -m64 -std=c++0x
+CXXOPTS = -O3 -fexpensive-optimizations -ffast-math 
+CC = gcc -m64
+COPTS = -O3 -fexpensive-optimizations -ffast-math
+```
+	- Edit Linux-x86_64.mkl
+```
+FFTDIR=/share/compiler/intel/19.1/mkl
+FFTINCL=-I$(FFTDIR)/include/fftw
+FFTLIB=-L$(FFTDIR)/lib/intel64 -lmkl_gf_lp64 -lmkl_sequential -lmkl_core
+FFTFLAGS=-DNAMD_FFTW -DNAMD_FFTW_3
+FFT=$(FFTINCL) $(FFTFLAGS)
+```
+	- ./config Linux-x86_64-g++.arch --with-mkl --charm-base ./charm-6.8.2 --charm-arch verbs-linux-x86_64-smp --with-cuda --cuda-prefix /share/libs/cuda/10.0
+	- cd Linux-x86_64-g++.arch
+	- make -j 32
+	- *namd2* is produced
+- Running:
+	- Linux-x86_64-g++.arch/namd2 +p 40 +devices 0,1 apoa1.namd
+
