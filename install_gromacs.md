@@ -24,8 +24,10 @@
 - https://www.nvidia.com/en-us/data-center/gpu-accelerated-applications/gromacs/
 - mkdir gromacs-VERSION-build
 - cd gromacs-VERSION-build
-- Single node
-	- $ CC=gcc CXX=g++ cmake <GROMACS_SRC_DIR> -DGMX_OPENMP=ON -DGMX_GPU=ON -DGPU_DEPLOYMENT_KIT_ROOT_DIR=<GDK_PATH> -DGMX_BUILD_OWN_FFTW=ON 
--DGMX_PREFER_STATIC_LIBS=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=<GROMACS_INSTALL_DIR>
-- With MPI
-	- CC=mpicc CXX=mpicxx cmake <GROMACS_SRC_DIR> -DGMX_OPENMP=ON -DGMX_GPU=ON -DGPU_DEPLOYMENT_KIT_ROOT_DIR=<GDK_PATH> -DGMX_MPI=ON -DGMX_BUILD_OWN_FFTW=ON -DGMX_PREFER_STATIC_LIBS=ON -DCMAKE_BUILD_TYPE=Release -DGMX_BUILD_UNITTESTS=ON -DCMAKE_INSTALL_PREFIX=<GROMACS_INSTALL_DIR>
+- CC=mpicc CXX=mpicxx cmake .. -DGMX_OPENMP=ON -DGMX_GPU=ON -DGPU_DEPLOYMENT_KIT_ROOT_DIR=/usr/nic/libs/cuda/10.0  -DGMX_MPI=ON -DGMX_BUILD_OWN_FFTW=ON -DGMX_PREFER_STATIC_LIBS=ON -DCMAKE_BUILD_TYPE=Release -DGMX_BUILD_UNITTESTS=ON -DCMAKE_INSTALL_PREFIX=/work/jeonb/MD -DGMX_HWLOC=OFF
+	- If HWLOC=auto, openmpi may fail to compile
+- make -j 32
+- Running Gromacs
+	- CPU only: `OMP_NUM_THREADS=1 mpirun -np 40 gromacs-2019.2/build_cuda/bin/gmx_mpi mdrun -s ion_channel.tpr -maxh 0.5 -noconfout -nsteps 1000 -nb cpu`
+	- CPU+GPU: `OMP_NUM_THREADS=2 mpirun -np 20 gromacs-2019.2/build_cuda/bin/gmx_mpi mdrun -s ion_channel.tpr -maxh 0.5 -noconfout -nsteps 1000 -nb gpu`
+		- Tuning/optimization is necessary
