@@ -18,10 +18,10 @@
 	- export OMP_NUM_THREADS=1
 	- mpirun -np 8 /myproject/MD/gromacs-2019.2/build/bin/gmx_mpi mdrun -s ion_channel.tpr -maxh 0.5  -noconfout -nsteps 10000 -g logfile
 
-# With CUDA/nvcc
+# With CUDA
 - Ref: http://manual.gromacs.org/documentation/current/install-guide/index.html
-- cmake .. -DGMX_GPU=ON -DGMX_MPI=ON -DCMAKE_INSTALL_PREFIX=/home/marydoe/programs
 - https://www.nvidia.com/en-us/data-center/gpu-accelerated-applications/gromacs/
+- nvcc is not used
 - mkdir gromacs-VERSION-build
 - cd gromacs-VERSION-build
 - CC=mpicc CXX=mpicxx cmake .. -DGMX_OPENMP=ON -DGMX_GPU=ON -DGPU_DEPLOYMENT_KIT_ROOT_DIR=/usr/nic/libs/cuda/10.0  -DGMX_MPI=ON -DGMX_BUILD_OWN_FFTW=ON -DGMX_PREFER_STATIC_LIBS=ON -DCMAKE_BUILD_TYPE=Release -DGMX_BUILD_UNITTESTS=ON -DCMAKE_INSTALL_PREFIX=/work/jeonb/MD -DGMX_HWLOC=OFF
