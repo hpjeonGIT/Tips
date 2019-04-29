@@ -71,7 +71,18 @@ sinclude .depend
 # GPU package with Nvidia CUDA
 - Ref: https://lammps.sandia.gov/doc/Build_extras.html#gpu
 - http://www.afs.enea.it/software/lammps/doc17/html/accelerate_gpu.html
-- May not need nvcc. Just link CUDA
+- Ref: https://sites.google.com/site/rangsiman1993/comp-chem/program-install/install-lammps-pk-gpu
+- Edit lib/gpu/Makefile.linux
+```
+CUDA_HOME=/usr/nic/libs/cuda/10.0/
+CUDA_ARCH="-arch=sm_70"
+CUDA_PRECISION="-D_SINGLE_DOUBLE"
+```
+- make no-all
+- make yes-gpu yes-asphere yes-class2 yes-kspace yes-manybody yes-misc yes-molecule yes-rigid yes-user-omp
+- make gpu
+- Run command: `mpirun -n 4  ../../src/lmp_gpu -sf gpu -pk gpu 4 -in in.lj`
+
 
 # USER-CUDA
 - Deprecated. May not be supported anymore
@@ -79,5 +90,21 @@ sinclude .depend
 # LAMMPS KOKKOS
 - REF: http://www.hpcadvisorycouncil.com/pdf/LAMMPS_KOKKOS_Best_Practices.pdf
 - http://www.afs.enea.it/software/lammps/doc17/html/accelerate_kokkos.html
-- In cmake: -D KOKKOS=yes
-- In Make: make yes-KOKKOS
+- Edit lib/kokkos/Makefile.kokkos
+```
+KOKKOS_DEVICES ?= "Cuda,OpenMP"
+KOKKOS_ARCH ?= "Volta70"
+```
+- Edit lib/kokkos/bin/nvcc_wrapper
+```
+default_arch="sm_70"
+```
+- Edit MAKE/OPTIONS/Makefile.kokkos_cuda_mpi
+```
+KOKKOS_DEVICES = Cuda
+KOKKOS_ARCH = Volta70
+```
+- make no-all
+- make yes-gpu yes-asphere yes-class2 yes-kspace yes-manybody yes-misc yes-molecule yes-rigid yes-kokkos
+- make kokkos_cuda_mpi -j 40
+- mpirun -np 2 ../../src/lmp_kokkos_cuda_mpi -k on g 2 -sf kk -in in.lj          # 1 node,   2 MPI tasks/node, 2 GPUs/node
