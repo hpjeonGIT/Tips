@@ -73,7 +73,7 @@ sinclude .depend
 - http://www.afs.enea.it/software/lammps/doc17/html/accelerate_gpu.html
 - Ref: https://sites.google.com/site/rangsiman1993/comp-chem/program-install/install-lammps-pk-gpu
 - When openmpi is instlalld with --with-cuda, $CUDA_HOME/lib64 and $CUDA_HOME/lib64/stubs must be on LD_LIBRARY_PATH
-- Edit lib/gpu/Makefile.linux
+- Edit lib/gpu/Makefile.linux, Makefile.linux.double, Makfile.linux.mixed, Makefile.lammps.standard, Makefile.lammps
 ```
 CUDA_HOME=/usr/nic/libs/cuda/10.0/
 CUDA_ARCH="-arch=sm_70"
@@ -83,7 +83,20 @@ CUDA_PRECISION="-D_SINGLE_DOUBLE"
 - make yes-gpu yes-asphere yes-class2 yes-kspace yes-manybody yes-misc yes-molecule yes-rigid yes-user-omp
 - make gpu
 - Run command: `mpirun -n 4  ../../src/lmp_gpu -sf gpu -pk gpu 4 -in in.lj`
-
+- Batch job: Submit a following PBS script
+```bash
+#!/bin/bash
+#PBS -l select=2:ncpus=40:mpiprocs=2:ompthreads=20:ngpus=2
+#PBS -l walltime=10:00:00
+#PBS -N atomtest
+#PBS -q @atom
+cd $PBS_O_WORKDIR
+export NNODES=`sort $PBS_NODEFILE | uniq | wc -l`
+export NPROCS=`wc -l < $PBS_NODEFILE`
+. /etc/profile.d/modules.sh
+module load ompi/4.0.1_gcc74_cuda10
+mpirun -np $NPROCS  /work/jeonb/LAMMPS/lammps-stable_12Dec2018_Atom/src/lmp_gpu -sf gpu -pk gpu 2 -in in.rhodo
+```
 
 # USER-CUDA
 - Deprecated. May not be supported anymore
@@ -102,7 +115,7 @@ default_arch="sm_70"
 ```
 - Edit MAKE/OPTIONS/Makefile.kokkos_cuda_mpi
 ```
-KOKKOS_DEVICES = Cuda
+KOKKOS_DEVICES = Cuda, OpenMP
 KOKKOS_ARCH = Volta70
 ```
 - make no-all
