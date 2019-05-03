@@ -72,6 +72,7 @@ sinclude .depend
 - Ref: https://lammps.sandia.gov/doc/Build_extras.html#gpu
 - http://www.afs.enea.it/software/lammps/doc17/html/accelerate_gpu.html
 - Ref: https://sites.google.com/site/rangsiman1993/comp-chem/program-install/install-lammps-pk-gpu
+- When openmpi is instlalld with --with-cuda, $CUDA_HOME/lib64 and $CUDA_HOME/lib64/stubs must be on LD_LIBRARY_PATH
 - Edit lib/gpu/Makefile.linux
 ```
 CUDA_HOME=/usr/nic/libs/cuda/10.0/
