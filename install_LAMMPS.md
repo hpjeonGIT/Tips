@@ -146,6 +146,6 @@ KOKKOS_ARCH = Volta70
 - ~~If mxm_handle_error() appears, use `-mca pml ob1` in mpirun~~
 - CUDA + OpenMP
 		- `export OMP_PROC_BIND=false`
-		- `mpirun -np 2 --bind-to socket  ../../src/lmp_kokkos_cuda_mpi -k on g 2 t 20  -sf kk -in in.rhodo`
+		- `mpirun -np 2 --bind-to socket  ../../src/lmp_kokkos_cuda_mpi -k on g 2 t 4  -sf kk -in in.rhodo`
 			- Further optimization is necessary
 
