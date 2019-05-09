@@ -143,4 +143,4 @@ KOKKOS_ARCH = Volta70
 - make yes-gpu yes-asphere yes-class2 yes-kspace yes-manybody yes-misc yes-molecule yes-rigid yes-kokkos
 - make kokkos_cuda_mpi -j 40
 - mpirun -np 2 ../../src/lmp_kokkos_cuda_mpi -k on g 2 -sf kk -in in.lj          # 1 node,   2 MPI tasks/node, 2 GPUs/node
-- If mxm_handle_error() appears, use `-mca pml ob1` in mpirun
+- ~~If mxm_handle_error() appears, use `-mca pml ob1` in mpirun~~
