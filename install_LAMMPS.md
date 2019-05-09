@@ -104,6 +104,27 @@ mpirun -np $NPROCS  /work/jeonb/LAMMPS/lammps-stable_12Dec2018_Atom/src/lmp_gpu 
 # LAMMPS KOKKOS
 - REF: http://www.hpcadvisorycouncil.com/pdf/LAMMPS_KOKKOS_Best_Practices.pdf
 - http://www.afs.enea.it/software/lammps/doc17/html/accelerate_kokkos.html
+- Centos7 with openmpi 4.0.1 + cuda 10 + ucx1.5.1 (there seems bugs in old ucx)
+  - Install ucx 1.5.1 with cuda aware mode
+```
+module load gcc/7.4
+./configure --prefix=/share/libs/openucx/1.5.1_cuda -with-cuda=/share/libs/cuda/10.0 \
+--with-knem=/opt/knem-1.1.3.90mlnx1 --with-mlx5-dv --with-dm
+make -j 20 all
+make install
+```
+  - Install openmpi with cuda + ucx_cuda
+```
+./configure --prefix=/share/mpi/ompi/401_gcc74_cuda_ucx151 --with-cuda=/share/libs/cuda/10.0 \
+--disable-dependency-tracking --disable-silent-rules --enable-binaries --enable-mpi-cxx \
+--enable-mpi-cxx-seek --enable-shared --enable-openib-rdmacm --enable-fast-install \
+ --with-devel-headers --with-hwloc=internal --with-tm=/opt/pbs/ --with-verbs=auto \
+ --with-lustre --enable-oshmem --with-knem=/opt/knem-1.1.3.90mlnx1 \
+ --with-mxm=/opt/mellanox/mxm --with-platform=contrib/platform/mellanox/optimized \
+ --with-hcoll=/opt/mellanox/hcoll --enable-mpi1-compatibility --with-ucx=/share/libs/openucx/1.5.1_cuda
+ make -j 20 all
+ make install
+```
 - Edit lib/kokkos/Makefile.kokkos
 ```
 KOKKOS_DEVICES ?= "Cuda,OpenMP"
