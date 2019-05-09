@@ -30,3 +30,19 @@
 
 ## With cuda
 ./configure --prefix=/share/ompi/401_gcc74_cuda --with-cuda=/share/libs/cuda/10.0 --disable-dependency-tracking --disable-silent-rules --enable-binaries --enable-mpi-cxx --enable-mpi-cxx-seek --enable-shared --enable-openib-rdmacm --enable-fast-install --with-devel-headers --with-hwloc=internal --with-tm=/opt/pbs/ --with-verbs=auto --with-file-system=ufs+nfs+lustre --enable-oshmem --with-knem=/opt/knem-1.1.3.90mlnx1 --with-mxm=/opt/mellanox/mxm --with-platform=contrib/platform/mellanox/optimized --with-hcoll=/opt/mellanox/hcoll --enable-mpi1-compatibility
+
+## At centos7. Cuda+ucx
+- Download ucx 1.5.1 with cuda. Install gdr if the driver is available
+  - ./configure --prefix=/share/libs/openucx/1.5.1_cuda -with-cuda=/share/libs/cuda/10.0 --with-knem=/opt/knem-1.1.3.90mlnx1 --with-mlx5-dv --with-dm
+  - make -j 40 all
+  - make install
+-  Install openmpi with cuda + ucx_cuda
+```
+./configure --prefix=/share/mpi/ompi/401_gcc74_cuda_ucx151 --with-cuda=/share/libs/cuda/10.0 \
+--disable-dependency-tracking --disable-silent-rules --enable-binaries --enable-mpi-cxx \
+--enable-mpi-cxx-seek --enable-shared --enable-openib-rdmacm --enable-fast-install \
+ --with-devel-headers --with-hwloc=internal --with-tm=/opt/pbs/ --with-verbs=auto \
+ --with-lustre --enable-oshmem --with-knem=/opt/knem-1.1.3.90mlnx1 \
+ --with-mxm=/opt/mellanox/mxm --with-platform=contrib/platform/mellanox/optimized \
+ --with-hcoll=/opt/mellanox/hcoll --enable-mpi1-compatibility --with-ucx=/share/libs/openucx/1.5.1_cuda
+```
