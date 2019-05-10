@@ -148,3 +148,10 @@ export LD_LIBRARY_PATH="${1:h}:$LD_LIBRARY_PATH"
 $*
 ```
 - If namd2 hangs, use `++verbose` to monitor the status
+
+
+## checking charmrun
+- After charm is built,
+	- cd <charm_build>/tests/charm++/simplearrayhello/
+	- make -j
+	- mpirun -n 2 ./hello # check if it runs parallel or not
