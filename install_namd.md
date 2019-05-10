@@ -6,13 +6,14 @@
   - cd charm-6.8.2
   - Edit src/arch/mpi-linux-x86_64/cc-mpicxx.sh and src/arch/mpi-linux-x86_64/conv-mach.sh
 	  - Convert all mpicxx -> mpiicpc, mpicc -> mpiicc, gcc-> icc, g++-> icpc, mpif77 -> mpiifort, mpif90 -> mpiifort, f95 -> ifort, g77 -> ifort
-  - ./build charm++  mpi-linux-x86_64
+	- Edit src/arch/common/cc-icc.sh and cc-iccstatic.sh as icc -> mpiicc, icpc -> mpiicpc, ifort -> mpiifort
+  - ./build charm++  mpi-linux-x86_64 smp icc
 - NAMD
   - Reference: [link](https://software.intel.com/en-us/articles/recipe-building-namd-on-intel-xeon-and-intel-xeon-phi-processors-for-multi-node-runs), [link2](https://www.pugetsystems.com/labs/hpc/NAMD-Custom-Build-for-Better-Performance-on-your-Modern-GPU-Accelerated-Workstation----Ubuntu-16-04-18-04-CentOS-7-1196/#edit-archlinux-x86mkl)
   - Edit arch/Linux-x86_64-icc.arch
       ```bash
       AMD_ARCH = Linux-x86_64
-      CHARMARCH = mpi-linux-x86_64-smp
+      CHARMARCH = mpi-linux-x86_64-smp-icc
       FLOATOPTS = -ip -xCORE-AVX512  -O3 -g -fp-model fast=2 -no-prec-div -qoverride-limits -DNAMD_DISABLE_SSE
       CXX = icpc -std=c++11
       CXXOPTS = -static-intel -O2 $(FLOATOPTS)
@@ -29,7 +30,7 @@
       TCLFLAGS=-DNAMD_TCL
       TCL=$(TCLINCL) $(TCLFLAGS)
       ```
-  - ./config Linux-x86_64-icc --with-mkl --charm-base ./charm-6.8.2 --charm-arch mpi-linux-x86_64
+  - ./config Linux-x86_64-icc --with-mkl --charm-base ./charm-6.8.2 --charm-arch mpi-linux-x86_64-smp-icc
   	- --with-mkl will use arch/Linux-x86_64.mkl
   - cd Linux-x86_64-icc/
   - make -j 32
@@ -37,7 +38,7 @@
 # Running namd
 - Download *apoa1.tar.gz* from https://www.ks.uiuc.edu/Research/namd/utilities/
 - export LD_LIBRARY_PATH+=:/share/libs/tcl/8.6.9/lib
-- mpirun -n 40 ../NAMD_Git-2019-04-23_Source/Linux-x86_64-icc/namd2 apoa1.namd
+- mpirun -n 10 ../NAMD_Git-2019-04-23_Source/Linux-x86_64-icc/namd2 apoa1.namd +ppn 4
 
 ## verbs - infiniband version
 - CHARM
