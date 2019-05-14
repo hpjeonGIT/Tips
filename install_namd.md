@@ -153,6 +153,46 @@ $*
 
 ## checking charmrun
 - After charm is built,
-	- cd <charm_build>/tests/charm++/simplearrayhello/
-	- make -j
-	- mpirun -n 2 ./hello # check if it runs parallel or not
+- cd <charm_build>/tests/charm++/simplearrayhello/
+- make -j
+- mpirun -n 2 ./hello # check if it runs parallel or not
+
+
+## Update
+-using gcc for cuda
+- Building charmrun
+	- In src/scripts/charmc, `CORE_LIBS="-L/usr/lib64 -libverbs -lconv-core -ltmgr -lconv-util -lconv-partition $TRACE_OBJ"`
+	- `./build charm++ verbs-linux-x86_64 smp gcc`
+- Building NAMD
+	- Edit arch/Linux-x86_64.tcl
+```
+TCLDIR=/usr
+TCLINCL=-I$(TCLDIR)/include
+TCLLIB=-L$(TCLDIR)/lib -ltcl8.5 -ldl -lpthread
+TCLFLAGS=-DNAMD_TCL
+TCL=$(TCLINCL) $(TCLFLAGS)
+```
+	- Edit arch/Linux-x86_64.mkl
+```
+FFTDIR=/share/compiler/intel/18.0/mkl
+FFTINCL=-I$(FFTDIR)/include/fftw
+FFTLIB=-L$(FFTDIR)/lib/intel64 -lmkl_gf_lp64 -lmkl_sequential -lmkl_core
+FFTFLAGS=-DNAMD_FFTW -DNAMD_FFTW_3
+FFT=$(FFTINCL) $(FFTFLAGS)
+```
+	- Edit arch/Linux-x86_64-g++.arch
+```
+NAMD_ARCH = Linux-x86_64
+CHARMARCH = verbs-linux-x86_64-smp-gcc
+CXX = g++ -m64 -std=c++0x
+CXXOPTS = -O3 -fexpensive-optimizations -ffast-math
+CC = gcc -m64
+COPTS = -O3 -fexpensive-optimizations -ffast-math
+```
+	- `./config Linux-x86_64-g++.arch --with-mkl --charm-base ./charm-6.8.2 --charm-arch verbs-linux-x86_64-smp-gcc  --with-cuda --cuda-prefix /share/libs/cuda/10.0`
+	- `cd Linux-x86_64-g++; make -j 40`
+- Running:
+	- `export LD_LIBRARY_PATH+=:/share/compiler/intel/18.0/mkl/lib/intel64`
+    - Single node run: `../NAMD_CUDA/Linux-x86_64-g++.arch/namd2 +p 40 +devices 0,1 apoa1.namd`
+	- Multi node: charmrun +p40 ++ppn20 ++runscript ./runsciprt ++nodelist ./hostfile ../NAMD/Linux-x86_64-g++.arch/namd2 +devices 0,1 stmv.namd ++verbose
+
