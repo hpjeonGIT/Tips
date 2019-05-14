@@ -163,6 +163,8 @@ $*
 - Building charmrun
 	- In src/scripts/charmc, `CORE_LIBS="-L/usr/lib64 -libverbs -lconv-core -ltmgr -lconv-util -lconv-partition $TRACE_OBJ"`
 	- `./build charm++ verbs-linux-x86_64 smp gcc`
+	- `cd tests/charm++/simplearrayhello/`
+	- `make -j 2; ./charmrun +p 4 ./hello`
 - Building NAMD
 	- Edit arch/Linux-x86_64.tcl
 ```
