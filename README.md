@@ -10,3 +10,6 @@ libunwind: ./configure --prefix /home/hpjeon/hw/libunwind
 mpiP: ./configure --prefix=/home/hpjeon/hw/mpiP --with-cc=mpicc --with-f77=mpifort
  CFLAGS=-I/home/hpjeon/hw/libunwind/include LDFLAGS=-L/home/hpjeon/hw/libunwind/
 lib --enable-collective-report-default
+
+## References
+- CUDA: https://people.maths.ox.ac.uk/gilesm/cuda/lecs/lecs.pdf
