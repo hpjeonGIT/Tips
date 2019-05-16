@@ -112,8 +112,6 @@ mogrify -resize 50% -path . -format png /work/jeonb/*.bmp
 # ansys150 -g yes
 #
  
-# e a SA
-# jeonb aisa pal #
 #
 # gnuplot
 # range of data file
@@ -225,10 +223,10 @@ ffmpeg -r 3 -b 1800   -i tail_parab%04d.jpg  -vcodec msmpeg4v3 aaa.avi
 # pbs node check 
 # pbsnodes -l
 # qstat -s => verbose qstat
+# qstat -n1 => shows which nodes are used
+# qstat -n1 -t => shows which nodes are used including job array
 # qdel -W force id => brute force delete
 # qalter xxxx -l walltime=10:00:00 -> change wall time
-# win Feb 2015 Shiawase7!
-# gi t pasu wo do jeonb_git!
 
 # gitlab command
 # git add *.f90; git commit -m "comment on this "; git push
