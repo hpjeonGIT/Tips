@@ -7,7 +7,7 @@ git clone https://github.com/OpenFOAM/OpenFOAM-dev.git; git checkout 1ff57870007
 - Install mpfr: `./configure --prefix=/share/libs/mpfr/402_gcc51 --with-gmp=/share/libs/gmp/612_gcc51; make -j 32; make all; make install`
 - Install scotch: `cd src; ln -s Make.inc/Makefile.inc.x86-64_pc_linux2 Makefile.inc; # add -fPIC in the CFLAGS ; make -j 32 scotch; export C_INCLUDE_PATH+=:/share/mpi/ompi/401_gcc51/include ; make -j32 ptscotch ; make prefix=/usr/nic/libs/scotch/607_gcc51 install`
 - Install CGAL: `mkdir build; cd buld; ccmake ..; # configure using gmp/mpfr; make -j 32; make install`
-
+- For cgal and mpfr, make a soft link of lib or lib64
 # setup compiler and mpi environment as necessary
 ```
 export LD_LIBRARY_PATH+=:/usr/local/gmp/612_gcc51/lib:/usr/local/mpfr/315_gcc51/lib:/usr/local/scotch/603_intel15/lib:/usr/local/cgal/47_gcc51/lib
