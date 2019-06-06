@@ -67,3 +67,22 @@ decomposePar 2>&1 | tee log. decomposePar
 mpirun -np 4 simpleFoam -parallel 2>&1 | tee log.simpleFoam
 ```
 
+### installing 4.1 using intel mpi- each version - 3 or 4 or 5 have different source packaging and thirdparty folders
+- New cgal (4.14) doesn't work. Use cgal 4.8
+- mpfr/gmp may have lib or lib64. Adjust etc/config.sh/settings accordingly
+export LD_LIBRARY_PATH+=:/share/libs/gmp/612_gcc51/lib:/usr/nic/libs/mpfr/402_gcc51/lib:/share/libs/scotch/607_gcc51/lib:/share/libs/cgal/48_gcc51/lib64
+export PATH+=:/share/libs/scotch/607_gcc51/bin:/share/libs/cgal/48_gcc51/bin
+export SCOTCH_ROOT=/share/libs/scotch/607_gcc51
+export SCOTCH_LIB_DIR=/share/libs/scotch/607_gcc51/lib
+export CGAL_LIB_DIR=/ushare/libs/cgal/48_gcc51/lib
+export  MPI_ROOT=/usr/nic/compiler/intel/18.0/impi/2018.0.128
+export MPI_ARCH_FLAGS="-DMPICH_SKIP_MPICXX "
+export MPI_ARCH_INC="-isystem $MPI_ROOT/include64" 
+export MPI_ARCH_LIBS="-L$MPI_ROOT/lib64" 
+export C_INCLUDE_PATH+=:/share/libs/mpfr/402_gcc51/include/
+export MPFR_ARCH_PATH=/share/libs/mpfr/402_gcc51
+export GMP_ARCH_PATH=/share/libs/gmp/612_gcc51
+- prepare wmake/rules/General/mplibINTELMPI
+- Edit wmake/rules/linux64Icc
+- configure etc/bashrc as Icc, INTELMPI
+- `source etc/bashrc; ./Allmake -j 32`
