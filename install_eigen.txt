@@ -47,3 +47,4 @@ make install INSTALL=/usr/nic/libs/SuiteSparse/5.4.0_intel18 CC=icc FC=ifort
 # using GCC
 - Requires gcc > 4.9
 - May use MKL library - can be downloaded as free
+- CC=/share/apps/gcc/9.1/bin/gcc; FC=/share/apps/gcc/9.1/bin/gfortran; CXX=/share/apps/gcc/9.1/bin/g++; make config; make -j 20; make install INSTALL=/share/apps/SS/5.4_gcc91
