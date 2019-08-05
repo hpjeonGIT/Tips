@@ -43,3 +43,7 @@ export CC=icc; export FC=ifort; export F77=ifort; export CMAKE_CXX_COMPILER=icpc
 make config
 make
 make install INSTALL=/usr/nic/libs/SuiteSparse/5.4.0_intel18 CC=icc FC=ifort
+
+# using GCC
+- Requires gcc > 4.9
+- May use MKL library - can be downloaded as free
