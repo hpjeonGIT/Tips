@@ -19,3 +19,40 @@ export LD_LIBRARY_PATH+=:/opt/libs/tcl/8.6.8/lib:/opt/libs/tk/8.6.8/lib # if thi
 ./configure --prefix=/opt/apps/python_custorm/3.6.3 --enable-shared --with-ensurepip=install --with-tcltk-includes="-I/opt/libs/tcl/8.6.8/include -I/opt/libs/tk/8.6.8/include" --with-tcltk-libs="-L/opt/libs/tcl/8.6.8/lib -ltcl8.6 -L/opt/libs/tk/8.6.8/lib -ltk8.6“ CPPFLAGS="-I/opt/apps/bzip2/1.0.6/include" LDFLAGS="-L/opt/apps/bzip2/1.0.6/lib"  # => if quotation in CPPFLAGS and LDFLAGS are not given, bzip2 will not be built
 make –j 20;  # check if there is any module failed to build
 make install
+
+# the order of packges to install jupyter notebook
+traitlets==4.3.2
+tornado-6.0.3.tar.gz
+jupyter_core-4.5.0-py2.py3-none-any.whl
+jupyter_client-5.3.1-py2.py3-none-any.whl
+pyzmq-18.1.0-cp36-cp36m-manylinux1_x86_64.whl
+pickleshare-0.7.5-py2.py3-none-any.whl
+wcwidth-0.1.7.tar.gz
+prompt_toolkit-2.0.9-py3-none-any.whl
+parso-0.5.1.tar.gz
+jedi-0.15.1.tar.gz
+ptyprocess-0.6.0-py2.py3-none-any.whl
+pexpect-4.7.0.tar.gz
+Pygments-2.4.2.tar.gz
+backcall-0.1.0.tar.gz
+ipython-7.7.0-py3-none-any.whl
+ipykernel-5.1.1-py3-none-any.whl
+ipython_genutils-0.2.0-py2.py3-none-any.whl
+pycosat-0.6.3.zip
+jupyter_console-6.0.0-py2.py3-none-any.whl
+terminado-0.8.2-py2.py3-none-any.whl
+prometheus_client-0.7.1.tar.gz
+attrs-19.1.0-py2.py3-none-any.whl
+pyrsistent-0.15.4.tar.gz
+jsonschema-3.0.2-py2.py3-none-any.whl
+pandocfilters-1.4.2.tar.gz
+testpath-0.4.2-py2.py3-none-any.whl
+defusedxml-0.6.0-py2.py3-none-any.whl
+entrypoints-0.3-py2.py3-none-any.whl
+nbformat-4.4.0-py2.py3-none-any.whl
+mistune-0.8.4-py2.py3-none-any.whl
+webencodings-0.5.1-py2.py3-none-any.whl
+bleach-3.1.0-py2.py3-none-any.whl
+nbconvert-5.6.0-py2.py3-none-any.whl
+Send2Trash-1.5.0-py3-none-any.whl
+notebook-6.0.0-py3-none-any.whl
