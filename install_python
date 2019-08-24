@@ -56,3 +56,8 @@ bleach-3.1.0-py2.py3-none-any.whl
 nbconvert-5.6.0-py2.py3-none-any.whl
 Send2Trash-1.5.0-py3-none-any.whl
 notebook-6.0.0-py3-none-any.whl
+
+# finding dependency from each wheel
+- copy wheel file like aaa.zip
+- unzip aaa.zip
+- From packagename.dist-info/METADATA, can find the list of dependent packages
