@@ -1,4 +1,8 @@
 # For RHEL or CENTOS
 - /etc/sysconfig/network-scripts/ifcfg-**
-- May need quote "" for RHS
-- `systemctl restart network; systemctl status network`
+~~- May need quote "" for RHS~~
+- Find MAC address using `ip addr`
+- Enter `HWADDR=MAC address` in ifcfg-** file
+- `NETWORKING=yes` and `HOSTNAME=abc.def.local` into /etc/sysconfig/network
+- `systemctl disable NetworkManager; reboot`
+~~- `systemctl restart network; systemctl status network~~
