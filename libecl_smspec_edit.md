@@ -1,6 +1,6 @@
 ## How to edit smspec/unsmry files
 - They are Fortran binaries made by Schlumberger Eclipse
-- libecl, which is third party developer, shared source code for the access to those binaries
+- libecl is shared on github (developers are not from Schlumberger)
   - https://github.com/equinor/libecl
   - Install steps
     - Unzip
