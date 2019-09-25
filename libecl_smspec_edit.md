@@ -9,7 +9,7 @@
     - `ccmake ..`
     - Enable Python binding (supports 2.7 only at 2019)
     - Enable BUILD_APPLICATIONS=ON
-    - 'make -j 10`
+    - `make -j 10`
     - `make install`
   - In the intall location, bin/convert.x is found
   - `convert.x a.smspec` yields a.fsmspec, which is ASCII
