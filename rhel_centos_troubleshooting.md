@@ -39,3 +39,4 @@
   - Or fix using https://github.com/TurboVNC/turbovnc/issues/47
 - `/opt/VirtualGL/bin/vglrun glxgears`
   - When `Invalid MIT-MAGIC-COOKIE-1 key [VGL] ERROR: Could not open display :0` is shown, `unset XDG_VTNR`
+- If refresh is slow or screen is laggy, adjust Enconding option through Options -> Encoding
