@@ -19,6 +19,17 @@ lib --enable-collective-report-default
 ```
 for i in `curl -s https://api.github.com/users/hpjeonGIT/repos?per_page=1000 |grep git_url |awk '{print $2}'| sed 's/"\(.*\)",/\1/'`; do  git clone $i;  done
 ```
+## Using https for git
+- When ssh key authentication fails
+- One time activity
+ - Make a dummy project
+ - cd <some folder>
+ - git pull https://github.com/.../myproject.git
+ - This download all the git setup as well
+- Backup activity
+ - cd <some folder>
+ - git add *; git commit -m "my commit"
+ - git push https://github.com/.../myproject.git
 
 ## pdsh command
 - shell command for multiple nodes
