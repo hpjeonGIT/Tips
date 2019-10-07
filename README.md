@@ -23,11 +23,11 @@ for i in `curl -s https://api.github.com/users/hpjeonGIT/repos?per_page=1000 |gr
 - When ssh key authentication fails
 - One time activity
  - Make a dummy project
- - cd <some folder>
+ - cd some_folder
  - git pull https://github.com/.../myproject.git
  - This download all the git setup as well
 - Backup activity
- - cd <some folder>
+ - cd some_folder
  - git add *; git commit -m "my commit"
  - git push https://github.com/.../myproject.git
 
