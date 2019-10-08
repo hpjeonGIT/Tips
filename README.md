@@ -29,7 +29,8 @@ for i in `curl -s https://api.github.com/users/hpjeonGIT/repos?per_page=1000 |gr
 - Backup activity
  - cd some_folder
  - git add *; git commit -m "my commit"
- - git push https://github.com/.../myproject.git
+ - git push --set-upstream https://github.com/.../myproject.git master
+ - When total file size > 1MB, gitlab may not upload. Check configuration
 
 ## pdsh command
 - shell command for multiple nodes
