@@ -25,3 +25,7 @@
 - Using anchor
   - In a page to be referred, add anchor as :  `<a name="paraview">ParaView</a>`
   - In a page to implant a link, add the link as : `[paraview](../../02.Mysw/default.md#paraview)`
+
+- default webpage
+  - When ip_address:port# yields 404 woops message
+  - admin -> Configuration -> Content -> Redirect default route -> Yes
