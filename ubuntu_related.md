@@ -12,6 +12,7 @@ options nouveau modeset=0
   - sudo update-initramfs -u; reboot
   - sudo systemctl stop lightdm
   - sudo bash NVIDIA-Linux-x86_64-430.50.run --dkms -s --no-opengl-files ; reboot
+  - sudo apt  install nvidia-prime mesa-utils ; sudo prime-select  nvidia
 
 # proprietary driver
 - bash nvidia-**.sh
