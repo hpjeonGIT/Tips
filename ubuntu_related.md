@@ -4,6 +4,14 @@
 - Reboot
 - Install drivers
 - Ref: https://gist.github.com/wangruohui/df039f0dc434d6486f5d4d098aa52d07
+  - /etc/modprobe.d/blacklist-nouveau.conf 
+```  
+blacklist nouveau
+options nouveau modeset=0
+```
+  - sudo update-initramfs -u; reboot
+  - sudo systemctl stop lightdm
+  - sudo bash NVIDIA-Linux-x86_64-430.50.run --dkms -s --no-opengl-files ; reboot
 
 # proprietary driver
 - bash nvidia-**.sh
