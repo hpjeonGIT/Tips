@@ -40,3 +40,27 @@
 - `/opt/VirtualGL/bin/vglrun glxgears`
   - When `Invalid MIT-MAGIC-COOKIE-1 key [VGL] ERROR: Could not open display :0` is shown, `unset XDG_VTNR`
 - If refresh is slow or screen is laggy, adjust Enconding option through Options -> Encoding
+
+## environmental module
+- Install: yum install environment-modules
+- Sample module file
+```
+##
+proc ModulesHelp { } {
+        puts stderr "\tProvides antlr"
+        }
+module-whatis "-------------------------------"
+module-whatis "(Name___________) antlr"
+module-whatis "(Version________) 4.7.1"
+module-whatis "(Dependencies___) "
+module-whatis "-------------------------------"
+module-whatis ""
+# Local TCL 
+set     topdir  /opt/antlr
+setenv           PARAVIEW_HOME  $topdir
+prepend-path     PATH           $topdir/bin
+prepend-path     LD_LIBRARY_PATH $topdir/lib
+prepend-path     CLASSPATH     $topdir/antlr-4.7.1-complete.jar
+set-alias  antlr4 {java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool}
+```
+- export MODULEPATH=/opt/modulefiles:$MODULEPATH
