@@ -61,6 +61,9 @@ setenv           PARAVIEW_HOME  $topdir
 prepend-path     PATH           $topdir/bin
 prepend-path     LD_LIBRARY_PATH $topdir/lib
 prepend-path     CLASSPATH     $topdir/antlr-4.7.1-complete.jar
-set-alias  antlr4 {java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool}
+set-alias "ll" "ls -l"
+set-alias  antlr4 {java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool $1}
 ```
+  - Regular alias works using double-quotes
+  - When using system variable, regular alias will not work. Using curly braces {} and define as a function. For the input argument, use $1 to parse
 - export MODULEPATH=/opt/modulefiles:$MODULEPATH
