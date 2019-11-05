@@ -3,7 +3,8 @@
 export PKG_CONFIG_PATH=/opt/libdrm/2.4.92/lib/pkgconfig
 
 # Install llvm. Unpack source
-mkdir build; cd build; ccmake ..;  # make sure BUILD_SHARED_LIBS=ON and  -DLLVM_ENABLE_PROJECTS=clang 
+- download clang source and upack at tools/clang/
+mkdir build; cd build; ccmake ..;  # make sure BUILD_SHARED_LIBS=ON and  ~~-DLLVM_ENABLE_PROJECTS=clang ~~
 make –j 32; make install; 
 ## note: Gcc/7.3.0 failed to compile. Used 4.8
 
