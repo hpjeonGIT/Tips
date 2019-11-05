@@ -5,4 +5,5 @@
 - export FFTW_HOME=...
 - qmake-qt5 engauge.pro CONFIG+=log4cpp_null
   - Default qmake in RHEL7 is qt3.3
-- make  
+- make -j 10
+- ./bin/engauge
