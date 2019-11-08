@@ -5,6 +5,7 @@
   - Flang may need gcc > 7.0
 - mkdir build; cd build; ccmake ..;
   - BUILD_SHARED_LIBS=ON
+  - LLVM_TOOL_OPENMP_BUILD:BOOL=ON
   - FLANG_LIBOMP               	llvm-release_90/tools/flang/runtime/flangrti
   - LIBPGMATH                   llvm-release_90/tools/flan/runtime/flangrti
 - make # make -j 10 didn't work at 2019 version of flang
