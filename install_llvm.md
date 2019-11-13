@@ -8,6 +8,8 @@
   - LLVM_EXTERNAL_OPENMP_SOURCE_DIR=....
   - SHARED_LIBS ON
 - When omp is coupled, clang -fopenmp must be able to compile without header/lib locations
+- `clang -v` will show the gcc-toolchain as the system default. To couple with specific gcc, use `clang --gcc-toolchain=/opt/gcc/5.3 -v`
+
 
 ## FLang  
   
