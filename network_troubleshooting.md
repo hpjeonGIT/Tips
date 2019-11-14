@@ -11,3 +11,4 @@
 - `ifdown port0`
 - `ifup port1`
 - Adjust /etc/sysconfig/network-scripts/ifcfg-port* to BOOTON port
+- Run `ip route` and check the configuration
