@@ -12,3 +12,7 @@
 - `ifup port1`
 - Adjust /etc/sysconfig/network-scripts/ifcfg-port* to BOOTON port
 - Run `ip route` and check the configuration
+- `traceroute 8.8.8.8`
+- `ip neighbor`
+  - STALE seems OK
+- `ip addr flush portname` to clear the port - this may help
