@@ -30,5 +30,5 @@ TBB_LIBRARY-ADVANCED:INTERNAL=1
 TBB_LIBRARY-MODIFIED:INTERNAL=ON
 ```
 - Even though pre-built library is for gcc4.7, it works with gcc/5.3 as well
-- srun -N1 make -j 16
+- make -j 10
 - make install
