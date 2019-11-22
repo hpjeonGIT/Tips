@@ -13,6 +13,10 @@
 - Adjust /etc/sysconfig/network-scripts/ifcfg-port* to BOOTON port
 - Run `ip route` and check the configuration
 - `traceroute 8.8.8.8`
+- `tracepath 8.8.8.8`
 - `ip neighbor`
   - STALE seems OK
 - `ip addr flush portname` to clear the port - this may help
+- `netstat -rn` to see gateway
+- `nmcli -f ip4 device show interface-name` 
+- `dhclient interface_name` may refresh dhcp client?
