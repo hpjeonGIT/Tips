@@ -5,6 +5,7 @@
 - configure LD_LIBRARY_PATH with mkl or netlib lapack
 - ccmake ..
   - configure CMAKE_INSTALL_PREFIX
+  - disable gsl
   - When lapack libraries are detected, umfpack and lapack would be ON
 - make -j 22; make install
 
