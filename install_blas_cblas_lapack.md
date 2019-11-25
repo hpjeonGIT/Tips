@@ -19,3 +19,10 @@
 ## or use cmake 
 - mkdir build ; cd build ; ccmake .. # enable shared library
 - make -j 32; make install
+
+# scalapack
+- Requires blas/lapack. use netlib as shown above
+- mkdir build; cd build; ccmake ..
+- Enable shared library (static will not be made)
+- Or enable static library then *.so is not made
+- make -j 20
