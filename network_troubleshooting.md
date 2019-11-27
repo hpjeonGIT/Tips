@@ -20,3 +20,4 @@
 - `netstat -rn` to see gateway
 - `nmcli -f ip4 device show interface-name` 
 - `dhclient interface_name` may refresh dhcp client?
+- If 802.1x security is applied in the network port, enable 802.1x secruity from Network Manager
