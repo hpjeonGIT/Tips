@@ -1,3 +1,4 @@
+For fortran support, may use --enable-mpi-fortran=all   
 ## download source
 - wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.0.tar.gz
 
