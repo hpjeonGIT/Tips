@@ -1,5 +1,8 @@
 # Tips
 
+- In open source configure/make, instead of $INCLUDE or $C_INCLUDE_PATH, use $CPATH
+ - Ex: export CPATH+=:/usr/local/mpich/3.3.1_intel18/include
+
 ### multi_block.xmf
 ... An example of distributed parallel visualization.
 ... Among 200x3 position data, 100x3 and 100x3 are splitted and each of two processors in paraviewl will be responsible for each block.
