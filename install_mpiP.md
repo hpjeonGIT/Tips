@@ -13,7 +13,7 @@ CFLAGS=-I/opt/libunwind/1.3.1_gcc53/include LDFLAGS=-L/opt/libunwind/1.3.1_gcc53
 - Then run cmake or ccmake
 
 ## When run
-- export LD_LIBRARY_PATH+=:/opt/libunwind/1.3.1_gcc53/lib
+- export LD_LIBRARY_PATH+=:/opt/mpiP/3.4.1_gcc53/lib:/opt/libunwind/1.3.1_gcc53/lib
 - mpirun -n 10 ./a.out # in the end, mpiP will show that which file was produced and data are stored
 
 
