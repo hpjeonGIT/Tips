@@ -9,6 +9,8 @@
   - SHARED_LIBS ON
 - When omp is coupled, clang -fopenmp must be able to compile without header/lib locations
 - `clang -v` will show the gcc-toolchain as the system default. To couple with specific gcc, use `clang --gcc-toolchain=/opt/gcc/5.3 -v`
+- In order to use `#include <experimental/filesystem>`, use command `clang++ -std=c++14 fs_wrapper.cpp --gcc-toolchain=/opt/gcc/7.4 -lstdc++fs`
+	- `-std=c++17` may not support `<filesystem>` yet. May work with `<experimental/filesystem>`
 
 
 ## FLang  
