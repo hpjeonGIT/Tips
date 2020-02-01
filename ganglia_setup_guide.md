@@ -136,6 +136,7 @@ YES
 YES
 
 ```
+  - Questions/Answers might be different per OS/HW/lm_sensors version. Check manually and prepare answers in the correct sequence
   - Then `pds -w cluster[1-100] 'sensors-detect < /nfs/stdin.txt'`. Note that quotation '' is required for the local command
   - Now `sensors` yields cpu temperature. Combining with `grep`, average or detailed temperature value can be measured
 - Customizing example.py
