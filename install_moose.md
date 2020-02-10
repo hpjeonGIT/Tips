@@ -10,7 +10,7 @@
 # PETSC install
 - Download petsc source. Also download external packages from http://ftp.mcs.anl.gov/pub/petsc/externalpackages/ or newer from their own sites
 - The newest package might not be installed. Do some trials and errors
-``
+```
 ./configure \
  COPTFLAGS="$OPTFLAGS" CXXOPTFLAGS="$OPTFLAGS" FOPTFLAGS="$OPTFLAGS" CUDAOPTFLAGS="$OPTFLAGS" \
 --prefix=/opt/petsc/3.12.2_4moose \
@@ -43,14 +43,14 @@ PETSC_DIR=`pwd` PETSC_ARCH=linux-opt
 - make PETSC_DIR=/opt/petsc/petsc-3.12.2 PETSC_ARCH=linux-opt install 
 - make PETSC_DIR=/opt/petsc/petsc-3.12.2 PETSC_ARCH=linux-opt test # testing with MPI
 ```
-Running test examples to verify correct installation
-Using PETSC_DIR=/share/apps/7/petsc/petsc-3.12.2 and PETSC_ARCH=linux-opt
-C/C++ example src/snes/examples/tutorials/ex19 run successfully with 1 MPI process
-C/C++ example src/snes/examples/tutorials/ex19 run successfully with 2 MPI processes
-C/C++ example src/snes/examples/tutorials/ex19 run successfully with hypre
-C/C++ example src/snes/examples/tutorials/ex19 run successfully with mumps
-C/C++ example src/snes/examples/tutorials/ex19 run successfully with superlu_dist
-Completed test examples
+Running test examples to verify correct installation  
+Using PETSC_DIR=/share/apps/7/petsc/petsc-3.12.2 and PETSC_ARCH=linux-opt  
+C/C++ example src/snes/examples/tutorials/ex19 run successfully with 1 MPI process  
+C/C++ example src/snes/examples/tutorials/ex19 run successfully with 2 MPI processes  
+C/C++ example src/snes/examples/tutorials/ex19 run successfully with hypre  
+C/C++ example src/snes/examples/tutorials/ex19 run successfully with mumps  
+C/C++ example src/snes/examples/tutorials/ex19 run successfully with superlu_dist  
+Completed test examples  
 ```
 
 # Installing moose
