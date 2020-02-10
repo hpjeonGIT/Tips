@@ -18,11 +18,11 @@ proc ModulesHelp { } {
 module-whatis   "Python/3.8.1"
 
 # for Tcl script use only
-setenv   PYTHON_HOME /home/hpjeon/sw_local/python/3.8.1
-set     topdir          $PYTHON_HOME
+set     topdir          /home/hpjeon/sw_local/python/3.8.1
 set     version         3.8.1
 set     sys             linux86_64
 
+setenv   PYTHON_HOME            $topdir
 prepend-path    PATH            $topdir/bin
 prepend-path    MANPATH         $topdir/man
 prepend-path    LD_LIBRARY_PATH $topdir/lib
