@@ -61,4 +61,15 @@ Completed test examples
   - If moose-master.zip is downloaded from github webpage, it will not contain 1) libmesh and 2) metaphysicL
   - Download each of them and upack libmesh at moose/libmesh. Unpack metaphysicL at moose/libmesh/contrib/metaphysicl
     - go to moose/libmesh/contrib/metaphysicl and run bootstrap script
+    - go to moose/libmesh/contrib/timpi and run bootstrap script
 - `cd moose; ./scripts/update_and_rebuild_libmesh.sh`
+   - This will very slow. Or hack the script and edit as make -j 10
+
+# Running tests
+- `mkdir ~/project ; cd ~project ; cp -r /opt/moose/moose-next moose`
+- `cd ~/projects/moose/test`
+- `make -j 10` # took several minutes
+- `make hit`
+- Edit ~/.config/matplotlib/matplotlibrc as "backend : TkAgg"
+- `./run_tests -j 10`
+    
