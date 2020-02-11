@@ -64,6 +64,13 @@ Completed test examples
     - go to moose/libmesh/contrib/timpi and run bootstrap script
 - `cd moose; ./scripts/update_and_rebuild_libmesh.sh`
    - This will very slow. Or hack the script and edit as make -j 10
+- For peacock, download vtk from pypi and pip install or conda install
+   - For rhel7, opengl version is too low and will not work.
+   - Compile vtk 7.1.1 from source using VTK_RENDERING_BACKEND=OpenGL (default is OpenGL2). Wrap with available python
+   - After make;make install, copy vtk/lib/python3.x/site-packages/vtk folder into $PYTHON_HOME/lib/python3.x/site-packages
+   - when *libhdf.so.10X is missing error* is found, re-install conda
+   - check if `import vtk` works fromk python3 environment
+   - Go to moose/test and re-run `make hit` and then run `python3 ../python/peacock/peacock`
 
 # Running tests
 - `mkdir ~/project ; cd ~project ; cp -r /opt/moose/moose-next moose`
