@@ -4,8 +4,8 @@
 # new ncurl might be necessary
 
 # when libncurses is not coupled, ccmake will not be produced.
-- Checking for curses support failed, use
-- `./bootstrap --prefix=/opt/cmake_3.14.6 --parallel=20 -- -DBUILD_CursesDialog=ON -DCURSES_LIBRARY=/opt/ncurses_6.2/lib/libncurses.so -DCURSES_INCLUDE_PATH=/opt/ncurses_6.2/include/ncurses`
+- If checking for curses support failed, use:
+ - `./bootstrap --prefix=/opt/cmake_3.14.6 --parallel=20 -- -DBUILD_CursesDialog=ON -DCURSES_LIBRARY=/opt/ncurses_6.2/lib/libncurses.so -DCURSES_INCLUDE_PATH=/opt/ncurses_6.2/include/ncurses`
 - `make -j 20; make install`
 
 
