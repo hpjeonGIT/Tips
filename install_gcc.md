@@ -16,3 +16,5 @@
 # trouble-shooting
 - When `configure: error: error verifying int64_t uses long long` message appears
   - The system doesn't have g++ compiler
+- When `configure: error: cannot compute suffix of object files: cannot compile' appers
+  - Update LD_LIBRARY_PATH with libs of mpfr, gmp, mpc
