@@ -1,10 +1,10 @@
-- Nagios is a cluster management tool like Ganglia
+## Nagios is a cluster management tool like Ganglia
   - However, Ganglia shows snapshots of the system while it lacks alerting mechanism
   - Nagios actually doesn't show much of snapshots
   - Sensor data are recognized as Exit codes such as 0: OK, 1: Warning, 2: Critical, 3: Unknown
   - It may spam admins with notice/warnings when criteria are met
 
-! Nagios server on RHEL7/CENTOS7
+## Nagios server on RHEL7/CENTOS7
 - Ref: https://www.itzgeek.com/how-tos/linux/centos-how-tos/monitor-centos-7-rhel-7-using-nagios-4-0-7.html
 - Pre requisite
     - Most of prerequisites are bundled in the developer version of RHEL7. Extra packages need to be installed
@@ -111,7 +111,7 @@ define service{
     - Verification: `/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg`
     - `systemctl restart nagios`
 
-!! Nagios for RHEL7/CENTOS7 remote nodes
+## Nagios for RHEL7/CENTOS7 remote nodes
 - Ref: https://kifarunix.com/how-to-install-nagios-plugins-and-nrpe-agents-on-centos-7-rhel-7-fedora-29/
 - Ref: https://www.itzgeek.com/how-tos/linux/centos-how-tos/monitor-remote-linux-system-with-nagios-3.html
 - `yum install -y nrpe --enablerepo=epel`
@@ -135,7 +135,7 @@ command[check_mem]=bash /usr/lib64/nagios/plugins/check_mem.sh -w 80 -c 90
 - For the Nagios server
     - Edit /usr/local/nagios/etc/servers/client.mynodes.local.cfg for the new host name and the update of hostgroup
 
-# CPU Temperature using lm_sensors
+## CPU Temperature using lm_sensors
 - Ref: https://www.unixmen.com/write-nagios-plugin-using-bash-script/
 - Find `https://github.com/jackbenny/check_temp/check_temp.sh`
 - Copy to `/usr/lib64/nagios/plugins/`
