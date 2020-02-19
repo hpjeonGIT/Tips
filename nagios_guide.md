@@ -128,7 +128,6 @@ command[check_temp]=bash /usr/lib64/nagios/plugins/check_temp.sh -w 82 -c 92
 command[check_mem]=bash /usr/lib64/nagios/plugins/check_mem.sh -w 80 -c 90
 ```
 - Edit `/etc/nagios/nrpe.cfg` for `allowed_hosts=server_ip_address`
-    - Or just copy `/etc/nagios/nrpe.cfg` of brcwks1
 - `systemctl start nrpe`
 - `systemctl enable nrpe`
 - `firewall-cmd --add-port=5666/tcp --permanent; firewall-cmd --reload`
