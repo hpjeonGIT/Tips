@@ -147,3 +147,19 @@ command[check_mem]=bash /usr/lib64/nagios/plugins/check_mem.sh -w 80 -c 90
   - `bash ./check_temp.sh -w 92 -c 100`
     - Warning at 92 degree C and critical at 100 degree C
 
+## memcheck using bash
+- https://github.com/ckujau/nagios-plugins/edit/master/check_mem.sh
+- RHEL7
+  - Edit the code to use MemAvailable only
+```
+memAvail_kb=$(awk '/^MemAvailable:/ {print $2}' /proc/meminfo)
+memUsed_kb=$(( memTotal_kb - memAvail_kb ))
+```
+- RHEL6
+  - MemAvailable is not availalbe in /proc/meminfo
+  - Let's use MemFree
+```  
+memFree_kb=$(awk '/^MemFree:/ {print $2}' /proc/meminfo)
+memUsed_kb=$((  memTotal_kb - memFree_kb ))
+```
+
