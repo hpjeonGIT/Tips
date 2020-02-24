@@ -1,0 +1,8 @@
+- When link error comes: `collect2: error: ld returned 1 exit status`
+  - run compile with verbose such as `make VERBOSE=1`
+  - Find the compiling command actually done
+  - Go to the folder where the compile crashed
+  - Try the same command from CLI
+  - When the same error messsage is found, begin trouble-shooting
+  - Mostly adding necessary libraries in the compiling command will solve the issue
+  - Or update LD_LIBRARY_PATH
