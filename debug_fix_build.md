@@ -6,3 +6,6 @@
   - When the same error messsage is found, begin trouble-shooting
   - Mostly adding necessary libraries in the compiling command will solve the issue
   - Or update LD_LIBRARY_PATH
+- When  `error: invalid new-expression of abstract class type 'XX'`
+  - Ref: https://www.codeproject.com/Questions/1004768/Invalid-new-expression-of-abstract-class-type
+  - If a class inherits from a parent class, some of virtual functions are not explicitly defined in the new class
