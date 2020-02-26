@@ -163,3 +163,27 @@ memFree_kb=$(awk '/^MemFree:/ {print $2}' /proc/meminfo)
 memUsed_kb=$((  memTotal_kb - memFree_kb ))
 ```
 
+## Alerting
+- When using SMTP server
+  - Ref: SMTP setup : https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c02905871
+  - sendmail and postfix uses the same port (25). One of them must be stopped to use the other
+  - sudo service sendmail stop; sudo service postfix restart # or vice-versa. RHEL6
+  - sudo systemctl stop sendmail ; sudo systemctl start postfix # or vice-versa. RHEL7
+  - Check /var/log/maillog after testing sendmail or mail
+  - When using sendmail
+    - Adjust /etc/mail.rc as set smtp=ip_address at /etc/mail.rc
+- In Nagios
+  - Email address at /usr/local/nagios/etc/objects/contacts.cfg
+  - Email command at /usr/local/nagios/etc/objects/commands.cfg
+  - Main nagios configuration at /usr/local/nagios/etc/nagios.cfg
+    - By default, it loads /usr/loca/nagios/etc/objects/commands.cfg, contacts.cfg, timeperiods.cfg, templates.cfg
+  - Adjust /usr/local/nagios/etc/objects/templates.cfg for conditions or alerting level
+    - w: warning
+    - u: unknown
+    - c: critical
+    - r: recovery
+    - f: flapping
+    - n: none - disable alert
+    - d: down
+    - u: unreachable
+    - s: send notification
