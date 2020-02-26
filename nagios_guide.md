@@ -187,3 +187,6 @@ memUsed_kb=$((  memTotal_kb - memFree_kb ))
     - d: down
     - u: unreachable
     - s: send notification
+    - notification_interval 120
+      - Re-notify the same service problem every 120 min or 2hours
+
