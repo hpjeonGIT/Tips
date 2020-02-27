@@ -62,8 +62,14 @@ prepend-path     PATH           $topdir/bin
 prepend-path     LD_LIBRARY_PATH $topdir/lib
 prepend-path     CLASSPATH     $topdir/antlr-4.7.1-complete.jar
 set-alias "ll" "ls -l"
-set-alias  antlr4 {java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool $1}
+#set-alias  antlr4 {java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool $1}
+set-alias  antlr4 "java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool"
 ```
   - Regular alias works using double-quotes
   - When using system variable, regular alias will not work. Using curly braces {} and define as a function. For the input argument, use $1 to parse
 - export MODULEPATH=/opt/modulefiles:$MODULEPATH
+
+## yum cache location
+- Ref: https://www.thegeekdiary.com/how-to-change-the-default-location-var-cache-yum-of-yum-cache/
+- If the partition of /var is too small (10GB might be recommended), yum cache may result in disk shortage
+- Edit `/etc/yum.conf` to assign a different location for cache files
