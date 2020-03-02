@@ -190,3 +190,42 @@ memUsed_kb=$((  memTotal_kb - memFree_kb ))
     - notification_interval 120
       - Re-notify the same service problem every 120 min or 2hours
 
+## slurm checking script
+```
+#!/bin/bash
+	STATE_OK=0
+	STATE_WARNING=1
+	STATE_CRITICAL=2
+	STATE_UNKNOWN=3
+hname=$HOSTNAME
+#echo ${hname}
+if [ ${hname} = headnodeXXXX ] ; then
+  stat=$(ps -ef |grep slurmctld |wc -l)
+  if [ $stat -gt 1 ] ; then
+    echo "SLURM STATUS - slurmctd found | slurmctd found"
+    exit $STATE_OK
+  else	
+    echo "SLURM STATUS - slurmctd not found | slurmctd not found"
+    exit $STATE_WARNING
+  fi
+else
+ stat=$(scontrol show node ${hname} |grep State)
+ C=${stat:9:1}
+ if [ $C = "D" ]; then
+   echo "SLURM STATUS - node down | node down"
+   exit $STATE_WARNING
+ elif [ $C = "A" ]; then
+   echo "SLURM STATUS - node allocated | node up"
+   exit $STATE_OK
+ elif [ $C = "I" ]; then
+   echo "SLURM STATUS - node idle | node up"
+   exit $STATE_OK
+ else 
+   echo "SLURM STATUS - node unknown | node ?"
+   exit $STATE_UNKNOWN
+ fi
+fi
+```
+- exit code is used to determine the status at Nagios
+- echo command is necessary to show 1) Status information and 2) Performance data. They are split using a pipe (|)
+- /etc/nagios/nrpe.cfg must be adjusted using `command[check_slurm]=bash /usr/lib64/nagios/plugins/check_slurm.sh`
