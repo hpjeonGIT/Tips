@@ -1,5 +1,25 @@
 ## Altair PBS
-
+- qsub -I -l walltime=1:0:0 -l select=1:ncpus=8
+- qsub myscript
+- qstat -u USERNAME
+- qdel 12345
+```
+#!/bin/bash
+#PBS -q workq
+#PBS -l select=2:ncpus=16:mpiprocs=8:ompthreads=2
+#PBS -l walltime=1:0:0
+#PBS -o log.out
+#PBS -e log.err
+#
+cat $PBS_NODEFILE
+nranks=$(wc -l < ${PBS_NODEFILE})
+#
+module load intel
+module load mpi/intel.4.2.0
+cd $PBS_O_WORKDIR
+#mpirun a.exe
+mpirun -n $nranks ./a.exe
+```    
 ## SLURM
 - srun : run commands in the computing node
     - `srun -N 1 ./a.out` # Run a.out using 1 node. When the a.out is completed, the prompt is returned
