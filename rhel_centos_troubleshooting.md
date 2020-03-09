@@ -73,3 +73,11 @@ set-alias  antlr4 "java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool"
 - Ref: https://www.thegeekdiary.com/how-to-change-the-default-location-var-cache-yum-of-yum-cache/
 - If the partition of /var is too small (10GB might be recommended), yum cache may result in disk shortage
 - Edit `/etc/yum.conf` to assign a different location for cache files
+
+## when NFS is not mounted
+- Check /lib/modules/__XX_kernel_number__/kernel/fs to see if nfs is enlisted
+- Check /proc/filesystems to see if nfs is enlisted
+- May need to restart nfslock : `service nfslock restart; service rpcbind restart`
+- May rerun netfs : `service netfs restart`
+- Check /proc/filesystems if nfs is loaded
+- May need reboot
