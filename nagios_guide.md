@@ -229,3 +229,44 @@ fi
 - exit code is used to determine the status at Nagios
 - echo command is necessary to show 1) Status information and 2) Performance data. They are split using a pipe (|)
 - /etc/nagios/nrpe.cfg must be adjusted using `command[check_slurm]=bash /usr/lib64/nagios/plugins/check_slurm.sh`
+
+## infiniband status checking script
+```
+#!/bin/bash
+STATE_OK=0
+STATE_WARNING=1
+STATE_CRITICAL=2
+STATE_UNKNOWN=3
+#
+stat1=$(ibstat mlx5_0 1 | grep State:)
+stat2=$(ibstat mlx5_0 1 | grep state:)
+txt1=${stat1:7:4}
+txt2=${stat2:16:6}
+#
+if    [[ $txt1 = "Acti" &&  $txt2 = "LinkUp" ]] ; then
+  echo "IB STATUS - Active | LinkUp"
+  exit $STATE_OK
+elif  [[ $txt1 = "Down" && $txt2 = "Disabl" ]] ; then
+  echo "IB STATUS - Down | Disabled "
+  exit $STATE_CRITICAL
+elif  [[ $txt1 = "Acti" || $txt2 = "LinkUp" ]] ; then
+  echo "IB STATUS - " $txt1 "|" $txt2
+  exit $STATE_CRITICAL
+else
+   echo "IB STATUS - "  $txt1 "|" $txt2
+   exit $STATE_UNKNOWN
+fi
+```
+- Edit /usr/local/nagios/etc/servers/client.XXXnodes.local.cfg of Nagios server
+```
+define service{
+use                     local-service
+hostgroup_name          mynodes
+service_description     IB status
+check_command           check_nrpe!check_ib
+}
+```
+- Edit /etc/nagios/nrpe.cfg of computing nodes: `command[check_ib]=bash /usr/lib64/nagios/plugins/check_ib.sh`
+- Copy check_ib.sh into /usr/lib64/nagios/plugins of all computing nodes
+- Start/restart nrpe daemon of computing nodes
+- Start/restart nagios daemon of the Nagios server
