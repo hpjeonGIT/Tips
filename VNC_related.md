@@ -8,3 +8,16 @@ WinTab library not available # might be ignored
 Buffer size expanded to 4352
 Registered connection with app
 ```
+## mobaXterm
+- VNC is allowed in the session menu
+- To use ssh tunneling, display number(:1) shouldn't use in the ip menu. Instead change the port number such as 5900+1 = 5901
+- Resolution is not changed dynamically as TurboVNC does. Adjust using -geometry when VNC is initiated or use xrandr command
+```
+   1920x1080     60.00*+
+   1680x1050     59.95  
+   1600x900      60.00  
+   1280x1024     75.02    60.02  
+   1440x900      59.89  
+   1280x800      59.81  
+```
+- Then choose like `xrandr -s "1920x1080_60"` or `xrandr -s "640x480_75"`
