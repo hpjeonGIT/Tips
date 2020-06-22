@@ -168,4 +168,7 @@ Alias /ganglia /usr/share/ganglia
 - Open web-browser and enter the address of the server such as: `http://server_name_or_ip_addr/ganglia`
 - Enter `adminganglia` and the password configured as above
 
-
+## Temperature measurement using ipmitool
+- Similar python configuration done for lm_sensors package
+- But /dev/ipmi0 might be owned as ganglia:ganglia -> is this safe enough?
+- `ipmitool sensor |grep Ambi` for ambient temperature
