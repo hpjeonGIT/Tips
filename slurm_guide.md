@@ -11,3 +11,8 @@
     - `sudo /opt/slurm/bin/scontrol update nodename=mynode113 state=resume`
   - Bring the working nodes into down
     - `sudo /opt/slurm/bin/scontrol update nodename=brcnode123 state=down`
+## when slurm job is frozen
+  - When CG is the job status
+    - Restart daemon in the head node
+    - Restart daemon in the computing node
+    - Remove the node from SLURM and mount again
