@@ -28,3 +28,11 @@ waiting for 1 task(s)    ................ { last:compnode10 }
 - CMU configuration: /opt/cmu/etc/cmuserver.conf
 - Ref: https://community.hpe.com/t5/Server-Clustering/NO-Netboot-reboot-not-working-CMU-7-2-ProLiant-SL4540-Gen8-RHES/td-p/6482202#.XkVtBOhKjuo
 - Log file of each node from CMU command: /opt/cmu/tmp/ # Find *.output files
+
+## when disk mout is not working
+- /etc/fstab is the configuration
+- sudo pdsh -w node# 'service netfs restart' # restarting nfs. Will not fix HW failure.
+- ssh into the node and run `ip a`. Check if ib card is detected.
+- ssh into the node and run ` hostname -l` to see if ib card is detected.
+- sudo pdsh -w node#  `ibhosts` to see if ib card is detected or working correctly.
+- If ib status is not correct, HW replacement might be necessary.
