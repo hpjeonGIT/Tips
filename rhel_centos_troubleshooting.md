@@ -81,3 +81,25 @@ set-alias  antlr4 "java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool"
 - May rerun netfs : `service netfs restart`
 - Check /proc/filesystems if nfs is loaded
 - May need reboot
+
+## RHEL8 with legacy driver
+- RHEL8 dropped the support of legacy RAID/SAS/SATA driver
+  - When install GUI comes, it may not detect any of local disk
+- Ref: https://access.redhat.com/discussions/3722151
+- May use legacy driver at https://elrepo.org/linux/dud/el8/x86_64/
+  - For Intel C600,	dd-isci-1.2.0-3.el8_X.elrepo.iso will work
+ - Steps of RHEL8/CENTOS8 install with legacy driver
+   - Prepare RHEL8/CENTOS8 install image as DVD or USB
+   - Prepare legacy driver as a USB (using dd command : 
+     - sudo fdisk -l # check which /dev/sd* is for the mounted USB
+     - sudo dd if=name-of.iso of=/dev/sdb
+   - Reboot the computer with install image as DVD or USB
+   - Insert dd image USB memory stick into the USB port
+     - If install USB and dd image USB are already in the USB port simultaneously when booted, booting sequence may not work due to confusion
+   - When dd image is made, it would have name of OEMDRV and kicstart will recognize the driver automatically
+   - If dd image is not found, add manually
+     -  When menu of Install Red Hat Enterprise Linux 8.2 / Test this media & install Red Hat Enterprise Linux ... appears, click tab key
+     - It will show actuall command of those menu. For the Install (without Test) menu, the command is `vmlinuz initrd=initrd.img inst.stage2=hd:LABEL-RHEL-8-2-0-BasedOS-x86_64 quiet`
+     - Adjust as `vmlinuz initrd=initrd.img inst.stage2=hd:LABEL-RHEL-8-2-0-BasedOS-x86_64 inst.dd=/dev/sda`
+       - Removing quite will make the installation verbose, yielding more messages of status. Can check if legacy driver works
+       - DD image may be mounted at /dev/sdb or /dev/sdb1. Confirmation is necessary
