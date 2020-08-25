@@ -25,6 +25,8 @@
   - cfns.gperf, cfns.h, except.c
 - https://gcc.gnu.org/git/?p=gcc.git&a=commit;h=16b277761b432510ad6dcf72d877ae72b5f0a4b7
   - Apply i386 for intel64 build
+- https://gcc.gnu.org/bugzilla/show_bug.cgi?id=81066
+- comment out ustat.h. See below.
 
 # 5.5 source compiling using 8.2
 - https://stackoverflow.com/questions/56096060/how-to-fix-the-gcc-compilation-error-sys-ustat-h-no-such-file-or-directory-i
