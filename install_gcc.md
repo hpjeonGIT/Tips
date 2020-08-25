@@ -18,3 +18,14 @@
   - The system doesn't have g++ compiler
 - When `configure: error: cannot compute suffix of object files: cannot compile' appers
   - Update LD_LIBRARY_PATH with libs of mpfr, gmp, mpc
+  
+# 5.3 source compiling using 8.2
+- Needs a few patchhttps://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=ec1cc0263f156f70693a62cf17b254a0029f4852
+- https://gcc.gnu.org/git/?p=gcc.git;a=commitdiff;h=ec1cc0263f156f70693a62cf17b254a0029f4852
+  - cfns.gperf, cfns.h, except.c
+- https://gcc.gnu.org/git/?p=gcc.git&a=commit;h=16b277761b432510ad6dcf72d877ae72b5f0a4b7
+  - Apply i386 for intel64 build
+
+# 5.5 source compiling using 8.2
+- https://stackoverflow.com/questions/56096060/how-to-fix-the-gcc-compilation-error-sys-ustat-h-no-such-file-or-directory-i
+  - Comment out ustat.h and ustat variable
