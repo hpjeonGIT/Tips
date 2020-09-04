@@ -18,3 +18,25 @@ options nouveau modeset=0
 - bash nvidia-**.sh
 - To remove, nvidia-installer --uninstall
 - May not be recommended to use in ubuntu
+
+
+# update of library for developers
+- sudo apt update
+- sudo apt install m4 autotools-dev automake libtool libtirpc-dev gettext make gcc gfortran environment-modules bison flex
+
+# VNC for ubuntu
+- tigervnc/tightvnc didn't work appropriately for Ubuntu20.04
+- Use TurboVNC. Download deb from sourceforge. Download virtualGL deb as well
+- GDB didn't work well. Let's use mate session
+- sudo apt install ubuntu-mat-desktop
+- Edit ~/.vnc/xstartup.turbovnc
+```
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+/usr/bin/mate-session
+```
+- /opt/TurboVNC/bin/vncserver
+- /opt/TurboVNC/bin/vncserver -list
+- /opt/TurboVNC/bin/vncserver -kill :1
+
