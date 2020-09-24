@@ -369,3 +369,11 @@ rpm -ql emacs-filesystem-24.3-19.el7_3.noarch # find the location
 2) alt+F7
 3) move the mouse then the window will be resized.
 
+
+# finding the list of symbols from library or object file
+nm abc.so |grep  _ZNSt6vectorIiSaIiEEC1Ev 
+- If U is found, only called.
+- If T is fouind, it is defined.
+
+# demangle symbols
+c++filt _ZNSt6vectorIiSaIiEEC1Ev
