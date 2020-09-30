@@ -21,3 +21,9 @@ Registered connection with app
    1280x800      59.81  
 ```
 - Then choose like `xrandr -s "1920x1080_60"` or `xrandr -s "640x480_75"`
+
+## Conflict with Anaconda
+- Ref: https://unix.stackexchange.com/questions/469909/vncviewer-errorcould-not-connect-to-session-bus-failed-to-connect-to-socket-tm
+- Error message: could not connect to session bus :failed to connect to socket/tmp/dbus-XXXXXXXX connection refused
+- Cause: anaconda runs dbus-daemon and this may conflict with VNC server
+- Solution: disable anaconda setup ($PATH) in the .bashrc and restart the terminal/vncserver command
