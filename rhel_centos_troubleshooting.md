@@ -82,6 +82,13 @@ set-alias  antlr4 "java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool"
 - Check /proc/filesystems if nfs is loaded
 - May need reboot
 
+## yum group install
+- Pre-selection from kicstart GUI menu
+  - If missed, can be done later in CLI using yum group install
+  - The names of list is found using `yum group list hidden`
+- Sample group install command
+  - `yum group install "Development Tools"`
+
 ## RHEL8 with legacy driver
 - RHEL8 dropped the support of legacy RAID/SAS/SATA driver
   - When install GUI comes, it may not detect any of local disk
