@@ -1,3 +1,5 @@
+#as of dec 2020 download llvm projec, not individual package
+
 ## Clang would be  built with LLVM, putting clang source at tools/clang of LLVM src tree
 - GCC> 7 is not supported for openmp
   - Let's us gcc 7.4
