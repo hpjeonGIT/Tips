@@ -16,3 +16,18 @@
     - Restart daemon in the head node
     - Restart daemon in the computing node
     - Remove the node from SLURM and mount again
+
+## when sacctmgr yields an error message of connection related
+```
+sacctmgr: error: slurm_persist_conn_open_without_init: failed to open persistent connection to localhost:6819: Connection refused
+sacctmgr: error: slurmdbd: Sending PersistInit msg: Connection refused
+sacctmgr: error: Problem talking to the database: Connection refused
+```
+- Start or restart slurmdbd
+  - For RHEL6, `service slurmdbd restart`
+
+## When orphaned or dangled jobs exist
+- scancel will not be able to remove them. Not found from squeue
+- Restart of slurmd will not resolve
+- `sacctmgr show RunawayJobs`
+  - Will ask fix or not. Enter `y` to fix and enter
