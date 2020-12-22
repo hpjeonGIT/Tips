@@ -1,4 +1,10 @@
-#as of dec 2020 download llvm projec, not individual package
+## Version 11.0
+- Not from https://releases.llvm.org/download.html but download from https://github.com/llvm/llvm-project, as the entire project
+- clang, flang, openmp are already enclosed
+- When running cmake or ccmake, configure LLVM_ENABLE_PROJECTS as clang;clang-tools-extra;compiler-rt;flang;openmp
+  - Full list is: clang;clang-tools-extra;compiler-rt;debuginfo-tests;libc;libclc;libcxx;libcxxabi;libunwind;lld;lldb;openmp;parallel-libs;polly;pstl
+- Enable SHARED_LIBS ON
+
 
 ## Clang would be  built with LLVM, putting clang source at tools/clang of LLVM src tree
 - GCC> 7 is not supported for openmp
