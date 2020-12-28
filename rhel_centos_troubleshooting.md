@@ -116,3 +116,8 @@ set-alias  antlr4 "java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool"
 - sudo reboot
 - If gui login menu doesn't come:
   - sudo systemctl set-default graphical.target ; sudo reboot
+
+## when firefox cannot open cross frame reference file in the local disk
+- open about:config
+- search origin
+- adjust unique_oaque_origin and strict_origin_policy as false
