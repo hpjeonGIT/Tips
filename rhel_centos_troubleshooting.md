@@ -110,3 +110,9 @@ set-alias  antlr4 "java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool"
      - Adjust as `vmlinuz initrd=initrd.img inst.stage2=hd:LABEL-RHEL-8-2-0-BasedOS-x86_64 inst.dd=/dev/sda`
        - Removing quite will make the installation verbose, yielding more messages of status. Can check if legacy driver works
        - DD image may be mounted at /dev/sdb or /dev/sdb1. Confirmation is necessary
+
+## When ctrl alt f123 doesn't wrk
+- sudo systemctl set-default mult-user.target
+- sudo reboot
+- If gui login menu doesn't come:
+  - sudo systemctl set-default graphical.target ; sudo reboot
