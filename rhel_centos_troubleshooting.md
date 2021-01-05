@@ -121,3 +121,8 @@ set-alias  antlr4 "java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool"
 - open about:config
 - search origin
 - adjust unique_oaque_origin and strict_origin_policy as false
+
+## when gui is frozen
+- from tty2
+- init 3
+- init 5
