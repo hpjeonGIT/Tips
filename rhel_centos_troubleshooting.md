@@ -29,6 +29,12 @@
 - `usermode -a -G vlgusers <username>` # root, all local users, domain users
 - `reboot`
 
+## When java application crashes with Canvas3D error message on VNC session
+- Ex) Tempestview on VNC session from RHEL6
+- Check glxgear opens. If it complains xlib error with display :X.0, then the VNC session may not be able to shoot X-graphics
+- To resolve, virtualGL is necessary such as `vglrun java_application` on VNC session
+- User account must be added into vglusers group in /etc/groups. If just added, logout/re-login is necessary. For VNC session, terminate and restart
+
 ## Using TurboVNC from windows
 - Using putty, login to the server
 - `vncserver -list`
