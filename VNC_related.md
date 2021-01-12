@@ -32,3 +32,9 @@ Registered connection with app
 - Error message: could not connect to session bus :failed to connect to socket/tmp/dbus-XXXXXXXX connection refused
 - Cause: anaconda runs dbus-daemon and this may conflict with VNC server
 - Solution: disable anaconda setup ($PATH) in the .bashrc and restart the terminal/vncserver command
+
+## when mouse grabbing crashes VNC (mobaxterm or turbovnc)
+- Ref: https://github.com/neutrinolabs/xrdp/issues/755
+- May need to update rdp?
+- Or run vncconfig
+  - Disable 1) Also set primary selection 2) Send primary selection to viewers
