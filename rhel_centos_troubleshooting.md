@@ -132,3 +132,23 @@ set-alias  antlr4 "java -Xmx500M -cp "$CLASSPATH" org.antlr.v4.Tool"
 - from tty2
 - init 3
 - init 5
+
+## when nfs or autofs is slow
+- /etc/idmapd.conf
+```
+[General]
+Cache-Expiration=10
+Verbosity=5
+Domain=my.network.local
+Local-Realms = my.network.local, my.company.org, my.company.com
+[Mapping]
+Nobody-User = nobody
+Nobody-Group = nobody
+[Translation]
+Method = nsswitch
+```
+- and disable [Static], [Umich_schema], LDAP_SERVER, LDAP_base
+- sudo systemctl restart autofs
+
+## disable hibernation
+- sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
