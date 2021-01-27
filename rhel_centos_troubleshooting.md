@@ -152,3 +152,7 @@ Method = nsswitch
 
 ## disable hibernation
 - sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
+## installing libncurses5 for RHEL8
+- RHEL8 comes with libncurses 6.
+- Some app like ddt19 may look for libncurses 5. Then install `sudo yum install ncurses-compat-libs`
