@@ -156,3 +156,18 @@ Method = nsswitch
 ## installing libncurses5 for RHEL8
 - RHEL8 comes with libncurses 6.
 - Some app like ddt19 may look for libncurses 5. Then install `sudo yum install ncurses-compat-libs`
+
+## When booting fails:
+- For EFI booting:
+  - After bios message, there are messages:
+```
+Could not create MokListRT: Out of Resources
+Failed to set MokListRT: Out of Resources
+Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
+```
+- Ref: https://angrysysadmins.tech/index.php/2018/12/grassyloki/centos-7-failed-set-moklistrt/
+- Using RHEL media, boot and rescue mode. Enter 1
+  - This may take time if fsck runs. Alt-tab and check top if it runs
+  - When system is loaded, chroot /mnt/sysimage; cd /boot/efi/EFI/red-hat ;cp grubx64.efi shimx64.efi; reboot
+  - After rebooting, exclude shim* mokut* from /etc/yum.conf
+  
