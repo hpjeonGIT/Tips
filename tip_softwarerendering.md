@@ -22,3 +22,7 @@
 - comsol -3drend sw 
 - comsol -3drend ogl # for opengl
 - comsol -3drend dx9 # for directX in windows
+
+# For any java 3d application using Canvas3d library
+- export LIBGL_ALWAYS_SOFTWARE=1
+- Tempest worked using this method
