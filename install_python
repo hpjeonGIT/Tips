@@ -23,9 +23,11 @@ CPPFLAGS="-I/opt/apps/bzip2/1.0.6/include" LDFLAGS="-L/opt/apps/bzip2/1.0.6/lib"
 - if quotation in CPPFLAGS and LDFLAGS are not given, bzip2 will not be built
 make –j 20;  # check if there is any module failed to build
 make install
-- If linking readline libs yields `/libreadline.so: undefined refer ence to `tgetstr'`, couple with ncurses lib
+- If linking readline libs yields `/libreadline.so: undefined refer ence to `tgetstr'`, couple with ncurses lib. In LDFLAGS, ncurses lib must be prior to readline
 - For tcltk lib, --with-tcltk-libs might be used
-- When system library doesn't have readline and ncurses, add the location of those libraries into LDFLAGS in the configure command
+- When system library doesn't have readline and ncurses, add the location of those libraries into LDFLAGS in the configure command. 
+- Also head the header file location into CPPFLAGS
+- Installing on RHEL6 may need ncurses5
 
 # the order of packges to install jupyter notebook
 traitlets==4.3.2
