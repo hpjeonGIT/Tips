@@ -49,3 +49,6 @@ fi
         
 fi
 
+### ARM DDT license checkup
+- curl http://license_server:port_number/status.html >log
+- Open log file and find User Name
