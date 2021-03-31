@@ -76,56 +76,51 @@ notebook-6.0.0-py3-none-any.whl
 
 # pymeep
 - Regular python build or pypi will not be able to install pymeep from conda package
-- Use Anaconda (2020.11 didn't work. Tested with 5.0.1)
+- Use miniconda
 - conda config --set allow_conda_downgrades true
-- conda install -c conda-forge openblas=0.3.4
 ```
-    _libgcc_mutex:          0.1-conda_forge       conda-forge
-    _openmp_mutex:          4.5-1_gnu             conda-forge
-    conda-package-handling: 1.7.2-py36hd7bf43e_0  conda-forge
-    gdbm:                   1.18-h0a1914f_2       conda-forge
-    ld_impl_linux-64:       2.35.1-hea4e1c9_2     conda-forge
-    libgomp:                9.3.0-h2828fa1_18     conda-forge
-    openblas:               0.3.4-h9ac9557_1000   conda-forge
-    pypy3.6:                7.3.2-h45e8706_2      conda-forge
-    python_abi:             3.6-1_pypy36_pp73     conda-forge
-    tqdm:                   4.59.0-pyhd8ed1ab_0   conda-forge
-```
-- conda install -c conda-forge pymeep
-- When SAT is broken
-```
-Solving environment: \ WARNING conda.resolve:_get_sat_solver_cls(57): Could not run SAT solver through interface 'pycosat'.
-failed
-CondaDependencyError: Cannot run solver. No functioning SAT implementations available.
-```
-    - pip install pycryptosat
-    _libgcc_mutex:          0.1-conda_forge       conda-forge
-    _openmp_mutex:          4.5-1_gnu             conda-forge
-    conda-package-handling: 1.7.2-py36hd7bf43e_0  conda-forge
-    gdbm:                   1.18-h0a1914f_2       conda-forge
-    ld_impl_linux-64:       2.35.1-hea4e1c9_2     conda-forge
-    libgdsii:               0.21-h4bd325d_4       conda-forge
-    libgomp:                9.3.0-h2828fa1_18     conda-forge
-    pypy3.6:                7.3.2-h45e8706_2      conda-forge
-    python_abi:             3.6-1_pypy36_pp73     conda-forge
-    tqdm:                   4.59.0-pyhd8ed1ab_0   conda-forge
+                                 Total:        53.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-1_gnu
+  c-ares             conda-forge/linux-64::c-ares-1.17.1-h7f98852_1
+  cached-property    conda-forge/noarch::cached-property-1.5.2-hd8ed1ab_1
+  cached_property    conda-forge/noarch::cached_property-1.5.2-pyha770c72_1
+  fftw               conda-forge/linux-64::fftw-3.3.9-nompi_h74d3f13_101
+  gsl                conda-forge/linux-64::gsl-2.6-he838d99_2
+  h5py               conda-forge/linux-64::h5py-3.1.0-nompi_py37h1e651dc_100
+  harminv            conda-forge/linux-64::harminv-1.4.1-hbf3b5f1_1007
+  hdf5               conda-forge/linux-64::hdf5-1.10.6-nompi_h6a2412b_1114
+  krb5               pkgs/main/linux-64::krb5-1.17.1-h173b8e3_0
+  libblas            conda-forge/linux-64::libblas-3.9.0-8_openblas
+  libcblas           conda-forge/linux-64::libcblas-3.9.0-8_openblas
+  libctl             conda-forge/linux-64::libctl-4.5.0-h7f98852_2
+  libcurl            conda-forge/linux-64::libcurl-7.75.0-hc4aaa36_0
+  libev              conda-forge/linux-64::libev-4.33-h516909a_1
+  libgdsii           conda-forge/linux-64::libgdsii-0.21-h4bd325d_4
+  libgfortran-ng     conda-forge/linux-64::libgfortran-ng-9.3.0-hff62375_18
+  libgfortran5       conda-forge/linux-64::libgfortran5-9.3.0-hff62375_18
+  libgomp            conda-forge/linux-64::libgomp-9.3.0-h2828fa1_18
+  liblapack          conda-forge/linux-64::liblapack-3.9.0-8_openblas
+  libnghttp2         conda-forge/linux-64::libnghttp2-1.43.0-h812cca2_0
+  libopenblas        conda-forge/linux-64::libopenblas-0.3.12-pthreads_h4812303_1
+  libssh2            conda-forge/linux-64::libssh2-1.9.0-ha56f1ee_6
+  mpb                conda-forge/linux-64::mpb-1.11.1-nompi_hed98f5b_103
+  numpy              conda-forge/linux-64::numpy-1.20.2-py37h038b26d_0
+  pymeep             conda-forge/linux-64::pymeep-1.18.0-nompi_py37h1234567_101
+  python_abi         conda-forge/linux-64::python_abi-3.7-1_cp37m
 
 The following packages will be UPDATED:
 
-    bzip2:                  1.0.6-h0376d23_1                  --> 1.0.8-h7f98852_4          conda-forge
-    conda:                  4.3.30-py36h5d9f9f4_0             --> 4.9.2-py36hd000896_0      conda-forge
-    cryptography:           2.0.3-py36ha225213_1              --> 3.3.1-py36ha3c3305_0      conda-forge
-    expat:                  2.2.4-hc00ebd1_1                  --> 2.2.10-h9c3ff4c_0         conda-forge
-    libedit:                3.1-heed3624_0                    --> 3.1.20191231-he28a2e2_2   conda-forge
-    libgcc-ng:              7.2.0-h7cc24e2_2                  --> 9.3.0-h2828fa1_18         conda-forge
-    libstdcxx-ng:           7.2.0-h7a57d05_2                  --> 9.3.0-h6de172a_18         conda-forge
-    ncurses:                6.0-h06874d7_1                    --> 6.2-h58526e2_4            conda-forge
-    openssl:                1.0.2l-h077ae2c_5                 --> 1.1.1k-h7f98852_0         conda-forge
-    pycosat:                0.6.2-py36h1a0ea17_1              --> 0.6.3-py36hd7bf43e_1005   conda-forge
-    python:                 3.6.3-hc9025b9_1                  --> 3.6.11-h4d41432_2_cpython conda-forge
-    readline:               7.0-hac23ff0_3                    --> 8.0-he28a2e2_2            conda-forge
-    sqlite:                 3.20.1-h6d8b0f3_1                 --> 3.35.3-h74cdb3f_0         conda-forge
-    tk:                     8.6.7-h5979e9b_1                  --> 8.6.10-h21135ba_1         conda-forge
-    xz:                     5.2.3-h2bcbf08_1                  --> 5.2.5-h516909a_1          conda-forge
+  ca-certificates    pkgs/main::ca-certificates-2019.10.16~ --> conda-forge::ca-certificates-2020.12.5-ha878542_0
+  certifi               pkgs/main::certifi-2019.9.11-py37_0 --> conda-forge::certifi-2020.12.5-py37h89c1867_1
+  conda                      pkgs/main::conda-4.7.12-py37_0 --> conda-forge::conda-4.9.2-py37h89c1867_0
+  libgcc-ng           pkgs/main::libgcc-ng-9.1.0-hdf63c60_0 --> conda-forge::libgcc-ng-9.3.0-h2828fa1_18
+  libstdcxx-ng       pkgs/main::libstdcxx-ng-9.1.0-hdf63c6~ --> conda-forge::libstdcxx-ng-9.3.0-h6de172a_18
+  openssl              pkgs/main::openssl-1.1.1d-h7b6447c_3 --> conda-forge::openssl-1.1.1k-h7f98852_0
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  _libgcc_mutex           pkgs/main::_libgcc_mutex-0.1-main --> conda-forge::_libgcc_mutex-0.1-conda_forge
 ```
-- Doesn't work
