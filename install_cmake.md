@@ -7,7 +7,10 @@
 - If checking for curses support failed, use:
  - `./bootstrap --prefix=/opt/cmake_3.14.6 --parallel=20 -- -DBUILD_CursesDialog=ON -DCURSES_LIBRARY=/opt/ncurses_6.2/lib/libncurses.so -DCURSES_INCLUDE_PATH=/opt/ncurses_6.2/include/ncurses`
 - `make -j 20; make install`
-
+- If an error message comes:fatal error: ncurses/ncurses_dll.h: No such file or directory’
+ - `ln -s /opt/ncurses/6.1/include/ncurses/*.h /opt/ncurses/6.1/include`
+ - `./bootstrap --prefix=/opt/cmake_3.14.6 --parallel=20 -- -DBUILD_CursesDialog=ON -DCURSES_LIBRARY=/opt/ncurses_6.2/lib/libncurses.so -DCURSES_INCLUDE_PATH=/opt/ncurses_6.2/include`
+ - Include paths of include/ncurses and include/ are required but cmake path may not understand multiple paths. So make symbolic links to be included.
 
 # Now unpack cmake source code
 ./bootstrap --help; 
