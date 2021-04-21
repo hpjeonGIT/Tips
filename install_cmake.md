@@ -28,9 +28,19 @@ set(CURSES_INCLUDE_LIBRARY "/opt/libs/ncurses/6.1/lib/libncurses.so")
 
 ## Edit CMakeCache.txt, adding -L/opt/libs/ncurses/6.1/lib -ltinfo as well
 ### if signal.c:(.text+0x1370): undefined reference to `pthread_atfork' => in CMakeCache.txt, convert -lpthread into -pthread then run 
+```
 export LD_LIBRARY_PATH+=:/opt/libs/ncurses/6.1/lib
-
 make
-
 make install
+```
 
+## building shared libs
+- `CMAKE_SHARED_LINKER_FLAGS="-Wl,-Bsymbolic"` when links are messed up
+
+## enforcing `$PREFIX/lib64`
+- Ubuntu may make `$PREFIX/lib`
+- `CMAKE_INSTALL_LIBDIR:PATH=lib64`
+
+## After running cmake command, when there is an error message: undefined reference to pthread_create
+- This might not be cmake or environment issue. May try again disabling employed options
+- When labeling fails in add_test() or matching name doesn't exist, this error message may appear. Fix all the grammar in cmake file.
