@@ -40,3 +40,9 @@ unset DBUS_SESSION_BUS_ADDRESS
 - /opt/TurboVNC/bin/vncserver -list
 - /opt/TurboVNC/bin/vncserver -kill :1
 
+# setup one gpu for display and the 2nd for CUDA only
+- Ref: jonasadler.com/post/install_cuda
+- sudo nvidia-xconfig -multigpu=on
+- Edit /etc/X11/xorg.conf
+    - `BusID "PCI:3:0:0"` # PCI ID is found from nvidia-smi
+- Reboot
