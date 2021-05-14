@@ -108,3 +108,27 @@ fwmpirun -np $NPROCS wg.ind
 rslmd -stop
 ```
 
+## Torque/moab script for running a single node job over the entire nodes
+- A bash script submitting a job over compute001-compute300 nodes
+```bash
+for i in {001...300}
+do 
+echo -n "$1"
+sed "s/_hostname_/compute${i}/" single.template > $1.pbs
+msub $1.bps
+done
+```
+- A sample template job script
+```bash
+#!/bin/bash
+#MSUB -l nodes=_hostname_:ppn=32
+#MSUB -l walltime=00:15:00
+#MSUB -N test_single_node.$HOSTNAME
+cd $PBS_O_WORKDIR
+cat $PBS_NODEFILE
+NCPU=$(wc -l $PBS_NODEFILE| awk '{print $1}')
+export MODULEPATH+=:/opt/modulefiles
+module load gcc/9.3 mvapich/2.3
+export Mexe=/opt/myexecutable
+mpirun -np $NCPU -hostfile $PBS_NODEFILE bash -c "ulimit -s unlimited && $Mexe" |& tee log.${NCPU}.${HOSTNAME}
+```
