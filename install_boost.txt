@@ -18,3 +18,7 @@ using python
 using mpi
    : /share/ompi/4.0.0/bin/mpicc ;
 " into project-config.jam
+
+## Nitty Gritty
+- For boost 1.61, the combo of gcc/5.3 + mvapich/2.3 might not work - produces ompi_mpi* library, which cannot be used
+- For boost 1.61, the combo of gcc/5.3 + openmpi/4.1.0 didn't work - libboost_mpi was not made. Use openmpi/2.0.0
