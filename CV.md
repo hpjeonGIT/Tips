@@ -18,14 +18,14 @@ PROFESSIONAL EXPERIENCE
     - Implemented pre-conditioner, linear solver, and framework for the reservoir simulator using Google Test, CMake, SWIG, C++14, ANTLR4, Hypre, and AmgX
     - Managed unit-tests/regression-tests using CMake and Bash scripting  
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
-    - Trouble-shooting with ARM DDT, gdb, valgrind, Vtune, mpiP, TempestView, SimReservoir
+    - Trouble-shooting with ARM DDT, gdb, valgrind, Vtune, mpiP, TempestView
   - Assisted HPC SW environment for scientific computing
     - Installed/managed Open Source SW like LLVM, AmgX, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TurboVNC, VirtualGL, VIM, and provided module environment
     - Installed RHEL7/8 and Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
     - Installed/managed Ganglia/Nagios for Linux cluster monitoring such as ambient/CPU temperature, SLURM status, Infiniband connection, and workload
-    - Provided/managed GRAV server for internal documentation of the best practice
+    - Provided/managed GRAV server for internal documentation of the best practice in HPC and scientific computing
 * Senior Computational Scientist, Corning Incorporated, Corning NY (May 2017 - July 2019)
-  - Parallelized/optimized in-house/open-source/commercial applications over HPC clusters
+  - Parallelized/optimized in-house/open-source/commercial applications over HPC clusters for machine learning and scientific computing
     - Accelerated DL/CNN image training of Keras/TensorFlow using distributed computing of Horovod, OpenMPI, and NCCL2 (30x speed-up using 32 GPUs)
     - Performed 1 trillion grid simulations of Cellular Automata using Co-Array Fortran with 6000 MPI ranks, and visualized 4 TB snapshots using distributed parallel VisIt, HDF5, and xdmf on Lustre
     - Accelerated ABAQUS scripting 10x through profiling and optimizing sketching/partitioning
@@ -34,12 +34,12 @@ PROFESSIONAL EXPERIENCE
     - Delivered ABAQUS Python scripts for CAD automation, parametric study, and crack growth simulations
     - Consulted ABAQUS modeling for beam structures, contact simulation, and spray modeling by SPH
     - Developed PoC of image analysis tools using OpenCV, NumPy, SciPy, tkinter, and mysql-connector for flaw detection, surface characterization, and spray measurement
-    - Delivered the best practice of ANSYS, Fluent, ABAQUS, COMSOL, MATLAB, LS-DYNA, HFSS, Lumerical, Rsoft, ParaView, VisIt, OpenFoam/FireFoam, Python, R, and Keras/TensorFlow for HPC Linux environment
-    - Organized and delivered training/workshop for python data analytics, image classification, open source software installation, scripting for ABAQUS, profiling, debugging, and OpenMP/OpenACC
+    - Delivered the best practice of ANSYS, Fluent, ABAQUS, COMSOL, MATLAB, LS-DYNA, HFSS, Lumerical, Rsoft, ParaView, VisIt, OpenFoam/FireFoam, Python, R, and Keras/TensorFlow for HPC Linux environment    
   - Provided comprehensive user documentation, training, and daily support for HPC environment
     - Published documentation of HPC training and scientific SW on the internal GRAV server
     - Performed daily trouble-shooting like PBS job monitoring and license optimization
-    - Installation/tests of open-source software like UCX, CUDA-aware OpenMPI, KLayout, PyTorch, CNTK, TensorFlow, FireFoam, NWchem, SuiteSparse, ADIOS, IOR, namd, Lammps, Gromacs using configure/Make/Cmake and Intel/GCC/CUDA compilers
+    - Installed/tested open-source software like UCX, CUDA-aware OpenMPI, KLayout, PyTorch, CNTK, TensorFlow, FireFoam, NWchem, SuiteSparse, ADIOS, IOR, namd, Lammps, Gromacs using configure/Make/Cmake with Intel/GCC/CUDA compilers, and provided module environment
+    - Organized and delivered training/workshop for python data analytics, image classification, open source software installation, scripting for ABAQUS, profiling, debugging, and OpenMP/OpenACC
   - Delivered data analytics using state-of-art ML techniques
     - Performed image classification using VGG16, ResNet50, and MobileNet in Keras/Tensorflow for process control
     - Developed R/Python scripts for data engineering on OSIsoft PI data using AFSDK, OLEDB, ODBC, JDBC
@@ -50,7 +50,7 @@ PROFESSIONAL EXPERIENCE
     - Delivered scientific code profiling and tracing with Intel VTune, ITAC, and MPI Pcontrol with mpiP/mpitrace/IMPI tools on Intel XEON PHI KNL
     - Performed vectorization and optimization through Intel Advisor and SDE
 * Senior Research Scientist, Corning Incorporated, Corning NY (May 2014 - Nov. 2016)
-  - Parallelized ML/scientific applications over HPC cluster and optimized commercial applications
+  - Parallelized machine learning/scientific applications over HPC cluster and optimized commercial applications
     - Accelerated machine learning algorithm such as exhaustive search (800x speed-up using 1024 CPUs) and greedy search (96x speed-up using 128 CPUs) using R and Rmpi
     - Delivered 1 billion particle peridynamics simulations accelerating an in-house developed code with MPI, OpenMP, and HDF5 on 1,600 CPUs and Lustre
     - Delivered distributed parallel visualization using Paraview and VisIt with VTK/XDMF
