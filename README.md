@@ -35,6 +35,10 @@ for i in `curl -s https://api.github.com/users/hpjeonGIT/repos?per_page=1000 |gr
  - git push --set-upstream https://github.com/.../myproject.git master
  - When total file size > 1MB, gitlab may not upload. Check configuration
 
+## git on windows
+- git from cmd window or github desktop may yield timed out, failing to download all of submodules
+- find a location like c:\TMP or shorter folder name, not c:\users\....
+
 ## pdsh command
 - shell command for multiple nodes
 - When there are cluster1, cluster2, ... cluster99 nodes,
