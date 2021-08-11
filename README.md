@@ -48,3 +48,8 @@ for i in `curl -s https://api.github.com/users/hpjeonGIT/repos?per_page=1000 |gr
 - Delete or backup old .ssh folder
 - `ssh-keygen;cd .ssh; echo “StrictHostKeyChecking no” > config; cat id_rsa.pub > authorized_keys; chmod 600 authorized_keys`
 - Run pdsh all nodes to update ssh key
+
+## trace routing
+- Windows: tracert cnn.com
+- Linux: traceroute cnn.com
+- Shows time taken by gateway, b/w server and hosts
