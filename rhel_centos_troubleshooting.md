@@ -171,3 +171,5 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
   - When system is loaded, chroot /mnt/sysimage; cd /boot/efi/EFI/red-hat ;cp grubx64.efi shimx64.efi; reboot
   - After rebooting, exclude shim* mokut* from /etc/yum.conf
   
+## management of logical volume
+- How to delete opened LV: https://serverfault.com/questions/266697/cant-remove-open-logical-volume
