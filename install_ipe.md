@@ -29,3 +29,8 @@ make IPEPREFIX=/opt/ipe/7.2.24 CXX=/opt/gcc/5.3/bin/g++ CC=/opt/gcc/5.3/bin/gcc
 make install IPEPREFIX=/opt/ipe/7.2.24
 ```
   - There might be error message during the compiling but can be ignored
+
+## At RHEL8
+- Qt is not provided from RHEL and source build might be required
+- After installation of Qt, export PKG_CONFIG_PATH=/opt/libspiro/lib/pkgconfig:/opt/qt/5.12/lib/pkgconfig
+- Prerequisite: yum install libpng-devel freetype-devel cairo-devel
