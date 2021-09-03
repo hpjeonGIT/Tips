@@ -172,4 +172,21 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
   - After rebooting, exclude shim* mokut* from /etc/yum.conf
   
 ## management of logical volume
-- How to delete opened LV: https://serverfault.com/questions/266697/cant-remove-open-logical-volume
+- lsblk # find disk like /dev/sda, /dev/sdb, ...
+- pvcreate /dev/sda ; pvdisplay # check if the volume is made
+- vgcreate vg_satadisk /dev/sda; vgdisplay # check if the  volume group is produced
+- lvcreate -l 100%FREE -n lv_localdisk vg_satadisk; lvdisplay # 100 usage of free space. check if the logical volume is produced
+- mkfs.ext4 /dev/vg_satadisk/lv_localdisk # format as ext4
+- Edit /etc/fstab
+```
+/dev/mapper/vg_satadisk-lv_localdata   /localmount  ext4   defaults  1 0
+```
+- mkdir /localmount
+- mount /localmount
+- To remove lv,vg,pv, use lvremove, vgremove, pvremove
+  - How to delete opened LV: https://serverfault.com/questions/266697/cant-remove-open-logical-volume
+
+## disabling SELinux
+- Edit /etc/selinux/config and inject `disabled`
+- Reboot
+
