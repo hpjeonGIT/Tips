@@ -44,3 +44,17 @@ make install
 ## After running cmake command, when there is an error message: undefined reference to pthread_create
 - This might not be cmake or environment issue. May try again disabling employed options
 - When labeling fails in add_test() or matching name doesn't exist, this error message may appear. Fix all the grammar in cmake file.
+
+## compiling cmake 3.6
+- This needs openssl 1.0.2. 1.1 or higher will not work as some struct definition is deprecated
+- openssl 1.0.2 install
+  - upack source
+  - `./config --prefix=/opt/openssl/1.0.2 shared`
+  - `make -j10; make install`
+- cmake 3.6
+  - `export PKG_CONFIG_PATH+=:/opt/openssl/1.0.2/lib/pkgconfig`
+  - `export LD_LIBRARY_PATH+=:/opt/openssl/1.0.2/lib`
+  - `./bootstrap --prefix=/opt/cmake/3.6.2 --parallel=8`
+    - May need to delete CMakeCache.txt beforehand
+    - Check newly prodcued CMakeCache.txt has openssl at the given location
+  - `make -j 20; make install`
