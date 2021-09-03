@@ -1,0 +1,23 @@
+## qt 5.12 build from source at RHEL8
+- Getting source. From windows or Linux
+  - git clone git://code.qt.io/qt/qt5.git
+  - cd qt5
+  - git checkout 5.12
+  - git submodule update --init --recursive
+- Prerequisite
+  - If source is downloaded from windows, run dos2unix over entire source folders
+    - `find . -type f -print0 | xargs -0 -n 1 -P 4 dos2unix`
+    - https://stackoverflow.com/questions/11929461/how-can-i-run-dos2unix-on-an-entire-directory
+  - For RHEL8, jasper-devel is required. Download it from EPEL or pkgs.org:https://centos.pkgs.org/8/centos-powertools-x86_64/jasper-devel-2.0.14-4.el8.x86_64.rpm.html
+    - yum install jasper-devel-2.0.14-4.el8.x86_64.rpm
+  - Now QT doesn't ship fonts together. Needs fontconfig for installation
+    - yum install freetype-devel
+- source build
+  - mkdir build
+  - cd buidl
+  - ../qt5/configure -developer-build -opensource -nomake examples -nomake tests -prefix /opt/qt/5.12 -fontconfig -feature-freetype -system-freetype FREETYPE_INCDIR=/usr/include/freetype2
+  - make -j 40 all; make install 
+    - After installation, check qt/5.12/plugins/platforms. libqwayland-generic.so and libqxcb.so are necessary to visualize on RHEL8.
+- Necessary rpm for other qt5 applications
+  - yum install libicu-devel libxkbcommon-devel # for texmaker
+  - yum install libpng-devel  cairo-devel # for IPE
