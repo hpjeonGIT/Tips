@@ -190,3 +190,9 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 - Edit /etc/selinux/config and inject `disabled`
 - Reboot
 
+## installing SW using intel 2018 at RHEL8
+- intel18 is not supported in RHEL8
+- Error messsage: icpc has neither iostream nor iostream.h
+- system gcc is 8.3 or 8.4 and you may need older gcc like 5.3
+  - Download source and install from source. Patch might be necessary to build using system gcc
+  - Set `INCLUDE`, `C_INCLUDE_PATH`, `CPLUS_INCLUDE_PATH` to have include folder of old gcc and intel compiler.
