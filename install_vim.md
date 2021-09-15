@@ -6,10 +6,14 @@ make -j 10
 make install
 ```
 - If ycmd crashes, re-configure with `--enable-python3interp=dynamic`
+- At RHEL8.4, it needs the location of python config directory. Append following: `--with-python3-config-dir=/sare/apps/python/3.6/lib/python3.6/config-3.6m-x86_64-linux-gnu`
+- After `make -j10;make install;` run `vim --version` and check if `+python3` or `-python3` is found.
 
 ### YouCompleteMe package with vim
 - no rpm or debian package. Installed at individual home folder
 - Download or install Vundle at `~/.vim/bundle`
+  - https://github.com/VundleVim/Vundle.vim
+  - When unpack the zip, it will be Vundle.vim-XXX. Rename the folder as Vundle.vim. Final form will be ~/.vim/bundle/Vundle.vim
 - Download and untar YouCompleteMe source at `~/.vim/bundle/YouCompleteMe`
 - llvm (clang must be enabled) and gcc (>8.x) are required
 - vim must be compiled with python3 support
@@ -37,3 +41,4 @@ filetype on
 - Libraries of gcc/llvm/clang/python must exist in `LD_LIBRARY_PATH`
 - Run vim, and `:YcmDiags` for diagnosis message. Or `:YcmComplete` shows the status
 - Error message will be shown at /tmp/*.log files
+- At RHEL8.4, PYTHONPATH needs the lib-dynload like `PYTHONPATH=/share/apps/python/3.6.8/lib/python3.6/lib/python3.6:/share/apps/python/3.6.8/lib/python3.6/lib/python3.6/site-packages:/share/apps/python/3.6.8/lib/python3.6/lib/python3.6/lib-dynload`
