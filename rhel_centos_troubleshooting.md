@@ -196,3 +196,7 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 - system gcc is 8.3 or 8.4 and you may need older gcc like 5.3
   - Download source and install from source. Patch might be necessary to build using system gcc
   - Set `INCLUDE`, `C_INCLUDE_PATH`, `CPLUS_INCLUDE_PATH` to have include folder of old gcc and intel compiler.
+
+## when authentication window becomes unclicable or undismissable
+- alt+F2, then enter 'r' then enter
+- refresh the gnome GUI
