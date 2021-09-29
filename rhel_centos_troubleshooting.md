@@ -150,6 +150,11 @@ Method = nsswitch
 - and disable [Static], [Umich_schema], LDAP_SERVER, LDAP_base
 - sudo systemctl restart autofs
 
+## when autofs mounted file shows `nobody:nobody`
+- May need `echo "N" > /sys/module/nfsd/parameters/nfs4_disable_idmapping`
+- In `/etc/idmapd.conf`,`Domain=localdomain`
+- Reload using `systemctl restart nfs-idmapd.service; nfsidmap -vc; umount -a -t autofs; systemctl restart autofs`
+
 ## disable hibernation
 - sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
