@@ -15,12 +15,12 @@ PROFESSIONAL EXPERIENCE
 ------------------------
 * Computational Modeling Engineer, Aramco Americas, Boston MA (July 2019 – present)
   - Participated in the development of the next-generation reservoir simulator
-    - Implemented pre-conditioner, linear solver, IO, and framework for the reservoir simulator using C++, Google Test, CMake, SWIG, Python C-API, ANTLR4, HDF5, HYPRE, and AmgX
+    - Implemented pre-conditioner, linear solver, IO, and framework for the reservoir simulator using C++, Google Test, CMake, SWIG, Python C-API, ANTLR4, HDF5, cereal, HYPRE, and AmgX
     - Managed unit-tests/regression-tests using CMake and Bash scripting  
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
     - Trouble-shooting with ARM DDT, gdb, valgrind, Vtune, mpiP, TempestView
   - Assisted HPC SW environment for scientific computing
-    - Installed/managed Open Source SW like LLVM, AmgX, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TurboVNC, VirtualGL, VIM, and provided module environment
+    - Installed/managed Open Source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, OpenPBS, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, providing module environment
     - Installed RHEL7/8 and Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
     - Installed/managed Ganglia/Nagios for Linux cluster monitoring such as ambient/CPU temperature, SLURM status, Infiniband connection, and workload
     - Provided/managed GRAV server for internal documentation of the best practice in HPC and scientific computing
