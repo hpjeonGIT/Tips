@@ -1,0 +1,13 @@
+# source code installation at RHEL8/CentOS8
+- source code at https://github.com/openpbs/openpbs/tree/v20.0.1
+- yum install libXt-devel swig postgresql-devel postgresql-contrib python3-devel tcl-devel tk-devel
+- Find libedit-devel, libical-devel, hwloc-devel from pkgs.org and install them
+- `./configure --prefix=/opt/pbs/20.0.1; make -j20 ; make install`
+- `/opt/pbs/20.0.1/libexec/pbs_postinstall`
+- Edit /etc/pbs.conf
+  - For a single system only, `PBS_START_MOM=1`
+- `cd /opt/pbs/20.0.1/sbin; chmod 4755 pbs_iff pbs_rcp`
+- Starting server: `/etc/init.d/pbs start`
+  - To stop, `/etc/init.d/pbs stop`
+- For end users: `. /etc/profile.d/pbs.sh`
+  - Try `qstat -B`
