@@ -38,25 +38,14 @@ eclrun rgcoupler sample.MII  # Running Eclipse + Visage coupling
 ```
 
 ## Submit a job from Windows to Linux
-- Computing node (Linux) must have ECLPATH definition from .bashrc
+- Computing node (Linux) must have ECLPATH definition from .bashrc  
+  - Update PATH and license setup in .bashrc
 - Using job scheduler (PBSPRO in the example)
-  - `eclrun.exe -s compnode  -u user_name -p passwd --queuesystem=PBSPRO -q=workq eclipse abc.DATA -debug=both`
+  - `eclrun.exe -s compnode  -u user_name -p passwd --queuesystem=PBSPRO -q=workq eclipse abc.DATA --debug=both`
   - Registration of ssh_keygen is recommended instead of sending passwd through CLI
 - standalone execution (no job scheduler). 
-  - `eclrun.exe -s compnode -u user_name -p passwd eclipse abc.DATA -debug=both`
-  - Or use `--queuesystem=local`
+  - `eclrun.exe -s compnode -u user_name -p passwd eclipse abc.DATA --debug=both`
+    - `--queuesystem=local` will assume windows
 - Fetching or retrieving results 
   - `eclrun.exe check abc.DATA`
-  - TBD. Not working at this moment
-
-## Submit a job from Windows to Linux
-- Computing node (Linux) must have ECLPATH definition from .bashrc
-- Using job scheduler (PBSPRO in the example)
-  - `eclrun -s compnode -u user_name -p passwd --queuesystem=PBSPRO -q=workq eclipse abc.DATA --debug=both`
-  - Registration of ssh_keygen is recommended instead of sending passwd through CLI
-- standalone execution (no job scheduler). 
-  - `eclrun -s compnode -u user_name -p passwd eclipse abc.DATA --debug=both`
-  - Or use `--queuesystem=local`
-- Fetching or retrieving results 
-  - `eclrun check abc.DATA --debug=both`
   - TBD. Not working at this moment
