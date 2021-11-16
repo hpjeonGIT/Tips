@@ -124,6 +124,8 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
+  - MongoDB - The Complete Developer's Guide (2021)
+  - Arabic language | The comprehensive course (2021)
   - Learning CUDA10 Programming (2020)
   - Learn Linux Kernel Programming (2020)
   - CUDA Programming Masterclass with C++ (2020)
