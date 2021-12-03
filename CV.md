@@ -7,7 +7,7 @@ TECHNICAL SKILLS
 ----------------
 * High performance computing using MPI, OpenMP, CUDA libraries, and HDF5
 * Computational modeling and simulations of machine learning, FDM/FEM/FVM, reservoir simulation, peridynamics, molecular dynamics, Monte-Carlo, and first-principles calculation
-* Scientific program development using C/C++, Python, Fortran, R, MATLAB
+* Scientific program development using C/C++, Python, Fortran, R, MATLAB and the expericen with SQL, Ruby, Javascript, and x86 Assembly
 * Expertise of training and consulting for customers with Linux, parallel computing, DASSAULT ABAQUS, COMSOL, ANSYS, Keras/TensorFlow, and data science
 * English, Japanese, Korean fluency. Basic Spanish/Arabic
 
