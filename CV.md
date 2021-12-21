@@ -7,7 +7,7 @@ TECHNICAL SKILLS
 ----------------
 * High performance computing using MPI, OpenMP, CUDA libraries, and HDF5
 * Computational modeling and simulations of machine learning, FDM/FEM/FVM, reservoir simulation, peridynamics, molecular dynamics, Monte-Carlo, and first-principles calculation
-* Scientific program development using C/C++, Python, Fortran, R, MATLAB and the expericen with SQL, Ruby, Javascript, and x86 Assembly
+* Scientific program development using C/C++, Python, Fortran, R, MATLAB and the experience with SQL, Ruby, Javascript, and x86 Assembly
 * Expertise of training and consulting for customers with Linux, parallel computing, DASSAULT ABAQUS, COMSOL, ANSYS, Keras/TensorFlow, and data science
 * English, Japanese, Korean fluency. Basic Spanish/Arabic
 
@@ -126,7 +126,6 @@ CERTIFICATES
 * Udemy certificates of completion
   - MongoDB - The Complete Developer's Guide (2021)
   - Arabic language | The comprehensive course (2021)
-  - JavaScript - The Complete Guide 2022 (Beginner + Advanced)
   - Learning CUDA10 Programming (2020)
   - Learn Linux Kernel Programming (2020)
   - CUDA Programming Masterclass with C++ (2020)
