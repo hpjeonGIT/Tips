@@ -7,7 +7,7 @@ TECHNICAL SKILLS
 ----------------
 * High performance computing using MPI, OpenMP, CUDA libraries, and HDF5
 * Computational modeling and simulations of machine learning, FDM/FEM/FVM, reservoir simulation, peridynamics, molecular dynamics, Monte-Carlo, and first-principles calculation
-* Scientific program development using C/C++, Python, Fortran, R, MATLAB and the experience with SQL, Ruby, Javascript, and x86 Assembly
+* Scientific program development using C/C++, Python, Fortran, R, MATLAB and the experience with SQL, Ruby, Javascript, and x86 assembly
 * Expertise of training and consulting for customers with Linux, parallel computing, DASSAULT ABAQUS, COMSOL, ANSYS, Keras/TensorFlow, and data science
 * English, Japanese, Korean fluency. Basic Spanish/Arabic
 
@@ -15,7 +15,7 @@ PROFESSIONAL EXPERIENCE
 ------------------------
 * Computational Modeling Engineer, Aramco Americas, Boston MA (July 2019 – present)
   - Participated in the development of the next-generation reservoir simulator
-    - Implemented pre-conditioner, linear solver, IO, and framework for the reservoir simulator using C++, Google Test, CMake, SWIG, Python C-API, ANTLR4, HDF5, cereal, HYPRE, and AmgX
+    - Implemented pre-conditioner, linear solver, IO, and framework for the reservoir simulator using C++, Google Test, CMake, SWIG, Python C-API, ANTLR4, HYPRE, AmgX, cereal, and HDF5
     - Managed unit-tests/regression-tests using CMake and Bash scripting  
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
     - Trouble-shooting with ARM DDT, gdb, valgrind, Vtune, mpiP, TempestView
@@ -124,8 +124,10 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
-  - MongoDB - The Complete Developer's Guide (2021)
   - Arabic language | The comprehensive course (2021)
+  - MongoDB - The Complete Developer's Guide (2021)
+  - JavaScript – The complete Guide 2022 (2021)
+  - x86 Assembly Language Programming from Ground Up (2021)
   - Learning CUDA10 Programming (2020)
   - Learn Linux Kernel Programming (2020)
   - CUDA Programming Masterclass with C++ (2020)
