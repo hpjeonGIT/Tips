@@ -128,6 +128,7 @@ CERTIFICATES
   - MongoDB - The Complete Developer's Guide (2021)
   - JavaScript – The complete Guide 2022 (2021)
   - x86 Assembly Language Programming from Ground Up (2021)
+  - Learn C++ for Game Development (2021)
   - Learning CUDA10 Programming (2020)
   - Learn Linux Kernel Programming (2020)
   - CUDA Programming Masterclass with C++ (2020)
