@@ -205,3 +205,8 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 ## when authentication window becomes unclicable or undismissable
 - alt+F2, then enter 'r' then enter
 - refresh the gnome GUI
+
+## when libcrypto conflicts:
+- Perforce, matlab?
+- Error message: `symbol lookup error: /lib64/libk5crypto.so.3: undefined symbol:EVP_KDF_ctrl, version OPENSSL 1_1_10`
+- Solution: disable or rename libcrypto.so.1.1 from lib folder of the application
