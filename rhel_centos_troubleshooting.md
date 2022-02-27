@@ -29,6 +29,13 @@
 - `usermode -a -G vlgusers <username>` # root, all local users, domain users
 - `reboot`
 
+## virtualGL with disabled wayland
+- `Wayland = False` in `/etc/gdm/custom.conf`
+- Reboot
+- May need to delete ~/.Xauthority
+- Install virtualGL as shown above
+- but `/opt/VirtualGL/bin/vglrun -d :x glxgears` from mobaXterm doesn't appear in `nvidia-smi`. Is HW rendering working OK?
+
 ## When java application crashes with Canvas3D error message on VNC session
 - Ex) Tempestview on VNC session from RHEL6
 - Check glxgear opens. If it complains xlib error with display :X.0, then the VNC session may not be able to shoot X-graphics
