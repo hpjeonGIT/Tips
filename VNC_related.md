@@ -38,3 +38,15 @@ Registered connection with app
 - May need to update rdp?
 - Or run vncconfig
   - Disable 1) Also set primary selection 2) Send primary selection to viewers
+
+## vnc setup using systemd
+- vncserver will be deprecated. Migration to system service is necessary in near future
+- Ref: https://www.ibm.com/support/pages/how-configure-vnc-server-red-hat-enterprise-linux-8
+- `cp /lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:3.service`
+  - No edit required
+- `vi /etc/tigervnc/vncserver.users`
+  - Add `:3=USERname`
+- sudo -u USERname; vncpasswd; # or the USERname has configured vncpasswd already
+- `sudo systemctl start vncserver@:3.service`
+- `sudo systemctl enable vncserver@:3.service` # now restarts at reboot
+- As shown above, a user will not be able to launch vnc service anymore. Must be registered by admin and the display port will be given
