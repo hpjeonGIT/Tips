@@ -1,7 +1,7 @@
 Byoungseon Jeon, PhD
 ====================
 - HPC/ML consultant
-- Computational scientist
+- Application engineer
 
 TECHNICAL SKILLS
 ----------------
@@ -15,7 +15,7 @@ PROFESSIONAL EXPERIENCE
 ------------------------
 * Computational Modeling Engineer, Aramco Americas, Boston MA (July 2019 – present)
   - Participated in the development of the next-generation reservoir simulator
-    - Implemented pre-conditioner, linear solver, IO, and framework for the reservoir simulator using C++, Google Test, CMake, SWIG, Python C-API, ANTLR4, HYPRE, AmgX, cereal, and HDF5
+    - Implemented pre-conditioner, linear solver, IO, and framework for the reservoir simulator using C++, Google Test, CMake, SWIG, Python C-API, ANTLR4, HYPRE, AmgX, cereal, x86 intrinsics, and HDF5
     - Managed unit-tests/regression-tests using CMake and Bash scripting  
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
     - Trouble-shooting with ARM DDT, gdb, valgrind, Vtune, mpiP, TempestView
@@ -124,6 +124,8 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
+  - The Complete Regular Expressions Course with Exercises (2022)
+  - Learn and Understand NodeJS (2022)
   - Arabic language | The comprehensive course (2021)
   - MongoDB - The Complete Developer's Guide (2021)
   - JavaScript – The complete Guide 2022 (2021)
