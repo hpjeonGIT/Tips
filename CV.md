@@ -1,7 +1,7 @@
 Byoungseon Jeon, PhD
 ====================
 - HPC/ML consultant
-- Application engineer
+- Application SW engineer
 
 TECHNICAL SKILLS
 ----------------
