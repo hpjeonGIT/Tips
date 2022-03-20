@@ -124,6 +124,8 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
+  - Go: The Complete Developer's Guide (2022)
+  - The Nuts and Bolts of OAuth 2.0 (2022)
   - The Complete Regular Expressions Course with Exercises (2022)
   - Learn and Understand NodeJS (2022)
   - Arabic language | The comprehensive course (2021)
@@ -176,7 +178,7 @@ PRESENTATIONS
 3. B. Jeon, et al, “Peridynamic simulations of strengthened glasses,” 6th Modeling Symposium, Corning, NY (2016)
 4. B. Jeon, et al, “Nonlinear material simulations using peridynamics,” 5th Modeling Symposium, Corning, NY (2014)
 5. B. Jeon, A.C.T. van Duin, and S. Ramanathan, “Computational modeling of surface passive oxide growth and breakdown on metal nano-particles,” Materials Research Society Fall meeting, Boston, MA (2012)
-6. B. Jeon, A.C.T. van Duin, and S. Ramanathan, “Atomistic simulations of aqueous corrosion of copper and copper oxide films,” Corrosion-Aqueous, Gordon Research Seminar, New London, NM (2012)
+6. B. Jeon, A.C.T. van Duin, and S. Ramanathan, “Atomistic simulations of aqueous corrosion of copper and copper oxide films,” Corrosion-Aqueous, Gordon Research Seminar, New London, NH (2012)
 7. B. Jeon, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Passivity breakdown and pitting nucleation of copper oxide films under aqueous conditions: Simulations by reactive molecular dynamics,” Materials Research Society Fall meeting, Boston, MA (2011)
 8. B. Jeon, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Early stages of aqueous corrosion of copper using reactive molecular dynamics,” Electrochemical Society Fall meeting, Boston, MA (2011)
 9. S. Ramanathan and B. Jeon, “Atomistic Modeling of Nanoscale Corrosion Phenomena in Al alloys and the influence of Chlorine,” Discovery & Invention (D&I) Program Review, Arlington, VA (2011)
