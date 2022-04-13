@@ -1,3 +1,13 @@
+## Version 14.0
+- Download the entire project from github
+  - clang, flang, openmp are already enclosed
+- mkdir build; cd build; ccmake -S ../llvm
+- When running cmake or ccmake, configure LLVM_ENABLE_PROJECTS as clang;clang-tools-extra;compiler-rt;flang;openmp;lldb
+  - Full list is: clang;clang-tools-extra;compiler-rt;debuginfo-tests;libc;libclc;libcxx;libcxxabi;libunwind;lld;lldb;openmp;parallel-libs;polly;pstl
+- Enable SHARED_LIBS ON
+- make -j 20; make install
+- may need `-stdlib=libc++` as CXX flags for application
+
 ## Version 11.0
 - Not from https://releases.llvm.org/download.html but download from https://github.com/llvm/llvm-project, as the entire project
 - clang, flang, openmp are already enclosed
