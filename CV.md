@@ -18,12 +18,15 @@ PROFESSIONAL EXPERIENCE
     - Implemented pre-conditioner, linear solver, IO, and framework for the reservoir simulator using C++, Google Test, CMake, SWIG, Python C-API, ANTLR4, HYPRE, AmgX, cereal, x86 intrinsics, and HDF5
     - Managed unit-tests/regression-tests using CMake and Bash scripting  
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
-    - Trouble-shooting with ARM DDT, gdb, valgrind, Vtune, mpiP, TempestView
+    - Optimized MPI communication pattern and data gathering using serialization
+    - Investigated Cray environment and updated cmake/source code as necessary
   - Assisted HPC SW environment for scientific computing
     - Installed/managed Open Source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, OpenPBS, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, providing module environment
     - Installed RHEL7/8 and Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
     - Installed/managed Ganglia/Nagios for Linux cluster monitoring such as ambient/CPU temperature, SLURM status, Infiniband connection, and workload
-    - Provided/managed GRAV server for internal documentation of the best practice in HPC and scientific computing
+    - Provided/managed GRAV server for internal documentation of the best practice in HPC and scientific computing        ◦ 
+    - Assisted building legacy in-house simulation tools over various SW stacks
+    - Trained new hires for Linux cluster environment and SW development workflow
 * Senior Computational Scientist, Corning Incorporated, Corning NY (May 2017 - July 2019)
   - Parallelized/optimized in-house/open-source/commercial applications over HPC clusters for machine learning and scientific computing
     - Accelerated DL/CNN image training of Keras/TensorFlow using distributed computing of Horovod, OpenMPI, and NCCL2 (30x speed-up using 32 GPUs)
@@ -44,7 +47,6 @@ PROFESSIONAL EXPERIENCE
     - Performed image classification using VGG16, ResNet50, and MobileNet in Keras/Tensorflow for process control
     - Developed R/Python scripts for data engineering on OSIsoft PI data using AFSDK, OLEDB, ODBC, JDBC
     - Performed data analytics using random forest analysis, SVM, auto-correlation in Python/R
-    - Submitted one patent application for product characterization using deep learning
 * HPC Performance Architect, Intel Corporation, Santa Clara CA (Nov. 2016 - Apr. 2017)
   - Evaluated HPC performance of scientific SW to build weak-scaling model
     - Delivered scientific code profiling and tracing with Intel VTune, ITAC, and MPI Pcontrol with mpiP/mpitrace/IMPI tools on Intel XEON PHI KNL
@@ -150,7 +152,7 @@ CERTIFICATES
 PUBLICATIONS
 ------------
 * Patent
-1. A pending patent regarding product characterization using deep learning/convolution neural network. Submitted July 2018.
+1. J. George, B. Jeon, S. T. Nickerson, H.C. Sim, Structural characteristic prediction for a honeycomb body using image abstraction, World Intellectual Property Organization, W0 2022/0 35664 A1 (2022)
 * Peer-reviewed Journal Papers
 1. R. Stewart, B. Jeon, “Decoupling strength and grid resolution in peridynamic theory,” Journal of Peridynamics and Nonlocal Modeling,  pp.1-10 (2019)
 2. B. Jeon, R. Stewart, I Ahmed, “Peridynamic simulations of brittle structures with thermal residual deformation: strengthening and structural reactivity of glasses under impact,” Proceedings of the Royal Society A 471, 20150231 (2015)
