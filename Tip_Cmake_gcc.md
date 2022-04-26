@@ -24,5 +24,5 @@ $ nm libvtkCommonDataModel-9.1.so
 - How to enforce T, not t, in the library?
   - In Cmake files, add_library(someLib SHARED IMPORTED GLOBAL) will enforce global symbol -> but not working?
   - Comparing CMakeCache.txt by gcc8.4 vs 10.3, COMPILER_HAS_DEPRECATED:INTERNAL=1 is found at gcc8.4. 10.3 has no value.
-  - Needs newer version of cmake? This is 3.20.5
-  - TBD
+  - ~~Needs newer version of cmake? This is 3.20.5
+  - Tried vtk 9.1 and worked OK. But this will need the higher version of CMake (> 3.12)
