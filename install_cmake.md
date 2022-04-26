@@ -58,3 +58,7 @@ make install
     - May need to delete CMakeCache.txt beforehand
     - Check newly prodcued CMakeCache.txt has openssl at the given location
   - `make -j 20; make install`
+
+## build cmake using intel compiler
+- `env CC=icc CXX=icpc ./bootstrap --prefix=//opt/cmake/3.23.1_intel18 --parallel-10; make -j 40; make install`
+- cmake 3.20 didn't recognize icpc. 3.23 worked OK
