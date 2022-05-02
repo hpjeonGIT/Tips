@@ -15,6 +15,7 @@ hpjeon@hakune:~/hw/mpi_cpp$ mpirun --app ./appfile
 2 3 hakune
 ```
 - Q: ? global ranks are shared among applications?
+- A: Yes. Communication b/w applications will be through MPI_COMM_WORLD. Each application will have it sown MPI_Comm, and each will have rank=0 from its own communicator
 
 ## mvapich
 - https://mvapich.cse.ohio-state.edu/static/media/mvapich/mvapich2-2.3.6-userguide.html
@@ -27,6 +28,7 @@ $ cat configfile
 -n 2 : exe2
 $ mpirun_rsh -config configfile -hostfile hosts
 ```
+- ? `-config` option seems not working. Use `mpirun -np 1 ./a.out : -np 2 ./b.out`
 
 ## intel mpi
 - https://www.intel.com/content/www/us/en/develop/documentation/mpi-developer-guide-linux/top/running-applications/mpmd-launch-mode.html
