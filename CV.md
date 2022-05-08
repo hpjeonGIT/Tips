@@ -24,7 +24,7 @@ PROFESSIONAL EXPERIENCE
     - Installed/managed Open Source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, OpenPBS, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, providing module environment
     - Installed RHEL7/8 and Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
     - Installed/managed Ganglia/Nagios for Linux cluster monitoring such as ambient/CPU temperature, SLURM status, Infiniband connection, and workload
-    - Provided/managed GRAV server for internal documentation of the best practice in HPC and scientific computing        ◦ 
+    - Provided/managed GRAV server for internal documentation of the best practice in HPC and scientific computing
     - Assisted building legacy in-house simulation tools over various SW stacks
     - Trained new hires for Linux cluster environment and SW development workflow
 * Senior Computational Scientist, Corning Incorporated, Corning NY (May 2017 - July 2019)
@@ -126,6 +126,8 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
+  - Modern C++ Concurrency in Depth (C++17/20) (2022)
+  - Complete Modern C++ (C++11/14/17) (2022)
   - Go: The Complete Developer's Guide (2022)
   - The Nuts and Bolts of OAuth 2.0 (2022)
   - The Complete Regular Expressions Course with Exercises (2022)
@@ -152,49 +154,49 @@ CERTIFICATES
 PUBLICATIONS
 ------------
 * Patent
-1. J. George, B. Jeon, S. T. Nickerson, H.C. Sim, Structural characteristic prediction for a honeycomb body using image abstraction, World Intellectual Property Organization, W0 2022/0 35664 A1 (2022)
+1. J. George, **B. Jeon**, S. T. Nickerson, H.C. Sim, Structural characteristic prediction for a honeycomb body using image abstraction, World Intellectual Property Organization, W0 2022/0 35664 A1 (2022)
 * Peer-reviewed Journal Papers
-1. R. Stewart, B. Jeon, “Decoupling strength and grid resolution in peridynamic theory,” Journal of Peridynamics and Nonlocal Modeling,  pp.1-10 (2019)
-2. B. Jeon, R. Stewart, I Ahmed, “Peridynamic simulations of brittle structures with thermal residual deformation: strengthening and structural reactivity of glasses under impact,” Proceedings of the Royal Society A 471, 20150231 (2015)
-3. R. Copping, B. Jeon, C. D. Pemmaraju, S. Wang, S. J. Teat, M. Janousch, T. Tyliszczak, A. Canning, N. Grønbech-Jensen, D. Prendergast, D. K Shuh, “Toward equatorial planarity about uranyl: synthesis and structure of tridentate nitrogen-donor UO2 2+ Complexes,” Inorganic Chemistry 53, 2506-2515 (2014)
-4. B. Jeon, Quentin Van Overmeere, A.C.T . van Duin, and S. Ramanathan, “Nanoscale oxidation and complex oxide growth on single crystal iron surfaces and external electric field effects,” Physical Chemistry Chemical Physics 15, 1821-1830 (2013)
-5. B. Jeon, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Reactive molecular dynamics study of chloride ion interaction with copper oxide surfaces in aqueous media,” ACS Applied Materials & Interfaces 4, 1225-1232 (2012)
-6. B. Jeon, C. Ko, A.C.T . van Duin, and S. Ramanathan, “Chemical stability and surface stoichiometry of vanadium oxide phases studied by reactive molecular dynamics simulations,” Surface Science 606, 516-522 (2012)
-7. B. Jeon, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Influence of surface orientation and defects on early stage oxidation and ultrathin oxide growth on pure copper,” Philosophical Magazine 91, 4073-4088 (2011)
-8. P. Tiwary, A. van de Walle, B. Jeon, and N. Grønbech-Jensen, “Interatomic potentials for mixed oxide and advanced nuclear fuels ,” Physical Review B 83, 094104 (2011)
-9. B. Jeon, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Atomistic insights into aqueous corrosion of copper,” Journal of Chemical Physics 134, 234706 (2011)
-10. B. Jeon, S. Sankaranarayanan, and S. Ramanathan, “Atomistic modeling of ultra-thin surface oxide growth on a ternary alloy: oxidation of Al-Ni-Fe,” Journal of Physical Chemistry C 115, 6571-6580 (2011)
-11. S. M. Valone, B . P. Uberuaga, X.-Y. Liu, B. Jeon, A. Chaudhry, and N. Grønbech-Jensen, “Cascade-driven mixing at metal oxide interfaces,” Nuclear Instruments and Methods in Physics Research B 268, 3114-3116 (2010)
-12. B. Jeon, M. Asta, S. M. Valone, and N. Grønbech-Jensen, “Simulation of ion track ranges in uranium oxide,” Nuclear Instruments and Methods in Physics Research B 268, 2688-2693 (2010)
-13. B. Jeon and N. Grønbech-Jensen, “Efficient Parallel Algorithm for Statistical Ion Track Simulations in Crystalline Materials,” Computer Physics Communications 180, 231-237 (2009)
-14. B. Jeon, M. Foster, J. Colgan, G. Csanak, J. D. Kress, L. A. Collins, and N. Grønbech-Jensen, “Energy Relaxation Rates in Dense Hydrogen Plasmas,” Physical Review E 78, 036403 (2008)
-15. B. Jeon, J. D. Kress, L. A. Collins, and N. Grønbech-Jensen, “Parallel TREE code for two-component ultracold plasma analysis,” Computer Physics Communications 178, 272-279 (2008)
-16. B. Jeon, J. D. Kress, and N. Grønbech-Jensen, “Thiol density dependent classical potential for methyl-thiol on a Au(111) surface,” Physical Review B 76, 155120 (2007)
-17. B. Jeon, J.J. Lee, J.K. Kim, J.S. Huh, “Low velocity impact and delamination buckling behavior of composite laminates with embedded optical fibers,” Smart Materials and Structures 8 (1), 41-48 (1999)
+1. R. Stewart, **B. Jeon**, “Decoupling strength and grid resolution in peridynamic theory,” Journal of Peridynamics and Nonlocal Modeling,  pp.1-10 (2019)
+2. **B. Jeon**, R. Stewart, I Ahmed, “Peridynamic simulations of brittle structures with thermal residual deformation: strengthening and structural reactivity of glasses under impact,” Proceedings of the Royal Society A 471, 20150231 (2015)
+3. R. Copping, **B. Jeon**, C. D. Pemmaraju, S. Wang, S. J. Teat, M. Janousch, T. Tyliszczak, A. Canning, N. Grønbech-Jensen, D. Prendergast, D. K Shuh, “Toward equatorial planarity about uranyl: synthesis and structure of tridentate nitrogen-donor UO2 2+ Complexes,” Inorganic Chemistry 53, 2506-2515 (2014)
+4. **B. Jeon**, Quentin Van Overmeere, A.C.T . van Duin, and S. Ramanathan, “Nanoscale oxidation and complex oxide growth on single crystal iron surfaces and external electric field effects,” Physical Chemistry Chemical Physics 15, 1821-1830 (2013)
+5. **B. Jeon**, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Reactive molecular dynamics study of chloride ion interaction with copper oxide surfaces in aqueous media,” ACS Applied Materials & Interfaces 4, 1225-1232 (2012)
+6. **B. Jeon**, C. Ko, A.C.T . van Duin, and S. Ramanathan, “Chemical stability and surface stoichiometry of vanadium oxide phases studied by reactive molecular dynamics simulations,” Surface Science 606, 516-522 (2012)
+7. **B. Jeon**, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Influence of surface orientation and defects on early stage oxidation and ultrathin oxide growth on pure copper,” Philosophical Magazine 91, 4073-4088 (2011)
+8. P. Tiwary, A. van de Walle, **B. Jeon**, and N. Grønbech-Jensen, “Interatomic potentials for mixed oxide and advanced nuclear fuels ,” Physical Review B 83, 094104 (2011)
+9. **B. Jeon**, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Atomistic insights into aqueous corrosion of copper,” Journal of Chemical Physics 134, 234706 (2011)
+10. **B. Jeon**, S. Sankaranarayanan, and S. Ramanathan, “Atomistic modeling of ultra-thin surface oxide growth on a ternary alloy: oxidation of Al-Ni-Fe,” Journal of Physical Chemistry C 115, 6571-6580 (2011)
+11. S. M. Valone, B . P. Uberuaga, X.-Y. Liu, **B. Jeon**, A. Chaudhry, and N. Grønbech-Jensen, “Cascade-driven mixing at metal oxide interfaces,” Nuclear Instruments and Methods in Physics Research B 268, 3114-3116 (2010)
+12. **B. Jeon**, M. Asta, S. M. Valone, and N. Grønbech-Jensen, “Simulation of ion track ranges in uranium oxide,” Nuclear Instruments and Methods in Physics Research B 268, 2688-2693 (2010)
+13. **B. Jeon** and N. Grønbech-Jensen, “Efficient Parallel Algorithm for Statistical Ion Track Simulations in Crystalline Materials,” Computer Physics Communications 180, 231-237 (2009)
+14. **B. Jeon**, M. Foster, J. Colgan, G. Csanak, J. D. Kress, L. A. Collins, and N. Grønbech-Jensen, “Energy Relaxation Rates in Dense Hydrogen Plasmas,” Physical Review E 78, 036403 (2008)
+15. **B. Jeon**, J. D. Kress, L. A. Collins, and N. Grønbech-Jensen, “Parallel TREE code for two-component ultracold plasma analysis,” Computer Physics Communications 178, 272-279 (2008)
+16. **B. Jeon**, J. D. Kress, and N. Grønbech-Jensen, “Thiol density dependent classical potential for methyl-thiol on a Au(111) surface,” Physical Review B 76, 155120 (2007)
+17. **B. Jeon**, J.J. Lee, J.K. Kim, J.S. Huh, “Low velocity impact and delamination buckling behavior of composite laminates with embedded optical fibers,” Smart Materials and Structures 8 (1), 41-48 (1999)
 
 PRESENTATIONS
 -------------
 * Conference Talks
-1. B. Jeon, “Deep learning for visual inspection of ceramic honeycomb structures,” 2018 Modeling Symposium, Corning, NY (2018)
-2. B. Jeon, et al, “Profiling and Accelerating Scientific Codes,” 2018 Modeling Symposium, Corning, NY (2018)
-3. B. Jeon, et al, “Peridynamic simulations of strengthened glasses,” 6th Modeling Symposium, Corning, NY (2016)
-4. B. Jeon, et al, “Nonlinear material simulations using peridynamics,” 5th Modeling Symposium, Corning, NY (2014)
-5. B. Jeon, A.C.T. van Duin, and S. Ramanathan, “Computational modeling of surface passive oxide growth and breakdown on metal nano-particles,” Materials Research Society Fall meeting, Boston, MA (2012)
-6. B. Jeon, A.C.T. van Duin, and S. Ramanathan, “Atomistic simulations of aqueous corrosion of copper and copper oxide films,” Corrosion-Aqueous, Gordon Research Seminar, New London, NH (2012)
-7. B. Jeon, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Passivity breakdown and pitting nucleation of copper oxide films under aqueous conditions: Simulations by reactive molecular dynamics,” Materials Research Society Fall meeting, Boston, MA (2011)
-8. B. Jeon, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Early stages of aqueous corrosion of copper using reactive molecular dynamics,” Electrochemical Society Fall meeting, Boston, MA (2011)
-9. S. Ramanathan and B. Jeon, “Atomistic Modeling of Nanoscale Corrosion Phenomena in Al alloys and the influence of Chlorine,” Discovery & Invention (D&I) Program Review, Arlington, VA (2011)
-10. B. Jeon, S. Sankaranarayanan, and S. Ramanathan, “Molecular dynamics simulation of oxidation growth on metal alloy substrate: kinetics of early stage oxidation,” NACE CORROSION conference, Houston, TX (2011)
-11. B. Jeon, A. Chaudhry, M. Asta, S. Valone, and N. Grønbech-Jensen, “Radiation Range and Damage Assessment in UO2 Simulated by Classical Molecular Dynamics,” Materials Research Society Spring meeting, San Francisco, CA (2010)
-12. L. Collins, B. Jeon, J. Kress, and  N. Grønbech-Jensen, “Dynamics of ultracold neutral plasma,” American Physical Society March meeting, Denver, CO (2007)
-13. B. Jeon, L. Collins, J. Kress, and  N. Grønbech-Jensen, “Relaxation of laser-induced two component plasma,” American Physical Society March meeting, Denver, CO (2007)
+1. **B. Jeon**, “Deep learning for visual inspection of ceramic honeycomb structures,” 2018 Modeling Symposium, Corning, NY (2018)
+2. **B. Jeon**, et al, “Profiling and Accelerating Scientific Codes,” 2018 Modeling Symposium, Corning, NY (2018)
+3. **B. Jeon**, et al, “Peridynamic simulations of strengthened glasses,” 6th Modeling Symposium, Corning, NY (2016)
+4. **B. Jeon**, et al, “Nonlinear material simulations using peridynamics,” 5th Modeling Symposium, Corning, NY (2014)
+5. **B. Jeon**, A.C.T. van Duin, and S. Ramanathan, “Computational modeling of surface passive oxide growth and breakdown on metal nano-particles,” Materials Research Society Fall meeting, Boston, MA (2012)
+6. **B. Jeon**, A.C.T. van Duin, and S. Ramanathan, “Atomistic simulations of aqueous corrosion of copper and copper oxide films,” Corrosion-Aqueous, Gordon Research Seminar, New London, NH (2012)
+7. **B. Jeon**, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Passivity breakdown and pitting nucleation of copper oxide films under aqueous conditions: Simulations by reactive molecular dynamics,” Materials Research Society Fall meeting, Boston, MA (2011)
+8. **B. Jeon**, S. Sankaranarayanan, A.C.T. van Duin, and S. Ramanathan, “Early stages of aqueous corrosion of copper using reactive molecular dynamics,” Electrochemical Society Fall meeting, Boston, MA (2011)
+9. S. Ramanathan and **B. Jeon**, “Atomistic Modeling of Nanoscale Corrosion Phenomena in Al alloys and the influence of Chlorine,” Discovery & Invention (D&I) Program Review, Arlington, VA (2011)
+10. **B. Jeon**, S. Sankaranarayanan, and S. Ramanathan, “Molecular dynamics simulation of oxidation growth on metal alloy substrate: kinetics of early stage oxidation,” NACE CORROSION conference, Houston, TX (2011)
+11. **B. Jeon**, A. Chaudhry, M. Asta, S. Valone, and N. Grønbech-Jensen, “Radiation Range and Damage Assessment in UO2 Simulated by Classical Molecular Dynamics,” Materials Research Society Spring meeting, San Francisco, CA (2010)
+12. L. Collins, **B. Jeon**, J. Kress, and  N. Grønbech-Jensen, “Dynamics of ultracold neutral plasma,” American Physical Society March meeting, Denver, CO (2007)
+13. **B. Jeon**, L. Collins, J. Kress, and  N. Grønbech-Jensen, “Relaxation of laser-induced two component plasma,” American Physical Society March meeting, Denver, CO (2007)
 * Poster Presentations
-1. B. Jeon, et al, “Honeycomb structure surface characterization using computer vision and deep learning,” 2018 Measurement & Control Conference, Corning, NY (2018)
-2. “Fracture mechanics modeling capability,” Equipment and Process Engineering, Corning, NY (2014)
-3. B. Jeon, A.C.T. van Duin, and S. Ramanathan, “Atomistic simulations of aqueous corrosion of copper and copper oxide films,” Corrosion-Aqueous, Gordon Research Conference, New London, NM (2012)
-4. B. Jeon, “Electronic Structure Studies of Actinide Complexation by Maltol and Benzimidazyl type Ligands,” ACTINIDES 2009, San Francisco, CA (2009)
-5. N. Grønbech-Jensen, M. D. Asta, N. Browning, C. Wolverton, A. van de Walle, V. Ozolins, B. Jeon, A. Chaudhry, A. Sankar, B. Hanken, J. Aguiar, G. Zhang, A. Thomposon, P. Tiwary, S. Barabash, F. Zhou, “Radiation Damage in Nuclear Fuel for Advanced Burner Reactors: Modeling and Experimental Validation,” Advanced Fuel Cycle Initiative (AFCI) Annual Review meeting, Idaho Falls, ID (2008)
-6. B. Jeon, “Radiation Range Analysis of High Energy Ions,” Advanced Test Reactor summer school, Idaho Falls, ID (2008)
+1. **B. Jeon**, et al, “Honeycomb structure surface characterization using computer vision and deep learning,” 2018 Measurement & Control Conference, Corning, NY (2018)
+2. **B. Jeon**, et al, “Fracture mechanics modeling capability,” Equipment and Process Engineering, Corning, NY (2014)
+3. **B. Jeon**, A.C.T. van Duin, and S. Ramanathan, “Atomistic simulations of aqueous corrosion of copper and copper oxide films,” Corrosion-Aqueous, Gordon Research Conference, New London, NM (2012)
+4. **B. Jeon**, “Electronic Structure Studies of Actinide Complexation by Maltol and Benzimidazyl type Ligands,” ACTINIDES 2009, San Francisco, CA (2009)
+5. N. Grønbech-Jensen, M. D. Asta, N. Browning, C. Wolverton, A. van de Walle, V. Ozolins, **B. Jeon**, A. Chaudhry, A. Sankar, B. Hanken, J. Aguiar, G. Zhang, A. Thomposon, P. Tiwary, S. Barabash, F. Zhou, “Radiation Damage in Nuclear Fuel for Advanced Burner Reactors: Modeling and Experimental Validation,” Advanced Fuel Cycle Initiative (AFCI) Annual Review meeting, Idaho Falls, ID (2008)
+6. **B. Jeon**, “Radiation Range Analysis of High Energy Ions,” Advanced Test Reactor summer school, Idaho Falls, ID (2008)
 
 MANUSCRIPT REFEREEING
 ---------------------
