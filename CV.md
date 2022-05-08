@@ -193,7 +193,7 @@ PRESENTATIONS
 * Poster Presentations
 1. **B. Jeon**, et al, “Honeycomb structure surface characterization using computer vision and deep learning,” 2018 Measurement & Control Conference, Corning, NY (2018)
 2. **B. Jeon**, et al, “Fracture mechanics modeling capability,” Equipment and Process Engineering, Corning, NY (2014)
-3. **B. Jeon**, A.C.T. van Duin, and S. Ramanathan, “Atomistic simulations of aqueous corrosion of copper and copper oxide films,” Corrosion-Aqueous, Gordon Research Conference, New London, NM (2012)
+3. **B. Jeon**, A.C.T. van Duin, and S. Ramanathan, “Atomistic simulations of aqueous corrosion of copper and copper oxide films,” Corrosion-Aqueous, Gordon Research Conference, New London, NH (2012)
 4. **B. Jeon**, “Electronic Structure Studies of Actinide Complexation by Maltol and Benzimidazyl type Ligands,” ACTINIDES 2009, San Francisco, CA (2009)
 5. N. Grønbech-Jensen, M. D. Asta, N. Browning, C. Wolverton, A. van de Walle, V. Ozolins, **B. Jeon**, A. Chaudhry, A. Sankar, B. Hanken, J. Aguiar, G. Zhang, A. Thomposon, P. Tiwary, S. Barabash, F. Zhou, “Radiation Damage in Nuclear Fuel for Advanced Burner Reactors: Modeling and Experimental Validation,” Advanced Fuel Cycle Initiative (AFCI) Annual Review meeting, Idaho Falls, ID (2008)
 6. **B. Jeon**, “Radiation Range Analysis of High Energy Ions,” Advanced Test Reactor summer school, Idaho Falls, ID (2008)
