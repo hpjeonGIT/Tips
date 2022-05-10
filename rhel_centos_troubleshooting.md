@@ -217,3 +217,9 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 - Perforce, matlab?
 - Error message: `symbol lookup error: /lib64/libk5crypto.so.3: undefined symbol:EVP_KDF_ctrl, version OPENSSL 1_1_10`
 - Solution: disable or rename libcrypto.so.1.1 from lib folder of the application
+
+## Regarding RDP Remote Desktop connection
+- Server: xdrp. load drp on systemctl and Remote desktop from Windows can land on Linux. Like vnc server
+- Client:
+  - freerdp: command is xfreerdp
+  - vinagre:
