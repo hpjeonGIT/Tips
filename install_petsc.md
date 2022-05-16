@@ -1,3 +1,4 @@
+## basic
 ./configure --with-cc=mpicc --with-cxx=mpicxx --with-fc=mpifort \
 --prefix=/opt/libs/petsc/3.10.3 \
  --with-valgrind-dir=/opt/apps/valgrind/3.14.0 \
@@ -20,3 +21,13 @@
 
 make all test 
 make install
+
+## for cray environment
+- Fortran compiler is ftn
+ - FFLAGS needs `-hPIC` as it may not yield position independent format
+  - Not `-fPIC`. configure script will not understand it
+- `--with-batch` might be necessary
+- `--with-mpiexec` might be defined using srun or aprun
+
+## GCC10 or higher
+- Fortran compiler option or fortran optimization option may need `-w -fallow-argument-mismatch`
