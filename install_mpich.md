@@ -15,3 +15,16 @@
 ## Some discussion
 - `--with-slum` might not be recommeded in the SLURM environment
 - In infiniband-network with iverbs, using `--with-device=ch3:nemesis:mxm` may not work. MPI_Finalize crashes. Use UCX. UCX is contained in the mpich 3.3.x source package
+
+## MPICH from cray environment
+- If it hangs when reading files
+- `export MPICH_MPIIO_HINTS="*:romio_ds_read=disable:romio_cs_read=disable"
+- Those hints might be injected into MPI_info() but code recompilation is necessary
+- In order to investigate the current MPICH setup
+```bash
+export MPICH_MPIIO_STATS=1
+export MPICH_ENV_DISPLAY=1
+export MPICH_MPIIO_HINTS_DISPLAY=1
+export MPICH_OFI_VERBOSE=1
+export MPICH_OFI_NIC_VERBOSE=1
+```
