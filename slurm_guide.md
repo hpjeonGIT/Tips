@@ -31,3 +31,6 @@ sacctmgr: error: Problem talking to the database: Connection refused
 - Restart of slurmd will not resolve
 - `sacctmgr show RunawayJobs`
   - Will ask fix or not. Enter `y` to fix and enter
+
+## when job submission fails
+- Check the time b/w slurm head node and computing nodes. They must sync each other
