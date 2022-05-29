@@ -15,8 +15,8 @@ PROFESSIONAL EXPERIENCE
 ------------------------
 * Computational Modeling Engineer, Aramco Americas, Boston MA (July 2019 – present)
   - Participated in the development of the next-generation reservoir simulator
-    - Implemented pre-conditioner, linear solver, IO, and framework for the reservoir simulator using C++, Google Test, CMake, SWIG, Python C-API, ANTLR4, HYPRE, AmgX, cereal, x86 intrinsics, and HDF5
-    - Managed unit-tests/regression-tests using CMake and Bash scripting  
+    - Implemented pre-conditioner, linear solver, IO, and framework using C++, SWIG, Python C-API, MPI, HYPRE, AmgX, x86 intrinsics, cereal, and HDF5
+    - CI/CD using Bash scripting, CMake, CTest, and Google test
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
     - Optimized MPI communication pattern and data gathering using serialization
     - Investigated Cray environment and updated cmake/source code as necessary
@@ -126,6 +126,7 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
+  - (NEW 2021) CompTIA Network+ (N10-008) Video Training Series (2022)
   - Modern C++ Concurrency in Depth (C++17/20) (2022)
   - Complete Modern C++ (C++11/14/17) (2022)
   - Go: The Complete Developer's Guide (2022)
