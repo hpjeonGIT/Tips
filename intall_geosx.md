@@ -1,0 +1,20 @@
+## install from source including third party libraries
+- Clone https://github.com/GEOSX/GEOSX.git
+  - `git submodule update --init --recursive` may not download hdf5_interface, blt, PAMELA, LvARRAY, PVTPackage
+  - Download them manually (check the exact tag number) and unpack at each folder
+-  Clone https://github.com/GEOSX/thirdPartyLibs.git
+  - Will need to install github lfs per OS-wise
+  - git submodule update --init
+- TPL first
+  - Individual setting of TPL is not recommended
+  - cd thirdPartyLibs
+  - Configure MPI environment for CC, CXX, mpicc, mpicxx. Or set ./host-config/myPC.cmake for compiler wise. Also add MKL_ROOT
+    - To disable caliper and doxygen, use SET(ENABLE_CALIPER OFF CACHE BOOL ""); SET(ENABLE_DOXYGEN OFF CACHE BOOL ""); SET(GEOSXTPL_ENABLE_DOXYGEN OFF CACHE BOOL "")
+  - `python3 scripts/config-build.py --hostconfig=./host-config/myPC.cmake --buildtype=Release --installPath=/opt/share/geosx/TPL -DNUM_PROC=20
+  - cd build-myPC-release
+  - make # don't use -j option. This may take ~hr
+- geosx
+  - Edit hostconfig/myG.cmake. Include TPL.cmake. Setup MKL_ROOT or BLAS. Update CC or mpicc, mpicxx
+  - `python3 scripts/config-build.py --hostconfig=./host-config/myG.cmake --buildtype=Release --installPath=/opt/share/geosx/G`
+  - `make -j 20`
+  - `make install`
