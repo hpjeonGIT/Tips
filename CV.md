@@ -126,6 +126,8 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
+  - Kubernetes for the Absolute Beginners - Hands-on (2022)
+  - Creational Design Patterns in Modern C++ (2022)
   - (NEW 2021) CompTIA Network+ (N10-008) Video Training Series (2022)
   - Modern C++ Concurrency in Depth (C++17/20) (2022)
   - Complete Modern C++ (C++11/14/17) (2022)
