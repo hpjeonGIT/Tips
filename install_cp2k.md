@@ -15,3 +15,14 @@
 - Update arch/custom.psmp with LIBINT info. Refer other arch files as samples
   - LIBINT configuration must be in the head of custom.psmp, prior to mpicc or CC
 - make command is same as above
+
+## compiling with gcc environment
+- Use mpich. mvapich2 seems not working
+- install fftw from source. Add --enable-mpi --enable-openmp
+- install lapack/blas with static library
+- install scalapack library using cmake. Add -fPIC into CFLAGS and FFLAGS
+- install libint with selcted lmax value. May need recent cmake
+- When making arch/custom.psmp, add fftw and scalapack. In the end, add liblapack.a and libblas.a to LIB
+  - lapack lib may not find blas library. then LIB += /.../libblas.a /..../liblapack.a /.../libbas.a -lz -ldl -lstdc++
+  - Repeat libblas.a 
+- For fortran flags,  -fallow-argument-mismatch  might be  necessary for gfortran > 10.x
