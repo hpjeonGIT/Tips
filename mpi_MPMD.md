@@ -39,3 +39,18 @@ $ cat mpmd_config
 -n 4 -host node3 ./compute <compute_args_2
 $ mpirun -configfile mpmd_config
 ```
+- Or different formant of config file
+```
+-n 1 a.exe -m abc -mpmd ; -n 2 b.exe -m xyz -mpmd
+```
+
+## srun from cray
+- mapfile
+```
+0-3 hostname
+4-7 echo hello
+```
+- srun -n 8 -l --multi-prog ./mapfile
+- for mpi job, srun --mpi=cray_shasta or pmi2 might be necessary
+
+
