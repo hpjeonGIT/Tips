@@ -126,6 +126,8 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
+  - Linux System Programming - A programmer's/Practical Approach (2022)
+  - Linux Diagnostics and Troubleshooting (2022)
   - Master CMake for Cross-Platform C++ Project Building (2022)
   - Structural Design Patterns in Modern C++ (2022)
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
