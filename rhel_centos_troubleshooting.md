@@ -231,7 +231,8 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 ## when anaconda crashes in the middle of installation
 - cannot locate nvme?
 - Click debug and go to tty
+- Reboot with USB but start rescue mode
 - mkdir /boot/grub2
-- grub2-mkconfig /boot/grub2/grub.cfg
+- grub2-mkconfig -o /boot/grub2/grub.cfg
 - boot to disk. Let fix by itself
 - boot again
