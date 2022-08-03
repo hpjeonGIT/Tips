@@ -223,3 +223,15 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 - Client:
   - freerdp: command is xfreerdp
   - vinagre:
+
+## making boot image
+- dd command from Linux may not work at UEFI boot
+- Use Rufus with GPT partition scheme
+
+## when anaconda crashes in the middle of installation
+- cannot locate nvme?
+- Click debug and go to tty
+- mkdir /boot/grub2
+- grub2-mkconfig /boot/grub2/grub.cfg
+- boot to disk. Let fix by itself
+- boot again
