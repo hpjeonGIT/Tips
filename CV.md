@@ -126,15 +126,17 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
-  - Linux System Programming - A programmer's/Practical Approach (2022)
-  - Linux Diagnostics and Troubleshooting (2022)
-  - Master CMake for Cross-Platform C++ Project Building (2022)
-  - Structural Design Patterns in Modern C++ (2022)
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
-  - Creational Design Patterns in Modern C++ (2022)
+  - OpenStack Essentials (2022)
+  - API and Web Service Introduction (2022)
   - (NEW 2021) CompTIA Network+ (N10-008) Video Training Series (2022)
+  - Linux System Programming - A programmer's/Practical Approach
+  - Linux Diagnostics and Troubleshooting (2022)
   - Modern C++ Concurrency in Depth (C++17/20) (2022)
   - Complete Modern C++ (C++11/14/17) (2022)
+  - Master CMake for Cross-Platform C++ Project Building (2022)
+  - Structural Design Patterns in Modern C++ (2022)
+  - Creational Design Patterns in Modern C++ (2022)
   - Go: The Complete Developer's Guide (2022)
   - The Nuts and Bolts of OAuth 2.0 (2022)
   - The Complete Regular Expressions Course with Exercises (2022)
