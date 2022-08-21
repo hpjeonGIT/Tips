@@ -46,3 +46,8 @@ unset DBUS_SESSION_BUS_ADDRESS
 - Edit /etc/X11/xorg.conf
     - `BusID "PCI:3:0:0"` # PCI ID is found from nvidia-smi
 - Reboot
+
+
+# When there are too many gnome-shell or system is slow
+- https://askubuntu.com/questions/1036441/ubuntu-18-04-gnome-shell-high-cpu-usage
+- gsettings set org.gnome.desktop.interface  clock-show-seconds false
