@@ -19,7 +19,7 @@ PROFESSIONAL EXPERIENCE
     - CI/CD using Bash scripting, CMake, CTest, and Google test
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
     - Optimized MPI communication pattern and data gathering using serialization
-    - Investigated Cray environment and updated cmake/source code as necessary
+    - Investigated Cray environment and optimized performance over cpu-binding and architecture
   - Assisted HPC SW environment for scientific computing
     - Installed/managed Open Source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, OpenPBS, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, providing module environment
     - Installed RHEL7/8 and Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
@@ -128,8 +128,10 @@ CERTIFICATES
 * Udemy certificates of completion
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
   - OpenStack Essentials (2022)
+  - Master Puppet for DevOps Success (2022)
   - API and Web Service Introduction (2022)
-  - (NEW 2021) CompTIA Network+ (N10-008) Video Training Series (2022)
+  - SSL/TLS Operations (2022)
+  - CompTIA Network+ (N10-008) Video Training Series (2022)
   - Linux System Programming - A programmer's/Practical Approach
   - Linux Diagnostics and Troubleshooting (2022)
   - Modern C++ Concurrency in Depth (C++17/20) (2022)
