@@ -57,3 +57,8 @@ prepend-path   CLASSPATH $LOCALPATH
 set-alias antlr4 "java -Xmx500M -cp ${topdir}/antlr-4.7.1-complete.jar:${LOCALPATH}"
 set-alias grun "java org.antlr.v4.runtime.misc.TestRig"
 ```
+
+## Updating MODULEPATH
+- Instead of MODULEPATH, users may use the absolute path like `module load /opt/modulefiles/gcc/11.3`
+- `export MODULEPATH=$MODULEPATH:/home/myaccount/private_modules` might be located in ~/.bashrc
+- To apply global MODULEPATH, edit `/etc/environment-modules/modulespath` file. The default is `/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles`
