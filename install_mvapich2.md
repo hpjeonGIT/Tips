@@ -23,3 +23,10 @@
   - make -j 16
 - If an error message of `tools/bootstrap/src/bsci_init.c:17:266: error: 'HYDT_bsci_launcher_pbs_init' undeclared here ...`
   - Add --with-hydra-bss="user,ssh,rsh,fork,slurm,sge,manual,persist", excluding pbs for bss list
+
+## 2.3.7 with slingshot
+- For slingshot10, use 2.3.7, not 3.0a
+- Or make sure to use `--with-device=ch3:mrail --with-rdma=gen2`
+- Use `--with-ofi`, `--with-ofi-include`, `--with-ofi-lib` pointing cray ofi libs
+- Append `FFLAGS-fallow-argument-mismatch FCFLAGS=-fallow-argument-mismatch` for gfortran
+- For more than 32767 ranks, needs `--with-ch3-rank-bits=32`
