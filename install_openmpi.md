@@ -47,3 +47,9 @@ For fortran support, may use --enable-mpi-fortran=all
  --with-mxm=/opt/mellanox/mxm --with-platform=contrib/platform/mellanox/optimized \
  --with-hcoll=/opt/mellanox/hcoll --enable-mpi1-compatibility --with-ucx=/share/libs/openucx/1.5.1_cuda
 ```
+
+
+## applying the setup of mvapich2 into openmpi
+- run mpivars from mvapich2
+- extract `MPIR_CVAR...` using `cut -c-99`
+- export or setenv prior to running mpirun at openmpi
