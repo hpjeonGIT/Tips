@@ -236,3 +236,8 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 - grub2-mkconfig -o /boot/grub2/grub.cfg
 - boot to disk. Let fix by itself
 - boot again
+
+## When yum update doesn't do update
+- sudo subscription-manager release --set=8
+- sudo yum clean all
+- sudo yum update
