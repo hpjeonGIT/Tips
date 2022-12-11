@@ -1,14 +1,15 @@
 Byoungseon Jeon, PhD
 ====================
-- HPC/ML consultant
+- HPC/ML solution consultant
 - Application SW engineer
 
 TECHNICAL SKILLS
 ----------------
 * High performance computing using MPI, OpenMP, CUDA libraries, and HDF5
-* Computational modeling and simulations of machine learning, FDM/FEM/FVM, reservoir simulation, peridynamics, molecular dynamics, Monte-Carlo, and first-principles calculation
-* Scientific program development using C/C++, Python, Fortran, R, MATLAB and the experience with SQL, Ruby, Javascript, and x86 assembly
-* Expertise of training and consulting for customers with Linux, parallel computing, DASSAULT ABAQUS, COMSOL, ANSYS, Keras/TensorFlow, and data science
+* Expertise of machine learning, FDM/FEM/FVM, reservoir simulation, peridynamics, molecular dynamics, Monte-Carlo, and density functional theory
+* Software development using C/C++, Python, Fortran, R, MATLAB
+* Distributed Machine Learning and High Performance Data-Analytics (HPDA) using Python, Horovod, R, Rmpi
+* Training/consulting customers for technical topics
 * English, Japanese, Korean fluency. Basic Spanish/Arabic
 
 PROFESSIONAL EXPERIENCE
@@ -19,7 +20,7 @@ PROFESSIONAL EXPERIENCE
     - CI/CD using Bash scripting, CMake, CTest, and Google test
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
     - Optimized MPI communication pattern and data gathering using serialization
-    - Investigated Cray environment and optimized performance over cpu-binding and architecture
+    - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility
   - Assisted HPC SW environment for scientific computing
     - Installed/managed Open Source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, OpenPBS, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, providing module environment
     - Installed RHEL7/8 and Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
@@ -127,6 +128,7 @@ CERTIFICATES
 ------------
 * Udemy certificates of completion
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
+  - Master Puppet for DevOps Success (2022)
   - OpenStack Essentials (2022)
   - Master Puppet for DevOps Success (2022)
   - API and Web Service Introduction (2022)
@@ -139,10 +141,14 @@ CERTIFICATES
   - Master CMake for Cross-Platform C++ Project Building (2022)
   - Structural Design Patterns in Modern C++ (2022)
   - Creational Design Patterns in Modern C++ (2022)
+  - Hands on Debugging in C and C++ (2022)
+  - Learn Linux User Space Debugging (2022)
   - Go: The Complete Developer's Guide (2022)
+  - Java 17: Learn and dive deep into Java (2022)
   - The Nuts and Bolts of OAuth 2.0 (2022)
   - The Complete Regular Expressions Course with Exercises (2022)
   - Learn and Understand NodeJS (2022)
+  - The Complete Quantum Computing Course (2022)
   - Arabic language | The comprehensive course (2021)
   - MongoDB - The Complete Developer's Guide (2021)
   - JavaScript – The complete Guide 2022 (2021)
