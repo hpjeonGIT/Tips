@@ -62,3 +62,9 @@ set-alias grun "java org.antlr.v4.runtime.misc.TestRig"
 - Instead of MODULEPATH, users may use the absolute path like `module load /opt/modulefiles/gcc/11.3`
 - `export MODULEPATH=$MODULEPATH:/home/myaccount/private_modules` might be located in ~/.bashrc
 - To apply global MODULEPATH, edit `/etc/environment-modules/modulespath` file. The default is `/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles`
+
+## module command in Cray environment
+- `module` is not an actual command but an alias
+- Or defined as a function in the shell script. See : https://stackoverflow.com/questions/51192351/adapting-module-alias-invoking-modulecmd-from-tcsh-to-bash
+    - In bash: module() { eval "$(/app/modules/0/bin/modulecmd bash "$@")"; }
+    - In csh: alias module 'eval `/app/modules/0/bin/modulecmd tcsh \!*`'
