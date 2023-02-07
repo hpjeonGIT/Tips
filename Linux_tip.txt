@@ -377,3 +377,8 @@ nm abc.so |grep  _ZNSt6vectorIiSaIiEEC1Ev
 
 # demangle symbols
 c++filt _ZNSt6vectorIiSaIiEEC1Ev
+
+# dump ostream from buffer when application crashes
+- when cout or ostream buffered texts are not shown when crashed
+- stdbuf -o0 ./a.out
+- -o0 means no buffer, printing immediately
