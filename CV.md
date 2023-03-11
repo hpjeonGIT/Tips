@@ -72,7 +72,7 @@ PROFESSIONAL EXPERIENCE
   - A contractor for Corning Inc: Scientific Computing in M&S
   - Scientific SW development
     - Delivered web-interface engineering applications for EASA platform
-    - Developed MATLAB GUI application for constrained optimization solver
+    - Developed a MATLAB GUI application with constrained optimization solver
   - High Performance Computing
     - Parallelized peridynamics code using OpenMP and MPI (108x speed-up using 128 CPUs)
     - Built Calculix from scratch and deployed for multiple-processors
@@ -111,7 +111,6 @@ PROFESSIONAL EXPERIENCE
 
 EDUCATION
 ---------
-
 * Ph.D. in Applied Science, University of California, Davis, CA (GPA:3.88, March 2008)
   - Dissertation: Methods for molecular interactions and large-scale simulations
   - Advisor: Niels Grønbech-Jensen
@@ -127,21 +126,22 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificates of completion
+  - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
   - Master Puppet for DevOps Success (2022)
   - OpenStack Essentials (2022)
-  - Master Puppet for DevOps Success (2022)
   - API and Web Service Introduction (2022)
   - SSL/TLS Operations (2022)
   - CompTIA Network+ (N10-008) Video Training Series (2022)
-  - Linux System Programming - A programmer's/Practical Approach
+  - Linux System Programming - A programmer's/Practical Approach (2022)
   - Linux Diagnostics and Troubleshooting (2022)
+  - Master CMake for Cross-Platform C++ Project Building (2022)
   - Modern C++ Concurrency in Depth (C++17/20) (2022)
   - Complete Modern C++ (C++11/14/17) (2022)
-  - Master CMake for Cross-Platform C++ Project Building (2022)
   - Structural Design Patterns in Modern C++ (2022)
   - Creational Design Patterns in Modern C++ (2022)
   - Hands on Debugging in C and C++ (2022)
+  - x86 64-bit Assembly Language: Step-by-Step Tutorial (2022)
   - Learn Linux User Space Debugging (2022)
   - Go: The Complete Developer's Guide (2022)
   - Java 17: Learn and dive deep into Java (2022)
