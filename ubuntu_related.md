@@ -56,3 +56,9 @@ unset DBUS_SESSION_BUS_ADDRESS
 - Download hplip-3.23.3.run
 - sudo apt install python-is-python3
 - sudo bash ./hplip-3.23.3.run 
+
+# installing openssl 1.1.0 at ubuntu20
+- perl5 is too new. Use perl5.26 or old
+
+# Perforce 2021 at Ubuntu20
+- Deployed libssl.so not matching with system libcrypto. Just rename or remove the enclosed libssl.so and let perforce use the system libss.so
