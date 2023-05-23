@@ -241,3 +241,8 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 - sudo subscription-manager release --set=8
 - sudo yum clean all
 - sudo yum update
+
+## fsck logical volume
+- umount /localdata
+- lvscan
+- fsck -fy /dev/vg_satadisk/lv_localdata
