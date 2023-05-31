@@ -246,3 +246,7 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 - umount /localdata
 - lvscan
 - fsck -fy /dev/vg_satadisk/lv_localdata
+
+## for perf tools
+- Editing /proc/sys/kernel/perf_event_paranoid through vi is not allowed
+- Try `sudo sh -c 'echo 0 > /proc/sys/kernel/perf_event_paranoid'`
