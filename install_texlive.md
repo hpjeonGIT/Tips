@@ -8,3 +8,5 @@ tar zxf ../install-tl-unx.tar.gz .
 
 #### click D to configure path (click 1) then click R and I to install
 
+## installing epstopdf
+yum install texlive-epstopdf
