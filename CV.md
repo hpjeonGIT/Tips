@@ -127,6 +127,8 @@ CERTIFICATES
 ------------
 * Udemy certificates of completion
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
+  - Machine Learning: Natural Language Processing in Python (V2) (2023)
+  - Advanced C Programming Masterclass: Pointers & Memory in C (2023)
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
   - Master Puppet for DevOps Success (2022)
   - OpenStack Essentials (2022)
