@@ -1,0 +1,7 @@
+- similar to gcc, mpc, mpf, gmp is necessary
+- But using --with-gmp/--with-mpfr/--with-mpc may not work, yielding libgmp is not found or inusable.
+- Instead, use --with-libgmp-prefix/--with-libmpfr-prefix/--with-libmpc-prefix
+- ./configure --prefix=/opt/gdb/13.2 --with-libgmp-prefix=/opt/gmp/6.1.1  --with-libmpfr-prefix=/opt/mpfr/3.1.1 --with-libgmp-prefix=/opt/gmp/1.0.2
+- make -j 20
+- make all
+- make install
