@@ -1,17 +1,22 @@
-# install gmp, mpic, mpfr first
+# install gmp, mpfr, mpc sequentially
 ## gmp
 - ./configure --prefix=/opt/gmp6
+- make -j 10; make all; make install
 ## mpfr
-- ./configure --prefix=/opt/mpfr312 --with-gmp=/opt/gmp6
+- ./configure --prefix=/opt/mpfr/4.0.1 --with-gmp=/opt/gmp6
+- make -j 10; make all; make install
 ## mpc
-- ./configure --prefix=/opt/mpc102 --with-gmp=/opt/gmp6 --with-mpfr=/opt/mpfr312
+- ./configure --prefix=/opt/mpc102 --with-gmp=/opt/gmp6 --with-mpfr=/opt/mpfr/4.0.1
 - make -j 20; make install
 
 # gcc8.2 using gcc4.8 #
 - mkdir build ; cd build
 - ../configure --prefix=/opt/compiler/gcc/8.2 --enable-languages=c,c++,fortran --with-gmp=/opt/libs/gmp/6.1.2/ --with-mpc=/opt/libs/mpc/1.1.0 --with-mpfr=/opt/libs/mpfr/4.0.1 --disable-multilib
-- 32bit support is disabled
+  - 32bit support is disabled
 - lib of mpfr is needed in LD_LIBRARY_PATH
+  - export LD_LIBRARY_PATH+=:/opt/libs/mpfr/4.0.1/lib
+  - In csh/tcsh, setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/opt/libs/mpfr/4.0.1/lib
+- make -j 20; make all ; make install
 
 # trouble-shooting
 - When `configure: error: error verifying int64_t uses long long` message appears
