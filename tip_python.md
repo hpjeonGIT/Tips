@@ -133,3 +133,13 @@ program test
   print *, header, i, j, x, y
 end program test
 ```
+- Using numpy array to dump data
+```python
+from scipy.ip import FortranFile
+import numpy as np
+fstream = FortranFile("mybinfile",'w', '>u4') # big endian
+arrays = [1.1, 2.2, 3.4, 4.4]
+res = np.arrays(arrays, dtype=np.dtype('>f8')) # big endian double. for 4byte int, use >i4
+fstream.write_record(res)
+fstream.close()
+```
