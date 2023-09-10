@@ -125,6 +125,8 @@ EDUCATION
 
 CERTIFICATES
 ------------
+* Google Cloud Completion Badge
+  - Google Cloud Fundamentals: Core Infrastructure (2023)
 * Udemy certificates of completion
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
