@@ -34,3 +34,10 @@ sacctmgr: error: Problem talking to the database: Connection refused
 
 ## when job submission fails
 - Check the time b/w slurm head node and computing nodes. They must sync each other
+
+## Installing slurm
+- check install guide and use rpmbuild then can use systemctl
+- When slurmctld yields the message of `not a valid controller`
+    - In slurm.conf, use `SlurmctrldHost=hostName(IP.Number.here)`
+- When slurmd yields the message of `unable to determine this slurmd's NodeName`
+  - In slurm.conf, use node name of `hostname -s` at `ControlMachine=nodeName`
