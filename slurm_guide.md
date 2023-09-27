@@ -41,3 +41,6 @@ sacctmgr: error: Problem talking to the database: Connection refused
     - In slurm.conf, use `SlurmctrldHost=hostName(IP.Number.here)`
 - When slurmd yields the message of `unable to determine this slurmd's NodeName`
   - In slurm.conf, use node name of `hostname -s` at `ControlMachine=nodeName`
+- When compute node is invalid from `sinfo`
+  - Make sure that the detail of node in slurm.conf match the results of `slurmd -C` in each node
+  - No. of cores, threads per core, memsize, ...
