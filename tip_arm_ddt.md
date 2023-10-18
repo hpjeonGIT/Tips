@@ -12,3 +12,8 @@
 - mpich (mpmd) or intel mpi(mpmd) only
 - ddt mpirun -n 1 ./a.out : -n 2 ./b.out
 - intelmpi : mpiexec.hydra -np 2 ./a.exe : -np 3 ./b.exe
+
+## Change the location of cache or configuration
+- Open ~/.allinea/system.config
+- Change the default setup of shared_directory=~
+  - Any network mounted storage
