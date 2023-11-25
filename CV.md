@@ -137,7 +137,7 @@ CERTIFICATES
   - Exploit Development Tutorial for Hackers and Pentesters (2023)
   - The Complete Parallelism Course (2023)
   - x86/x64 Assembly Language for Cybersecurity Maniacs (2023)
-  - Design a CPU (2023)
+  - High Performance Computing in Linux (2023)
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
   - Master Puppet for DevOps Success (2022)
   - OpenStack Essentials (2022)
@@ -172,6 +172,7 @@ CERTIFICATES
   - SQL and PostgreSQL: The Complete Developer's Guide (2020)
   - Linux x86 Assembly Language Programming From Ground Up (2020)
 * AWS Cloud Practitioner Essentials (2020)
+* Exam Readiness: AWS Certified Solutions Architect – Associate (Digital)
 * Certificate of completion by Workforce Development & Learning, Corning
   - Getting results through others (2018)
   - DOL 1: Stepping Into Leadership (2018)
