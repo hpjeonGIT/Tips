@@ -1,6 +1,6 @@
 Byoungseon Jeon, PhD
 ====================
-- HPC/ML solution consultant
+- HPC/ML Solution Architect
 - Application SW engineer
 
 TECHNICAL SKILLS
@@ -19,9 +19,10 @@ PROFESSIONAL EXPERIENCE
     - Implemented pre-conditioner, linear solver, IO, and framework using C++, SWIG, Python C-API, MPI, HYPRE, AmgX, x86 intrinsics, cereal, and HDF5
     - CI/CD using Bash scripting, CMake, CTest, and Google test
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
-    - Optimized MPI communication pattern and data gathering using serialization
+    - Optimized and improved the existing parallel code for large-scale processing
     - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility
-  - Assisted HPC SW environment for scientific computing
+    - Visited Saudi R&D center to collaborate with developers
+  - Supported HPC SW environment for scientific computing
     - Installed/managed Open Source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, OpenPBS, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, providing module environment
     - Installed RHEL7/8 and Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
     - Installed/managed Ganglia/Nagios for Linux cluster monitoring such as ambient/CPU temperature, SLURM status, Infiniband connection, and workload
@@ -138,6 +139,7 @@ CERTIFICATES
   - The Complete Parallelism Course (2023)
   - x86/x64 Assembly Language for Cybersecurity Maniacs (2023)
   - High Performance Computing in Linux (2023)
+  - How Computers Work (2023)
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
   - Master Puppet for DevOps Success (2022)
   - OpenStack Essentials (2022)
