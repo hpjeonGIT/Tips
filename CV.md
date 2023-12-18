@@ -128,6 +128,10 @@ CERTIFICATES
 ------------
 * Google Cloud Completion Badge
   - Google Cloud Fundamentals: Core Infrastructure (2023)
+* Nvidia Academy Certificate of Completion (2023)
+  - InfiniBand Essentials
+* Deep Learning Courses Certificate of Achievement
+  - Data Science: Transformers for Natural Language Processing (2023)
 * Udemy certificates of completion
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
@@ -140,6 +144,8 @@ CERTIFICATES
   - x86/x64 Assembly Language for Cybersecurity Maniacs (2023)
   - High Performance Computing in Linux (2023)
   - How Computers Work (2023)
+  - Programming with Julia (2023)
+  - Complete Ruby Programmer – Master Ruby (2023)
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
   - Master Puppet for DevOps Success (2022)
   - OpenStack Essentials (2022)
