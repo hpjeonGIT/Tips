@@ -128,8 +128,9 @@ CERTIFICATES
 ------------
 * Google Cloud Completion Badge
   - Google Cloud Fundamentals: Core Infrastructure (2023)
-* Nvidia Academy Certificate of Completion (2023)
-  - InfiniBand Essentials
+* Nvidia Academy Certificate of Completion
+  - InfiniBand Essentials (2023)
+  - Introduction to Base Command Manager (2023)
 * Deep Learning Courses Certificate of Achievement
   - Data Science: Transformers for Natural Language Processing (2023)
 * Udemy certificates of completion
