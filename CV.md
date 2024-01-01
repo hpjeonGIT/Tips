@@ -134,6 +134,7 @@ CERTIFICATES
 * Deep Learning Courses Certificate of Achievement
   - Data Science: Transformers for Natural Language Processing (2023)
 * Udemy certificates of completion
+  - Introduction to Software Development Life Cycle (SDLC) (2024)
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
   - Advanced C Programming Masterclass: Pointers & Memory in C (2023)
@@ -147,6 +148,7 @@ CERTIFICATES
   - How Computers Work (2023)
   - Programming with Julia (2023)
   - Complete Ruby Programmer – Master Ruby (2023)
+  - The Complete Haskell Course: From Zero to Expert! (2023)
   - Kubernetes for the Absolute Beginners - Hands-on (2022)
   - Master Puppet for DevOps Success (2022)
   - OpenStack Essentials (2022)
