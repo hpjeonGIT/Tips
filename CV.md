@@ -126,15 +126,17 @@ EDUCATION
 
 CERTIFICATES
 ------------
-* Google Cloud Completion Badge
-  - Google Cloud Fundamentals: Core Infrastructure (2023)
 * Nvidia Academy Certificate of Completion
+  - Ansible Essentials for Network Engineers (2024)
   - InfiniBand Essentials (2023)
   - Introduction to Base Command Manager (2023)
+* Google Cloud Completion Badge
+  - Google Cloud Fundamentals: Core Infrastructure (2023)
 * Deep Learning Courses Certificate of Achievement
   - Data Science: Transformers for Natural Language Processing (2023)
-* Udemy certificates of completion
+* Udemy certificate of completion
   - Introduction to Software Development Life Cycle (SDLC) (2024)
+  - The Complete Foundation Stock Trading Course (2024)
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
   - Advanced C Programming Masterclass: Pointers & Memory in C (2023)
