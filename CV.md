@@ -131,6 +131,9 @@ CERTIFICATES
   - InfiniBand Essentials (2023)
   - Introduction to Base Command Manager (2023)
 * Google Cloud Completion Badge
+  - Infrastructure and Application Modernization with Google Cloud (2024)
+  - Introduction to Generative AI (2024)
+  - Digital Transformation with Google Cloud (2024)
   - Google Cloud Fundamentals: Core Infrastructure (2023)
 * Deep Learning Courses Certificate of Achievement
   - Data Science: Transformers for Natural Language Processing (2023)
@@ -185,7 +188,7 @@ CERTIFICATES
   - SQL and PostgreSQL: The Complete Developer's Guide (2020)
   - Linux x86 Assembly Language Programming From Ground Up (2020)
 * AWS Cloud Practitioner Essentials (2020)
-* Exam Readiness: AWS Certified Solutions Architect – Associate (Digital)
+* Exam Readiness: AWS Certified Solutions Architect – Associate (Digital) (2020)
 * Certificate of completion by Workforce Development & Learning, Corning
   - Getting results through others (2018)
   - DOL 1: Stepping Into Leadership (2018)
