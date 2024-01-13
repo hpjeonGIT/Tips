@@ -140,6 +140,8 @@ CERTIFICATES
 * Udemy certificate of completion
   - Introduction to Software Development Life Cycle (SDLC) (2024)
   - The Complete Foundation Stock Trading Course (2024)
+  - Linux KVM for System Engineers (2024)
+  - Beginners Course: Jq Command Tutorials to Parse JSON Data (2024)
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
   - Advanced C Programming Masterclass: Pointers & Memory in C (2023)
