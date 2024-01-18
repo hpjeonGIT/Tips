@@ -1,3 +1,11 @@
+## Issues of binary file writing
+- There could be conflict b/w openmpi and binary file read/writer depending on the implementation
+- May use `--mca io romio341` for ver 5
+- May use `--mca io romio321` for ver 4
+
+## for version 5.xx
+- --enable-mpi-cxx --enable-mpi-cxx-seek  might not be used anymore
+
 For fortran support, may use --enable-mpi-fortran=all   
 ## download source
 - wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.0.tar.gz
