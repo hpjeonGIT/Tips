@@ -23,3 +23,14 @@
 - export HCOLL_MAIN_IB=mlx5_0:0
 - export HCOLL_ENABLE_MCAST=1
 - export HCOLL_ENABLE_MCAST_ALL=1
+
+# when some nodes miss files or modules
+- Write a 3 line python script
+```py
+import socket
+import os
+print(socket.gethostname(),os.path.isfile("/opt/libfabric/some_version"))
+```
+- Run the above script then we can narrow down which nodes don't have the file
+- mpirun python3 host_check.py
+- srun python3 host_check.py
