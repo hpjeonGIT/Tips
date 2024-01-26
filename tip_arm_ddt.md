@@ -12,7 +12,9 @@
 - mpich (mpmd) or intel mpi(mpmd) only
 - ddt mpirun -n 1 ./a.out : -n 2 ./b.out
 - intelmpi : mpiexec.hydra -np 2 ./a.exe : -np 3 ./b.exe
-
+- In cray, mpmd run as: srun --mpi=cray_shasta -n 5 --multi-prog ./cray_job.config
+  - In DDT, open GUI and configure slurm(MPMD) then in select the first executable as the main debug executable. Skip arugument section and fill mpirun argument with ` --mpi=cray_shasta -n 5 --multi-prog ./cray_job.config`. Set number of ranks as appropriate (5 in this example)
+    
 ## Change the location of cache or configuration
 - Open ~/.allinea/system.config
 - Change the default setup of shared_directory=~
