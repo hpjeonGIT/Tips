@@ -10,3 +10,11 @@
   - srun or aprun on cray
 - The order of arguments matters
 - In the new UI, the source code of b.exe may not appear. Then click b.exe in the pid pane -> go to the pane of call stack -> click the function name
+
+## attaching running pid
+- totalview -classicUI
+- click attach menu
+- click +H and add the first computing node (we assume that you're on headnode of the cluster)
+- In cray srun environment, select **parent srun** process, not **child srun** process
+  - In regular mpirun environment, this might be different
+  - Can attach MPMD as well
