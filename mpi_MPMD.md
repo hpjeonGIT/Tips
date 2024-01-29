@@ -53,4 +53,32 @@ $ mpirun -configfile mpmd_config
 - srun -n 8 -l --multi-prog ./mapfile
 - for mpi job, srun --mpi=cray_shasta or pmi2 might be necessary
 
-
+## sample test code
+- a.cxx
+```cxx
+#include<iostream>
+#include<mpi.h>
+#include<unistd.h>
+int main(int argc, char* argv[]) {
+  int my_rank, ierr, ncpus;
+  ierr = MPI_Init(&argc, &argv);
+  ierr = MPI_Comm_size(MPIM_COMM_WORLD, &ncpus);
+  ierr = MPI_Comm_rank(MPIM_COMM_WORLD, &my_rank);
+  std::cout << "Hello from " << my_rank << " while ncpus = " << ncpus << std::endl;
+  int color {1};
+  int key {color};
+  MPI_Comm local_comm;
+  int ncpus_local, rank_local;
+  ierr = MPI_Comm_split(MPI_COMM_WORLD, color, key, &local_commm);
+  ierr = MPI_Comm_sizse(local_comm, &ncpus_local);
+  ierr = MPI_Comm_rank(local_comm, &rank_local);
+  char proc_name[MPI_MAX_PROCESSOR_NAME];
+  int name_len;
+  MPI_Get_Processor_name(proc_name, &name_len);
+  std::cout << "Proccessor name = << proc_name << std::endl;
+  std::cout << "a.exe from " << rank_local << " while local cpus = " << ncpus_local << std::endl;
+  MPI_Finalize()
+  return 0;
+}
+```
+- Make another b.cxx using `int color {2}`
