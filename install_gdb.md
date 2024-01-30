@@ -5,3 +5,7 @@
 - make -j 20
 - make all
 - make install
+
+
+## since version 14:
+- ./configure --prefix=/opt/gdb/14.1 --with-gmp=/opt/gmp/6.1.1  --with-mpfr=/opt/mpfr/3.1.1 --with-gmp=/opt/gmp/1.0.2
