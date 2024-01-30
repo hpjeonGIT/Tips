@@ -9,4 +9,7 @@
 
 ## since version 14:
 - ./configure --prefix=/opt/gdb/14.1 --with-gmp=/opt/gmp/6.1.1  --with-mpfr=/opt/mpfr/3.1.1 --with-gmp=/opt/gmp/1.0.2 --enable-tui
-- To enable TUI, libncurses library is required. TBD.
+- To enable TUI, libncurses library is required.
+- If ncurses is not installed at default location (/usr or /usr/local), gdb may not be able to find ncurses components
+  - In the configure step, use CFLAGS and CXX flags as CFLAGS="-L/opt/ncurses/6.4/lib -I/opt/ncurses/6.4/include"
+
