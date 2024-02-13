@@ -250,3 +250,11 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 ## for perf tools
 - Editing /proc/sys/kernel/perf_event_paranoid through vi is not allowed
 - Try `sudo sh -c 'echo 0 > /proc/sys/kernel/perf_event_paranoid'`
+
+## Rocky OS install
+- When error message pops up like:
+  - usb 2-0.1 device not accepting address
+  - sdb can't store path info
+- USB high voltage issue: https://paulphilippov.com/articles/how-to-fix-device-not-accepting-address-error
+- Adjust grub command: https://askubuntu.com/questions/117524/usb-device-not-accepting-address
+- multi path issue: https://ubuntuforums.org/showthread.php?t=2457812
