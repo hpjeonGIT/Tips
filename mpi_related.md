@@ -5,3 +5,7 @@
 
 ## Intel compiler/mpi since 2024
 - Module configuration Needs definition of ONEAPI_ROOT, I_MPI_ROOT, MKLROOT, FI_PROVIDER_PATH
+
+## send/recv using a same variable in collective calls
+- MPI_Allreduce(x,x,....) fails
+- Use MPI_Allreduce(MPI_IN_PLACE, x, ....) works
