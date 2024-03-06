@@ -15,12 +15,13 @@ TECHNICAL SKILLS
 PROFESSIONAL EXPERIENCE
 ------------------------
 * Computational Modeling Engineer, Aramco Americas, Boston MA (July 2019 – present)
-  - Participated in the development of the next-generation reservoir simulator
-    - Implemented pre-conditioner, linear solver, IO, and framework using C++, SWIG, Python C-API, MPI, HYPRE, AmgX, x86 intrinsics, cereal, and HDF5
+  - Developed in-house simulator suites
+    - Implemented pre-conditioner, linear solver, IO, and framework using C++, SWIG, Python C-API, MPI, HYPRE, AmgX, NCCL, x86 intrinsics, cereal, and HDF5
     - CI/CD using Bash scripting, CMake, CTest, and Google test
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
     - Optimized and improved the existing parallel code for large-scale processing
     - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility
+    - Modified hand-shaking of MPMD codes, b/w Fortran and C++ applications, for Cray MPICH library
     - Visited Saudi R&D center to collaborate with developers
   - Supported HPC SW environment for scientific computing
     - Installed/managed Open Source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, OpenPBS, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, providing module environment
@@ -139,11 +140,11 @@ CERTIFICATES
   - Data Science: Transformers for Natural Language Processing (2023)
 * Udemy certificate of completion
   - Introduction to Software Development Life Cycle (SDLC) (2024)
-  - The Complete Foundation Stock Trading Course (2024)
   - Linux KVM for System Engineers (2024)
   - Beginners Course: Jq Command Tutorials to Parse JSON Data (2024)
   - Learn Perl 5 By Doing It (2024)
   - Complete DevOps Ansible Automation Training (2024)
+  - C++ Data Structures & Algorithms + LEETCODE Exercises (2024)
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
   - Advanced C Programming Masterclass: Pointers & Memory in C (2023)
