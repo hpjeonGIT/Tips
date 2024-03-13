@@ -39,6 +39,16 @@ For fortran support, may use --enable-mpi-fortran=all
 
 ## With cuda
 ./configure --prefix=/share/ompi/401_gcc74_cuda --with-cuda=/share/libs/cuda/10.0 --disable-dependency-tracking --disable-silent-rules --enable-binaries --enable-mpi-cxx --enable-mpi-cxx-seek --enable-shared --enable-openib-rdmacm --enable-fast-install --with-devel-headers --with-hwloc=internal --with-tm=/opt/pbs/ --with-verbs=auto --with-file-system=ufs+nfs+lustre --enable-oshmem --with-knem=/opt/knem-1.1.3.90mlnx1 --with-mxm=/opt/mellanox/mxm --with-platform=contrib/platform/mellanox/optimized --with-hcoll=/opt/mellanox/hcoll --enable-mpi1-compatibility
+- Build with cuda-aware mpi
+  - Using --with-cuda might not be enough
+  - Need to use gdr_copy and ucx. Then couple ucx with openmpi build
+  - Ref: https://www-lb.open-mpi.org/faq/?category=buildcuda
+  - Steps
+    - Build gdr_copy
+    - Build ucx with coupling of gdr_copy
+    - Build openmpi with --with-cuda and --with-ucx
+  - Make sure using ompi_info --all |grep -in cuda_support
+  - As of March 2024, openmpi 5.0.1 seems not working with cuda build. cuda_support yields off. Use 4.1.4
 
 ## At centos7. Cuda+ucx
 - Download ucx 1.5.1 with cuda. Install gdr if the driver is available
