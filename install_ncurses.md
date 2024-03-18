@@ -1,2 +1,2 @@
-- ./configure --with-shared --with-termlib=tinfo --prefix=/share/libs/ncurses/6.1
+- ./configure --with-shared --with-termlib=tinfo --enable-widec --enable-expanded --prefix=/share/libs/ncurses/6.1
 - make –j24; make install
