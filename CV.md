@@ -16,7 +16,7 @@ PROFESSIONAL EXPERIENCE
 ------------------------
 * Computational Modeling Engineer, Aramco Americas, Boston MA (July 2019 – present)
   - Developed in-house simulator suites
-    - Implemented pre-conditioner, linear solver, IO, and framework using C++, SWIG, Python C-API, MPI, HYPRE, AmgX, NCCL, x86 intrinsics, cereal, and HDF5
+    - Implemented pre-conditioner, linear solver, IO, and framework using C++, SWIG, Python C-API, MPI, HYPRE, AmgX,x86 intrinsics, cereal, and HDF5
     - CI/CD using Bash scripting, CMake, CTest, and Google test
     - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
     - Optimized and improved the existing parallel code for large-scale processing
@@ -145,6 +145,7 @@ CERTIFICATES
   - Learn Perl 5 By Doing It (2024)
   - Complete DevOps Ansible Automation Training (2024)
   - C++ Data Structures & Algorithms + LEETCODE Exercises (2024)
+  - Assembly Language Foundation Course for Ethical Hackers (2024)
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
   - Advanced C Programming Masterclass: Pointers & Memory in C (2023)
