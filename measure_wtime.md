@@ -4,8 +4,7 @@ clock_t t0,t1;
 t0 = clock();
 ...
 t1 = clock();
-printf("Sum array CPU wall time = %4.6f\n",
-      (double)((double)(t1-t0)/CLOCKS_PER_SEC));
+printf("Took = %4.6f sec\n", (double)((double)(t1-t0)/CLOCKS_PER_SEC));
 ```
 
 ## In C using OpenMP
@@ -41,7 +40,7 @@ print *, t2
 t0 <- Sys.time()
 ...
 t1 <- Sys.time()
-cat(t1 - t0)
+cat("Took ", t1 - t0, "sec\n")
 ```
 
 ## In Python
@@ -50,12 +49,61 @@ import time
 t0 = time.time()
 ...
 t1 = time.time()
-print(t1-t0)
+print("Took ", t1-t0, "sec\n")
 ```
 
 ## In Matlab
-```
+```matlab
 tic
 ...
 toc
+```
+
+## In Java
+```Java
+long t0 = System.currentTimeMillis();
+...
+long t1 = System.currentTimeMillis();
+System.out.print("Took " + (t1-t0) +  "mseconds\n");
+```
+
+## In Javascript
+```javascript
+let t0, t1;
+t0 = new Date();
+...
+t1 = new Date();
+alert("Took" + (t1-t0) + "mseconds");
+```
+## In GoLang
+```go
+...
+import ( "fmt" ; "time" )
+...
+var t0 time.Time
+t0 = time.Now()
+...
+fmt.Println("Took " + time.Since(t0).String())
+```
+
+## In Ruby
+```ruby
+t0 = Time.now
+t1 = Time.now
+print("Took " , t1-t0 ,"seconds\n")
+```
+
+## In Julia
+```julia
+@time ... # do something
+```
+
+## In Perl
+```Perl
+use Time::HiRes qw (time);
+...
+my $t0 = time();
+...
+my $t1 = time();
+printf("Took %.2f sec\n", $t1-$t0);
 ```
