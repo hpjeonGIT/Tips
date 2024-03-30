@@ -25,7 +25,23 @@ t1 = MPI_Wtime();
 printf("Took %f seconds\n",t1-t0);
 ```
 
-## In fortran
+## In C using CUDA event
+```c
+cudaEvent_t start, end;
+cudaEventCreate(&start);
+cudaEventCreate(&end);
+cudaEventRecord(start);
+event_test << < grid,block >>> ();
+cudaEventRecord(end);
+cudaEventSynchronize(end);
+float time;
+cudaEventElapsedTime(&time, start, end);
+printf("Kernel execution time using events : %f \n",time);
+cudaEventDestroy(start);
+cudaEventDestroy(end);
+```
+
+## In Fortran
 ```fortran
 real:: t0,t1,t2,secnds
 t0 = 0.0
@@ -89,6 +105,7 @@ fmt.Println("Took " + time.Since(t0).String())
 ## In Ruby
 ```ruby
 t0 = Time.now
+...
 t1 = Time.now
 print("Took " , t1-t0 ,"seconds\n")
 ```
@@ -107,3 +124,17 @@ my $t0 = time();
 my $t1 = time();
 printf("Took %.2f sec\n", $t1-$t0);
 ```
+
+## In Rust
+```rust
+use std::time::{Duration,Instant};
+...
+let t0 = Instant::now();
+...
+let dtime = t0.elapsed();
+println!("Took {:?}", dtime);
+```
+
+## In Postgresql
+- Ref: https://stackoverflow.com/questions/9063402/get-execution-time-of-postgresql-query
+- `\timing on`
