@@ -50,6 +50,7 @@ t1 = secnds(t0)
 t2 = secnds(t1)
 print *, t2
 ```
+- May use `omp_get_wtime()` or `MPI_Wtime()` as shown above
 
 ## In R
 ```R
@@ -138,3 +139,13 @@ println!("Took {:?}", dtime);
 ## In Postgresql
 - Ref: https://stackoverflow.com/questions/9063402/get-execution-time-of-postgresql-query
 - `\timing on`
+
+## In Lua
+```lua
+t0 = os.time()
+...
+t1 = os.time()
+print("Took ", t1-t0, "sec")
+```
+- os.clock() might not be accurate
+  - Ref: https://stackoverflow.com/questions/463101/lua-current-time-in-milliseconds
