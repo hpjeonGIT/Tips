@@ -149,3 +149,11 @@ print("Took ", t1-t0, "sec")
 ```
 - os.clock() might not be accurate
   - Ref: https://stackoverflow.com/questions/463101/lua-current-time-in-milliseconds
+
+## In tcl
+```tcl
+% set t0 [clock clicks -milliseconds]
+...
+% set t1 [expr [clock clicks -milliseconds] - $t0]
+```
+
