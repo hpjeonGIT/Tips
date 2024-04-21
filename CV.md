@@ -149,6 +149,7 @@ CERTIFICATES
   - Erlang: The Complete Beginner's Guide (2024)
   - Lua Scripting: Master complete Lua Programming from scratch (2024)
   - COBOL Complete Reference Course! (2024)
+  - The Complete Course of TCL Programming 2024 (2024)
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
   - Advanced C Programming Masterclass: Pointers & Memory in C (2023)
