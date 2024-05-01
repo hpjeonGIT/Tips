@@ -33,11 +33,17 @@ $ nm libvtkCommonDataModel-9.1.so
 
 ## intel2021 + mvapich2 on AMD cpu
 - Hangs at FindMPI()
-  - Check through cmake --trace-expand
+  - Check through `cmake --trace-expand`
   - ROI: execute_process(mpicxx -showme:compile ...)
+    - Actually this was not the cause. The real issue was that MPI_CXX_WORKS failed (FALSE found. Must be TRUE)
+    - Failing from mpicxx -mkl=sequential test_mpi.cpp
 - Intel cpu seems OK
 - Found at 3.11, 3.28, 3.29, ...
 - Alternative solution
   - Instead of mpicxx, use icpc and provide -DCMAKE_CXX_FLAGS="..."
   - The contents can be found from `mpicxx -show`
   - Might not work on building external projects
+- The cause was the failure of try_compile(...) at FindMPI.cmake
+  - Test test_mpi.c from FindMPI folder
+  - MKL library was not found from linking
+  - Added -DCMAKE_CXX_FLAGS="-L${MKLROOT}/lib/intel64" resolved the isue 
