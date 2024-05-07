@@ -258,3 +258,7 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 - USB high voltage issue: https://paulphilippov.com/articles/how-to-fix-device-not-accepting-address-error
 - Adjust grub command: https://askubuntu.com/questions/117524/usb-device-not-accepting-address
 - multi path issue: https://ubuntuforums.org/showthread.php?t=2457812
+
+## when yum update yields an error message
+-RPM: error: db5 error (-30969) from dbenv->open: BDB0091 DB_VERSION_MISMATCH: Database environment version mismatch
+  - Solution: `systemctl stop packagekit.service` then perform yum command
