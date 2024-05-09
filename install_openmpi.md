@@ -71,3 +71,16 @@ For fortran support, may use --enable-mpi-fortran=all
 - run mpivars from mvapich2
 - extract `MPIR_CVAR...` using `cut -c-99`
 - export or setenv prior to running mpirun at openmpi
+
+## openmpi 5.0.3 with UCX + CUDA
+- gdrcopy: make prefix=... CUDA=... all install
+- UCX
+  - Needs autoconfig/automake/libtool
+  - ./autogen.sh
+  - When failed, run libtoolize then autogen.sh again
+  - ./configure --prefix=... --with-knem=... --with-grdcopy=... --with-verbs=/usr/include/infiniband:/usr/lib64/libibverbs --with-cuda=...
+  - make -j20; make install
+- openmpi 5.0.3
+- `--lib-cuda-libdir` must point the dir containing libcuda.so
+- ./autogen.pl --force
+- ./configure --prefix=... --with-cuda=/usr/local/cuda --with-cuda-libdir=/usr/local/cuda/targets/x86_64-linux/lib/stubs --disable-dependency-tracking --disable-silent-rules --enable-shared --enable-fast-install --with-devel-headers --with-hwloc=internal --with-platform=contrib/platform/optimized --with-knem=... --with-hcoll=... --with-ucx=... --enable-mpi-compatibility CC=gcc CXX=g++ F77=gfortran F90=gfortran
