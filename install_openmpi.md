@@ -78,8 +78,9 @@ For fortran support, may use --enable-mpi-fortran=all
   - Needs autoconfig/automake/libtool
   - ./autogen.sh
   - When failed, run libtoolize then autogen.sh again
-  - ./configure --prefix=... --with-knem=... --with-grdcopy=... --with-verbs=/usr/include/infiniband:/usr/lib64/libibverbs --with-cuda=...
+  - ./configure --prefix=... --with-knem=... --with-grdcopy=... --with-verbs=/usr --with-cuda=...
   - make -j20; make install
+  - After installation, check `./bin/ucx_info -d |grep Transport` and confirm mlx5 or verbs
 - openmpi 5.0.3
 - `--lib-cuda-libdir` must point the dir containing libcuda.so
 - ./autogen.pl --force
