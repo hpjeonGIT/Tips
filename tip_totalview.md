@@ -18,3 +18,7 @@
 - In cray srun environment, select **parent srun** process, not **child srun** process
   - In regular mpirun environment, this might be different
   - Can attach MPMD as well
+
+## for openmpi version 5 or higher
+- orterun is not provided anymore while totalview will look for orterun
+- Make a symbolic link of orterun at bin folder using mpirun
