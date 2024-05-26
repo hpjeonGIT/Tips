@@ -1,6 +1,6 @@
 Byoungseon Jeon, PhD
 ====================
-- HPC/ML Solution Architect
+- HPC/ML Consultant
 - Application SW engineer
 
 TECHNICAL SKILLS
@@ -24,7 +24,7 @@ PROFESSIONAL EXPERIENCE
     - Modified hand-shaking of MPMD codes, b/w Fortran and C++ applications, for Cray MPICH library
     - Visited Saudi R&D center to collaborate with developers
   - Supported HPC SW environment for scientific computing
-    - Installed/managed Open Source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, OpenPBS, Darshan, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, providing module environment
+    - Installed/managed open-source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TexMaker, MVAPICH2, OSU benchmark, OpenPBS, Darshan, UCX coupled OpenMPI with gdrcopy, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, DDT, TotalView, providing module environment
     - Installed RHEL7/8 and Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
     - Installed/managed Ganglia/Nagios for Linux cluster monitoring such as ambient/CPU temperature, SLURM status, Infiniband connection, and workload
     - Provided/managed GRAV server for internal documentation of the best practice in HPC and scientific computing
@@ -150,6 +150,7 @@ CERTIFICATES
   - Lua Scripting: Master complete Lua Programming from scratch (2024)
   - COBOL Complete Reference Course! (2024)
   - The Complete Course of TCL Programming 2024 (2024)
+  - Anomaly Detection: Machine Learning, Deep Learning, AutoML
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
   - Advanced C Programming Masterclass: Pointers & Memory in C (2023)
