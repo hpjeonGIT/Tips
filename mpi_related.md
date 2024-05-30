@@ -46,3 +46,7 @@ print(socket.gethostname(),os.path.isfile("/opt/libfabric/some_version"))
 - Run the above script then we can narrow down which nodes don't have the file
 - mpirun python3 host_check.py
 - srun python3 host_check.py
+
+# Check if IB is really working
+- cat  /sys/class/infiniband/mlx*_0/ports/1/counters/port_*_packets
+- May observe it changes/increases more than several thousands
