@@ -16,20 +16,19 @@ PROFESSIONAL EXPERIENCE
 ------------------------
 * Computational Modeling Engineer, Aramco Americas, Boston MA (July 2019 – present)
   - Developed in-house simulator suites
-    - Implemented pre-conditioner, linear solver, IO, and framework using C++, SWIG, Python C-API, MPI, HYPRE, AmgX,x86 intrinsics, cereal, and HDF5
-    - CI/CD using Bash scripting, CMake, CTest, and Google test
-    - Python and Bash scripting for the test automation, model conversion, unit-test, post-processing, and data analytics
+    - Implemented pre-conditioner, linear solver, IO, and framework using C++, SWIG, Python C-API, MPI, HYPRE, AmgX, x86 intrinsics, cereal, and HDF5
+    - CI/CD and test automation using Bash scripting, CMake, and Google test
+    - Python and Bash scripting for the model/DSL conversion, unit-test, post-processing, and data analytics
     - Optimized and improved the existing parallel code for large-scale processing
-    - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility
-    - Modified hand-shaking of MPMD codes, b/w Fortran and C++ applications, for Cray MPICH library
+    - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility and MPMD hand-shaking
     - Visited Saudi R&D center to collaborate with developers
   - Supported HPC SW environment for scientific computing
-    - Installed/managed open-source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TexMaker, MVAPICH2, OSU benchmark, OpenPBS, Darshan, UCX coupled OpenMPI with gdrcopy, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, DDT, TotalView, providing module environment
-    - Installed RHEL7/8, RockyOS8, and Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
+    - Installed/managed open-source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TexMaker, MVAPICH2, OSU benchmark, OpenPBS, Darshan, OpenMPI with UCX and gdrcopy, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, DDT, TotalView, providing module environment
+    - Installed RHEL7/8, RockyOS8, Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
     - Installed/managed Ganglia/Nagios for Linux cluster monitoring such as ambient/CPU temperature, SLURM status, Infiniband connection, and workload
-    - Provided/managed GRAV server for internal documentation of the best practice in HPC and scientific computing
+    - Provided/managed GRAV server for internal documentation of the best practice
     - Assisted building legacy in-house simulation tools over various SW stacks
-    - Trained new hires for Linux cluster environment and SW development workflow
+    - Trained new hires/interns for Linux cluster environment and workflow
 * Senior Computational Scientist, Corning Incorporated, Corning NY (May 2017 - July 2019)
   - Parallelized/optimized in-house/open-source/commercial applications over HPC clusters for machine learning and scientific computing
     - Accelerated DL/CNN image training of Keras/TensorFlow using distributed computing of Horovod, OpenMPI, and NCCL2 (30x speed-up using 32 GPUs)
@@ -129,6 +128,7 @@ CERTIFICATES
 ------------
 * Nvidia Academy Certificate of Completion
   - Ansible Essentials for Network Engineers (2024)
+  - Introduction to AI in the Data Center (2024)
   - InfiniBand Essentials (2023)
   - Introduction to Base Command Manager (2023)
 * Google Cloud Completion Badge
@@ -150,7 +150,7 @@ CERTIFICATES
   - Lua Scripting: Master complete Lua Programming from scratch (2024)
   - COBOL Complete Reference Course! (2024)
   - The Complete Course of TCL Programming 2024 (2024)
-  - Anomaly Detection: Machine Learning, Deep Learning, AutoML
+  - Anomaly Detection: Machine Learning, Deep Learning, AutoML (2024)
   - Function Acceleration on FPGA with Vitis – part 1: Fundamental (2023)
   - Machine Learning: Natural Language Processing in Python (V2) (2023)
   - Advanced C Programming Masterclass: Pointers & Memory in C (2023)
