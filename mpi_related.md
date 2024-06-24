@@ -50,3 +50,8 @@ print(socket.gethostname(),os.path.isfile("/opt/libfabric/some_version"))
 # Check if IB is really working
 - cat  /sys/class/infiniband/mlx*_0/ports/1/counters/port_*_packets
 - May observe it changes/increases more than several thousands
+
+# How to check IB dev/port
+- show_gids
+- If openmpi is installed, ompi_info --all |grep pml # not showing mlx but shows ucx or ob1
+- If ucx is installed, ucx_info -d |grep Transport
