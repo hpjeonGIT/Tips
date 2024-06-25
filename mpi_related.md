@@ -55,3 +55,6 @@ print(socket.gethostname(),os.path.isfile("/opt/libfabric/some_version"))
 - show_gids
 - If openmpi is installed, ompi_info --all |grep pml # not showing mlx but shows ucx or ob1
 - If ucx is installed, ucx_info -d |grep Transport
+
+# Find the version of mellanox driver
+- modinfo mlx5_core
