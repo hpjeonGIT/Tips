@@ -22,7 +22,7 @@ PROFESSIONAL EXPERIENCE
     - Optimized and improved the existing parallel code for large-scale processing
     - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility and MPMD hand-shaking
     - Visited Saudi R&D center to collaborate with developers
-  - Supported HPC SW environment for scientific computing
+  - Managed HPC HW/SW environment for scientific computing
     - Trouble-shooted daily issues in SW development and HW maintenance, consulting developers
     - Installed/managed open-source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TexMaker, MVAPICH2, OSU benchmark, OpenPBS, Darshan, OpenMPI with UCX and gdrcopy, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, DDT, TotalView, providing module environment
     - Installed RHEL7/8, RockyOS8, Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
