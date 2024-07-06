@@ -19,9 +19,11 @@ lib --enable-collective-report-default
 
 
 ## download all git repositories of a user
+- As of July 2024:
 ```
-for i in `curl -s https://api.github.com/users/hpjeonGIT/repos?per_page=1000 |grep git_url |awk '{print $2}'| sed 's/"\(.*\)",/\1/'`; do  git clone $i;  done
+for i in `curl -s https://api.github.com/users/hpjeonGIT/repos?per_page=1000 |grep git_url |awk '{print $2}'| sed 's/"\(.*\)",/\1/' | sed 's/git:/https:/'`; do  git clone $i;  done
 ```
+
 ## Using https for git
 - When ssh key authentication fails
 - One time activity
