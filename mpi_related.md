@@ -58,3 +58,21 @@ print(socket.gethostname(),os.path.isfile("/opt/libfabric/some_version"))
 
 # Find the version of mellanox driver
 - modinfo mlx5_core
+
+# monitoring memory consumption in the main node
+- monitor.sh
+```sh
+#!/bin/sh
+while true
+do
+  sleep 1
+  date >> free.log_`hostname`
+  free >> free.log_`hostname`
+done
+```
+- In the job script
+```
+..
+./monitor.sh&
+mpirun ...
+```
