@@ -33,3 +33,8 @@ DefaultLimitMEMLOCK=65536:infinity
 - Sample uprof command:
   - mpirun -np 40 .../AMDuProfCLI collect --config tbp --mpi --output-dir ./PROF40 ../bin/a.exe
   - MPI trace only: mpirun -np 40 .../AMDuProfCLI collect --trace mpi=full --output-dir ./TMP ../bin/a.exe
+
+## nvidia ncu/nsys
+- Basically they need sudo privilege
+- Or make /etc/modprobe.d/nvidia_prof.conf containing 'options nvidia NVreg_RestrictProfilingToAdminUsers=0'
+  - Ref: https://developer.nvidia.com/nvidia-development-tools-solutions-err_nvgpuctrperm-permission-issue-performance-counters
