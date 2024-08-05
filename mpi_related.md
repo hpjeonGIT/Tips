@@ -76,3 +76,12 @@ done
 ./monitor.sh&
 mpirun ...
 ```
+## cpu binding
+- mvapich2: export MV2_CPU_MAPPING=0:1:2:3:4
+- mpich: mpirun -n 4 -bind-to user:0,1,2,3 python3 cpu_id.py
+  - Instruction: mpirun -bind-to -help
+- openmpi: mpirun -n 4 -cpu-set 0,1,2,3 python3 cpu_id.py
+```python
+import psutil
+print(psutil.Process().cpu_num())
+```
