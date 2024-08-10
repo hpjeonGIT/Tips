@@ -126,6 +126,9 @@ EDUCATION
 
 CERTIFICATES
 ------------
+* Oracle University Badge
+  - Oracle Cloud Infrastructure Foundations (2024)
+  - Introduction to Oracle Cloud Essentials (2024)
 * Nvidia Academy Certificate of Completion
   - Ansible Essentials for Network Engineers (2024)
   - Introduction to AI in the Data Center (2024)
