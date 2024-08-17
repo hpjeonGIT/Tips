@@ -21,6 +21,7 @@ PROFESSIONAL EXPERIENCE
     - Python and Bash scripting for the model/DSL conversion, unit-test, post-processing, and data analytics
     - Optimized and improved the existing parallel code for large-scale processing
     - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility and MPMD hand-shaking
+    - Converted CUDA code into ROCm/HIP for AMD GPUs
     - Visited Saudi R&D center to collaborate with developers
   - Managed HPC HW/SW environment for scientific computing
     - Trouble-shooted daily issues in SW development and HW maintenance, consulting developers
