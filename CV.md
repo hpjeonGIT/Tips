@@ -127,9 +127,10 @@ EDUCATION
 
 CERTIFICATES
 ------------
-* Oracle University Badge
-  - Oracle Cloud Infrastructure Foundations (2024)
-  - Introduction to Oracle Cloud Essentials (2024)
+* Oracle University
+  - Oracle Cloud Infrastructure Foundations Badge (2024)
+  - Introduction to Oracle Cloud Essentials Badge (2024)
+  - Oracle Cloud Infrastructure 2023 AI Foundations Associate (1Z0-1122-23) (2024)
 * Nvidia Academy Certificate of Completion
   - Ansible Essentials for Network Engineers (2024)
   - Introduction to AI in the Data Center (2024)
