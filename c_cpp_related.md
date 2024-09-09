@@ -100,3 +100,8 @@ const int& x = 5
 - Summary
     - a function of const argument can handle the argument of non-const
     - Function overloading of const argument vs non-const argument may not work in earlier c++ standard. Works by -std=c++11
+
+## Clang
+- `-Rpass-analysis=kernel-resource-usage` may show Spill of CGPR/VGPR
+- `-save-temps` to generate assembly
+- Ref: https://www.olcf.ornl.gov/wp-content/uploads/Intro_Register_pressure_ORNL_20220812_2083.pdf
