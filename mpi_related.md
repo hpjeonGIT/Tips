@@ -85,3 +85,5 @@ mpirun ...
 import psutil
 print(psutil.Process().cpu_num())
 ```
+## coupling with nvcc
+- If nvcc cannot find mpi.h, then update CPATH variable as $MPI_ROOT/include
