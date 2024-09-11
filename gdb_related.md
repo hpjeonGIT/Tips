@@ -40,3 +40,8 @@ $1 = <optimized out>
 gdb-peda$ p y
 $1 = 0x4
 ```
+
+## when std::bad_cast exception
+- bt may not work. Need to stop throw
+- `catch throw` then run the execuble within gdb, to stay in the stack memory
+- `bt` will work now
