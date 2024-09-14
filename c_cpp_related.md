@@ -105,3 +105,56 @@ const int& x = 5
 - `-Rpass-analysis=kernel-resource-usage` may show Spill of CGPR/VGPR
 - `-save-temps` to generate assembly
 - Ref: https://www.olcf.ornl.gov/wp-content/uploads/Intro_Register_pressure_ORNL_20220812_2083.pdf
+
+## dynamic_cast
+```cpp
+#include <iostream>
+class Base
+{
+protected:
+  int n = 3;
+public:
+  Base() {};
+  virtual ~Base() {};
+  virtual void print() {std::cout << "Base " << n << std::endl;}
+};
+class Drvd: public Base 
+{
+  public:
+  Drvd() { n += 1; };
+  ~Drvd() {};
+  void print() {std::cout << "Drvd " << n << std::endl;}
+};
+int main() 
+{
+  Drvd q;
+  Base &s = dynamic_cast<Base&>(q);
+  std::cout << "upcast using reference done\n"; 
+  s.print(); // prints Drvd 4
+  Drvd *f = new Drvd();
+  Base *g = dynamic_cast<Base*>(f);
+  std::cout << "upcast using pointer done\n"; 
+  g->print();  // prints Drvd 4
+  delete(f);
+  Base *x = new Base();
+  Drvd *z = dynamic_cast<Drvd*>(x);
+  std::cout << "downcast using pointer done \n";
+  //z->print(); segfaults. Need to use static_cast
+  delete(x);
+  Drvd c;
+  Base &a = c;
+  Drvd &b = dynamic_cast<Drvd&>(a);
+  std::cout << "downcast using reference done\n"; 
+  b.print(); // prints Drvd 4
+  return 0;
+  //https://stackoverflow.com/questions/11855018/c-inheritance-downcasting
+}
+```
+- For downcast using a reference:
+```cpp
+  Base a;
+  Drvd &b = dynamic_cast<Drvd&>(a);
+```
+- This yields std::bad_cast
+- Using static_cast<> runs OK
+ 
