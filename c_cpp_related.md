@@ -107,8 +107,7 @@ const int& x = 5
 - Ref: https://www.olcf.ornl.gov/wp-content/uploads/Intro_Register_pressure_ORNL_20220812_2083.pdf
 
 ## dynamic_cast
-```cpp
-#include <iostream>
+```cpp#include <iostream>
 class Base
 {
 protected:
@@ -127,34 +126,54 @@ class Drvd: public Base
 };
 int main() 
 {
-  Drvd q;
-  Base &s = dynamic_cast<Base&>(q);
+  // ######
+  try {
+    Drvd q;
+    Base &s = dynamic_cast<Base&>(q);
+    s.print(); // prints Drvd 4  
+  } catch (std::bad_cast) {
+    throw "bad_cast";
+  }
   std::cout << "upcast using reference done\n"; 
-  s.print(); // prints Drvd 4
+  // ######  
   Drvd *f = new Drvd();
   Base *g = dynamic_cast<Base*>(f);
-  std::cout << "upcast using pointer done\n"; 
-  g->print();  // prints Drvd 4
+  if (g) {
+    std::cout << "upcast using pointer done\n"; 
+    g->print();  // prints Drvd 4
+  }
   delete(f);
+  // ######
   Base *x = new Base();
-  Drvd *z = dynamic_cast<Drvd*>(x);
-  std::cout << "downcast using pointer done \n";
+  Drvd *z = dynamic_cast<Drvd*>(x); // produces nullptr
+  if (z) std::cout << "downcast using pointer done\n"; // never done due to nullptr
   //z->print(); segfaults. Need to use static_cast
   delete(x);
-  Drvd c;
-  Base &a = c;
-  Drvd &b = dynamic_cast<Drvd&>(a);
+  // ######
+  try {
+    Drvd a; 
+    Base &b = dynamic_cast<Base&>(a);
+    b.print(); // prints Drvd 4
+  } catch (std::bad_cast) {
+    throw "bad_cast";
+  }
+  std::cout << "upcast using reference done\n"; 
+  /*
+  Base n; 
+  Drvd &m = dynamic_cast<Drvd&>(n); // this is bad_cast. static_cast<> will work
   std::cout << "downcast using reference done\n"; 
-  b.print(); // prints Drvd 4
+  */
+  // ######
+  try {
+    Drvd a; 
+    Base &b = dynamic_cast<Base&>(a);
+    Drvd &c = dynamic_cast<Drvd&>(b);
+    c.print();  // prints Drvd 4
+  } catch (std::bad_cast){
+    throw "bad_cast";
+  }
+  std::cout << "dowcast using reference done\n"; 
   return 0;
   //https://stackoverflow.com/questions/11855018/c-inheritance-downcasting
 }
 ```
-- For downcast using a reference:
-```cpp
-  Base a;
-  Drvd &b = dynamic_cast<Drvd&>(a);
-```
-- This yields std::bad_cast
-- Using static_cast<> runs OK
- 
