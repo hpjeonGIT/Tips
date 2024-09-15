@@ -132,7 +132,7 @@ int main()
     Base &s = dynamic_cast<Base&>(q);
     s.print(); // prints Drvd 4  
   } catch (std::bad_cast) {
-    throw "bad_cast";
+    throw;
   }
   std::cout << "upcast using reference done\n"; 
   // ######  
@@ -155,7 +155,7 @@ int main()
     Base &b = dynamic_cast<Base&>(a);
     b.print(); // prints Drvd 4
   } catch (std::bad_cast) {
-    throw "bad_cast";
+    throw;
   }
   std::cout << "upcast using reference done\n"; 
   /*
@@ -170,7 +170,7 @@ int main()
     Drvd &c = dynamic_cast<Drvd&>(b);
     c.print();  // prints Drvd 4
   } catch (std::bad_cast){
-    throw "bad_cast";
+    throw;
   }
   std::cout << "dowcast using reference done\n"; 
   return 0;
