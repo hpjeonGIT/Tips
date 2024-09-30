@@ -62,3 +62,9 @@ unset DBUS_SESSION_BUS_ADDRESS
 
 # Perforce 2021 at Ubuntu20
 - Deployed libssl.so not matching with system libcrypto. Just rename or remove the enclosed libssl.so and let perforce use the system libss.so
+
+# when x11 forward not working
+- strace xeyes
+  - Found it hangs at connect()
+  - IP address seems odd
+  - /etc/hosts had old IP address. Update resolves the issue
