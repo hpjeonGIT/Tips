@@ -38,3 +38,11 @@ DefaultLimitMEMLOCK=65536:infinity
 - Basically they need sudo privilege
 - Or make /etc/modprobe.d/nvidia_prof.conf containing 'options nvidia NVreg_RestrictProfilingToAdminUsers=0'
   - Ref: https://developer.nvidia.com/nvidia-development-tools-solutions-err_nvgpuctrperm-permission-issue-performance-counters
+- `ncu --target-processes all -o report_all mpirun -n 4 a.exe -i input` for collecting all ranks together
+- To get profile over each rank, the nvidia manual shows to use `report_%q{OMPI_COMM_WORLD_RANK}` but this doesn't work
+  - `PMI_RANK` for mpich or intel mpi
+  - `MV2_COMM_WORLD_RANK` for mvapich2
+  - Instead of rank number, use process number
+  - `mpirun -n 4 ncu -o report_%p a.exe -i input`
+  - May combine `%h` to append hostname
+    
