@@ -16,10 +16,11 @@ PROFESSIONAL EXPERIENCE
 ------------------------
 * Computational Modeling Engineer, Aramco Americas, Boston MA (July 2019 – present)
   - Developed in-house simulator suites
-    - Implemented pre-conditioner, linear solver, IO, and framework using C++, SWIG, Python C-API, MPI, HYPRE, AmgX, x86 intrinsics, cereal, and HDF5
+    - Implemented pre-conditioner, linear solver, IO, and framework using C++, OpenMP, MPI, HYPRE, AmgX, x86 intrinsics, SWIG, Python C-API, cereal, and HDF5
     - CI/CD and test automation using Bash scripting, CMake, and Google test
+    - Debugging MPI code using Linaro DDT/gdb and profiling the performance using Cray Perftools, Intel VTune, AMD µProfiler, Nvidia ncu/nsys, and Linaro MAP
     - Python and Bash scripting for the model/DSL conversion, unit-test, post-processing, and data analytics
-    - Optimized and improved the existing parallel code for large-scale processing
+    - Optimized and improved parallel computing algorithm for large-scale processing
     - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility and MPMD hand-shaking
     - Converted CUDA code into ROCm/HIP for AMD GPUs
     - Visited Saudi R&D center to collaborate with developers
