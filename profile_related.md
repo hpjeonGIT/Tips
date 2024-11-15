@@ -30,9 +30,18 @@
 DefaultLimitMEMLOCK=65536:infinity
 ```
   - If you use vnc session, ulimit -l must be adjusted before launching vnc session. The session will inherit from the current terminal and you will not be able to adjust memlock
-- Sample uprof command:
+- Collection steps: 
   - mpirun -np 40 .../AMDuProfCLI collect --config tbp --mpi --output-dir ./PROF40 ../bin/a.exe
   - MPI trace only: mpirun -np 40 .../AMDuProfCLI collect --trace mpi=full --output-dir ./TMP ../bin/a.exe
+  - TBP + mpi: mpirun -np 40 .../AMDuProfCLI collect --config tbp --trace mpi=full --output-dir ./TMP ../bin/a.exe
+  - TBP + mpi + call graph: mpirun -np 40 .../AMDuProfCLI collect --config tbp --call-graph --trace mpi=full --output-dir ./TMP ../bin/a.exe
+- Translation:
+  - Done automatically when loaded in GUI
+  - For very large results, use batch
+  - AMDuProfCLI translate -i ./TMP/AMDuProf-a.exe-Custom-MPI --log-path ./log_dir --enable-log --category cpu,mpi
+    - This will run multiple-threading processes. Feed some cpus (>4) on a single node
+- Analysis:
+  - Load the results from GUI of AMDuProf
 
 ## nvidia ncu/nsys
 - Basically they need sudo privilege
