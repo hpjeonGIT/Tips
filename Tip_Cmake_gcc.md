@@ -47,3 +47,17 @@ $ nm libvtkCommonDataModel-9.1.so
   - Test test_mpi.c from FindMPI folder
   - MKL library was not found from linking
   - Added -DCMAKE_CXX_FLAGS="-L${MKLROOT}/lib/intel64" resolved the isue 
+
+## Order of external project build
+- Adding dependencies on external projects
+```
+ExternalProject_Add(
+    AAA_PROJECT
+    ...
+)
+ExternalProject_Add(
+    BBB_PROJECT
+    DEPENDS AAA_PROJECT
+    ...
+)
+```
