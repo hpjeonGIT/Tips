@@ -5,7 +5,7 @@ Byoungseon Jeon, PhD
 
 TECHNICAL SKILLS
 ----------------
-* High performance computing using MPI, OpenMP, CUDA libraries, and HDF5
+* High performance computing using MPI, OpenMP, CUDA/HIP, and HDF5
 * Expertise of machine learning, FDM/FEM/FVM, reservoir simulation, peridynamics, molecular dynamics, Monte-Carlo, and density functional theory
 * Software development using C/C++, Python, Fortran, R, MATLAB
 * Distributed Machine Learning and High Performance Data-Analytics (HPDA) using Python, Horovod, R, Rmpi
@@ -18,7 +18,7 @@ PROFESSIONAL EXPERIENCE
   - Developed in-house simulator suites
     - Implemented pre-conditioner, linear solver, IO, and framework using C++, OpenMP, MPI, HYPRE, AmgX, x86 intrinsics, SWIG, Python C-API, cereal, and HDF5
     - CI/CD and test automation using Bash scripting, CMake, and Google test
-    - Debugging MPI code using Linaro DDT/gdb and profiling the performance using Cray Perftools, Intel VTune, AMD µProfiler, Nvidia ncu/nsys, and Linaro MAP
+    - Debugging MPI code using Linaro DDT/gdb and profiling the performance using Cray Perftools, Intel VTune, AMD µProfiler, TAU, Nvidia ncu/nsys, and Linaro MAP
     - Python and Bash scripting for the model/DSL conversion, unit-test, post-processing, and data analytics
     - Optimized and improved parallel computing algorithm for large-scale processing
     - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility and MPMD hand-shaking
@@ -145,6 +145,14 @@ CERTIFICATES
 * Deep Learning Courses Certificate of Achievement
   - Data Science: Transformers for Natural Language Processing (2023)
 * Udemy certificate of completion
+  - Fundamentals of Operating Systems (2025)
+  - CUDA Parallel Programming on NVIDIA GPUs (2025)
+  - Computer Science 101: Master the theory Behind Programming (2025)
+  - Fundamentals of Network Engineering (2025)
+  - The Complete Course of Compiler Design (2025)
+  - Containers Under the Hood (2025)
+  - Software Engineering 101: Plan and Execute Better Software (2025)
+  - Fundamentals of Database Engineering (2025)
   - Introduction to Software Development Life Cycle (SDLC) (2024)
   - Linux KVM for System Engineers (2024)
   - Beginners Course: Jq Command Tutorials to Parse JSON Data (2024)
