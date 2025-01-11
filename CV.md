@@ -128,22 +128,6 @@ EDUCATION
 
 CERTIFICATES
 ------------
-* Oracle University
-  - Oracle Cloud Infrastructure Foundations Badge (2024)
-  - Introduction to Oracle Cloud Essentials Badge (2024)
-  - Oracle Cloud Infrastructure 2023 AI Foundations Associate (1Z0-1122-23) (2024)
-* Nvidia Academy Certificate of Completion
-  - Ansible Essentials for Network Engineers (2024)
-  - Introduction to AI in the Data Center (2024)
-  - InfiniBand Essentials (2023)
-  - Introduction to Base Command Manager (2023)
-* Google Cloud Completion Badge
-  - Infrastructure and Application Modernization with Google Cloud (2024)
-  - Introduction to Generative AI (2024)
-  - Digital Transformation with Google Cloud (2024)
-  - Google Cloud Fundamentals: Core Infrastructure (2023)
-* Deep Learning Courses Certificate of Achievement
-  - Data Science: Transformers for Natural Language Processing (2023)
 * Udemy certificate of completion
   - Fundamentals of Operating Systems (2025)
   - CUDA Parallel Programming on NVIDIA GPUs (2025)
@@ -214,6 +198,22 @@ CERTIFICATES
   - C++ Unit Testing: Google Test and Google Mock (2020)
   - SQL and PostgreSQL: The Complete Developer's Guide (2020)
   - Linux x86 Assembly Language Programming From Ground Up (2020)
+* Oracle University
+  - Oracle Cloud Infrastructure Foundations Badge (2024)
+  - Introduction to Oracle Cloud Essentials Badge (2024)
+  - Oracle Cloud Infrastructure 2023 AI Foundations Associate (1Z0-1122-23) (2024)
+* Nvidia Academy Certificate of Completion
+  - Ansible Essentials for Network Engineers (2024)
+  - Introduction to AI in the Data Center (2024)
+  - InfiniBand Essentials (2023)
+  - Introduction to Base Command Manager (2023)
+* Google Cloud Completion Badge
+  - Infrastructure and Application Modernization with Google Cloud (2024)
+  - Introduction to Generative AI (2024)
+  - Digital Transformation with Google Cloud (2024)
+  - Google Cloud Fundamentals: Core Infrastructure (2023)
+* Deep Learning Courses Certificate of Achievement
+  - Data Science: Transformers for Natural Language Processing (2023)
 * AWS Cloud Practitioner Essentials (2020)
 * Exam Readiness: AWS Certified Solutions Architect – Associate (Digital) (2020)
 * Certificate of completion by Workforce Development & Learning, Corning
