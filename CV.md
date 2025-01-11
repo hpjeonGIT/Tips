@@ -153,6 +153,8 @@ CERTIFICATES
   - Containers Under the Hood (2025)
   - Software Engineering 101: Plan and Execute Better Software (2025)
   - Fundamentals of Database Engineering (2025)
+  - Practical Knowledge Modeling: Ontology Development 101 (2025)
+  - Demystifying Linux Virus Engineering (2025)
   - Introduction to Software Development Life Cycle (SDLC) (2024)
   - Linux KVM for System Engineers (2024)
   - Beginners Course: Jq Command Tutorials to Parse JSON Data (2024)
