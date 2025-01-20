@@ -28,3 +28,7 @@ export MPICH_MPIIO_HINTS_DISPLAY=1
 export MPICH_OFI_VERBOSE=1
 export MPICH_OFI_NIC_VERBOSE=1
 ```
+
+## Disabling ucx and using OFI
+- ./configure --prefix=/opt/mpich421_ofi --with-ibverbs-include=/usr/include/infiniband --with-ibverbs-lib=/usr/lib64 --with-hcoll=/opt/mellanox/hcoll --with-knem=/opt/knem-1.1.4.90mlnx3 --enable-shared --with-cuda=/usr/local/cuda --with-libfabric-lib=/usr/lib64 --without-ucx
+- make -j 40; make install
