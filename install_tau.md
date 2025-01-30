@@ -17,3 +17,11 @@
 ## TAU + PDT
 - Install PDT first. MPI not required
 - At tau, configure -prefix=/opt/tau/2.34 -bfd=/opt/bin/utils/2.43 -unwind=/opt/libunwind/1.6.2 -papi=/opt/papi -pdt=/opt/pdt/ -c++=mpicxx -cc=mpicc -mpi -openmp; make install
+- PDT may be deprecated. See SALT coupling
+
+## TAU with cmake
+- cmake may not work well due to instrument optimzation
+  - export TAU_OPTIONS=-optDisable
+  - configure
+  - export TAU_OPTIONS=-optCompInst
+  - make -j 40
