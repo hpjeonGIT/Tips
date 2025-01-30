@@ -21,6 +21,7 @@
 
 ## TAU with cmake
 - cmake may not work well due to instrument optimzation
+  - Edit configure script with tau_cc.sh and tau_cxx.sh
   - export TAU_OPTIONS=-optDisable
   - configure
   - export TAU_OPTIONS=-optCompInst
