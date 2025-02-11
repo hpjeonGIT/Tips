@@ -61,3 +61,8 @@ ExternalProject_Add(
     ...
 )
 ```
+
+## avoid rebuilding external project
+- Ref: https://stackoverflow.com/questions/56986726/cmake-externalproject-add-rebuilds-every-time
+- Use `UPDATE_COMMAND ""`
+
