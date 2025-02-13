@@ -65,4 +65,7 @@ ExternalProject_Add(
 ## avoid rebuilding external project
 - Ref: https://stackoverflow.com/questions/56986726/cmake-externalproject-add-rebuilds-every-time
 - Use `UPDATE_COMMAND ""`
+- ? May not work
+- If the location of external project is determined by CMAKE_BINARY_DIR, CMakeCache.txt of the external packages might be re-written when a new build is requested
+  - Use CMAKE_SOURCE_DIR instead
 
