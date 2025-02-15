@@ -62,10 +62,15 @@ ExternalProject_Add(
 )
 ```
 
-## avoid rebuilding external project
+## Avoid rebuilding external project
+- At ExternalProject_Add()
 - Ref: https://stackoverflow.com/questions/56986726/cmake-externalproject-add-rebuilds-every-time
 - Use `UPDATE_COMMAND ""`
 - ? May not work
 - If the location of external project is determined by CMAKE_BINARY_DIR, CMakeCache.txt of the external packages might be re-written when a new build is requested
+  - CMakeCache.txt is re-written, recompiling all source codes
   - Use CMAKE_SOURCE_DIR instead
-
+  - When old CMakeCache.txt survives, compilation will skip as Make command will compile any changed code only
+- Once built, recompiling source package will not rebuild external packages
+  - If external packages need recompiling - due to any source code change - then use BUILD_ALWAYS 1
+    - This will compile any changed code only - not building from scratch
