@@ -26,3 +26,11 @@
   - lapack lib may not find blas library. then LIB += /.../libblas.a /..../liblapack.a /.../libbas.a -lz -ldl -lstdc++
   - Repeat libblas.a 
 - For fortran flags,  -fallow-argument-mismatch  might be  necessary for gfortran > 10.x
+
+## Update as of 2025.1
+- mvapich runs OK. Just needs MV2_ENABLE_AFFINITY=0. Openmp Hybrid may not be available
+- Us b2zip file for Linux. Downloading from windows through git may have issues of dos format
+- mpich 4.x not supported yet
+- Install libint separately then link them through *.psmp
+- fftw/scalapack are linked through *.psmp file
+- make -j 10 ARCH=mycluster_mvapich VERSION=psmp
