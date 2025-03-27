@@ -262,3 +262,10 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 ## when yum update yields an error message
 -RPM: error: db5 error (-30969) from dbenv->open: BDB0091 DB_VERSION_MISMATCH: Database environment version mismatch
   - Solution: `systemctl stop packagekit.service` then perform yum command
+
+## CUDA profiler at Rocky8.9
+- 12.8.1 may need yum install xcb-util-cursor
+
+## ntfs for usb drive
+- To have mkfs.ntfs, yum install ntfsprogs
+- Use gnome-disks to delete any existing partition and apply format
