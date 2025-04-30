@@ -85,3 +85,11 @@ For fortran support, may use --enable-mpi-fortran=all
 - `--lib-cuda-libdir` must point the dir containing libcuda.so
 - ./autogen.pl --force
 - ./configure --prefix=... --with-cuda=/usr/local/cuda --with-cuda-libdir=/usr/local/cuda/targets/x86_64-linux/lib/stubs --disable-dependency-tracking --disable-silent-rules --enable-shared --enable-fast-install --with-devel-headers --with-hwloc=internal --with-platform=contrib/platform/optimized --with-knem=... --with-hcoll=... --with-ucx=... --enable-mpi-compatibility CC=gcc CXX=g++ F77=gfortran F90=gfortran
+
+## For version 5.0.* + UCX + CUDA + Mellanox
+- When there is a warning message: UCP deosn not support MPI_THREAD_MULTIPLE
+  - When building ucx, add the option of --enable_mt
+  - In the application code, feed MPI_THREAD_FUNNELED into MPI_Init()
+- Crash is found at MPI_Allreduce() -> mca_coll_hcoll_allreduce()
+  - No solution is found yet
+  - --mca coll ^hcoll will skip hcoll 
