@@ -92,4 +92,5 @@ For fortran support, may use --enable-mpi-fortran=all
   - In the application code, feed MPI_THREAD_FUNNELED into MPI_Init()
 - Crash is found at MPI_Allreduce() -> mca_coll_hcoll_allreduce()
   - No solution is found yet
-  - --mca coll ^hcoll will skip hcoll 
+  - --mca coll ^hcoll will skip hcoll
+  - Allreduce from Device pointer to hostmemory may have caused this issue - mpich runs OK though(?)
