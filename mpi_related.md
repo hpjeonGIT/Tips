@@ -87,3 +87,11 @@ print(psutil.Process().cpu_num())
 ```
 ## coupling with nvcc
 - If nvcc cannot find mpi.h, then update CPATH variable as $MPI_ROOT/include
+
+## configuring local variables per nodes
+- Using hostname
+  - At ~/.bashrc, check the hostname and we may configure different variables like CUDA_VISIBLE_DEVICES
+- Using the configfile of MPMD
+  - In MPICH
+    - Command: `mpirun -hostfile ./my_hosts -configfile ./my_config`
+    - Config file: `-n 4 -env CUDA_VISIBLE_DEVICES 0,1,2,3 ./my.exe -i ./my_input : -n 2 -env CUDA_VISIBLE_DEVICES 2,3 ./my.exe -i ./my_input`
