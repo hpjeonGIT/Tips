@@ -95,3 +95,10 @@ print(psutil.Process().cpu_num())
   - In MPICH
     - Command: `mpirun -hostfile ./my_hosts -configfile ./my_config`
     - Config file: `-n 4 -env CUDA_VISIBLE_DEVICES 0,1,2,3 ./my.exe -i ./my_input : -n 2 -env CUDA_VISIBLE_DEVICES 2,3 ./my.exe -i ./my_input`
+  - In openmpi
+    - Command: `mpirun --hostfile ./mfile --app ./config_ompi`
+    - config_ompi:
+```
+-n 4 --map-by L3cache -x CUDA_VISIBLE_DEVICES=0,1,2,3 ./my_exe -i ./my_input
+-n 2 --map-by L3cache -x CUDA_VISIBLE_DEVICES=2,3     ./my_exe -i ./my_input
+```
