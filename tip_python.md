@@ -143,3 +143,6 @@ res = np.arrays(arrays, dtype=np.dtype('>f8')) # big endian double. for 4byte in
 fstream.write_record(res)
 fstream.close()
 ```
+
+## When pip install fails with CERTIFICATE error message
+- `pip3 install --trusted-host files.pythonhosted.org --trusted-host pypi.org gmsh`
