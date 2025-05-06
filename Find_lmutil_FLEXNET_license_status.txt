@@ -52,3 +52,13 @@ fi
 ### ARM DDT license checkup
 - curl http://license_server:port_number/status.html >log
 - Open log file and find User Name
+
+### At RHEL/rockyOS
+- may need yum install lsb to run lmutil
+
+### monitoring license status
+- lmutil lmstat -a -c 1234@server
+
+### remove license
+- lmutil lmremove -c 1234@server -h feature server port handle
+   - not working?
