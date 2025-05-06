@@ -49,3 +49,8 @@ eclrun rgcoupler sample.MII  # Running Eclipse + Visage coupling
 - Fetching or retrieving results 
   - `eclrun.exe check abc.DATA`
   - TBD. Not working at this moment
+
+## How to check occupied license and remove the current license consumption
+- /opt/SLB_2024/tools/linux_x86_64/flexlm1116/lmutil lmstat -a -c 1234@license.server.local
+  - Check which feature and which hanlder are used
+- /opt/SLB_2024/tools/linux_x86_64/flexlm1116/lmutil lmremove -c 1234@license.server.local -h SomeFeature license.server.local 1234 <handler_no>
