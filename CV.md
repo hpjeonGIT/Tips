@@ -139,6 +139,7 @@ CERTIFICATES
   - Fundamentals of Database Engineering (2025)
   - Practical Knowledge Modeling: Ontology Development 101 (2025)
   - Demystifying Linux Virus Engineering (2025)
+  - Juniper JNCIA-Junos JN0-105 (2025)
   - Introduction to Software Development Life Cycle (SDLC) (2024)
   - Linux KVM for System Engineers (2024)
   - Beginners Course: Jq Command Tutorials to Parse JSON Data (2024)
