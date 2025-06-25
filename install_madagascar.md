@@ -1,3 +1,5 @@
+## Installation steps for Ubuntu 24.04
+
 1. download conda and install. Update $PATH to load python3 of conda
 	- Must be older than 3.12 like 3.11 or 3.9 (imp package not compatible)
 	- 2023.07 is confirmed to work
