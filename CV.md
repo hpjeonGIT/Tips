@@ -26,7 +26,7 @@ PROFESSIONAL EXPERIENCE
     - Visited Saudi R&D center to collaborate with developers
   - Managed HPC HW/SW environment for scientific computing
     - Trouble-shooted daily issues in SW development and HW maintenance, consulting developers
-    - Installed/managed open-source SW like LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TexMaker, MVAPICH2, OSU benchmark, OpenPBS, Darshan, OpenMPI with UCX and gdrcopy, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, DDT, TotalView, providing module environment
+    - Installed/managed open-source SW like Ollama, Qwen LLM, LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TexMaker, MVAPICH2, OSU benchmark, OpenPBS, Darshan, OpenMPI with UCX and gdrcopy, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, DDT, TotalView, providing module environment
     - Installed RHEL7/8, RockyOS8, Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
     - Installed/managed Ganglia/Nagios for Linux cluster monitoring such as ambient/CPU temperature, SLURM status, Infiniband connection, and workload
     - Provided/managed GRAV server for internal documentation of the best practice
@@ -140,6 +140,7 @@ CERTIFICATES
   - Practical Knowledge Modeling: Ontology Development 101 (2025)
   - Demystifying Linux Virus Engineering (2025)
   - Juniper JNCIA-Junos JN0-105 (2025)
+  - Mastering Ollama: Build Private Local LLM Apps with Python (2025)
   - Introduction to Software Development Life Cycle (SDLC) (2024)
   - Linux KVM for System Engineers (2024)
   - Beginners Course: Jq Command Tutorials to Parse JSON Data (2024)
@@ -283,6 +284,7 @@ MANUSCRIPT REFEREEING
 
 HONORS AND AWARDS
 -----------------
-1. 2nd place in the internal competition for the course of datadojo class (2017)
-2. Advanced Fuel Cycle Initiative  (AFCI) Annual Review Meeting Best Poster, Idaho Falls ID (2008) 
-3. Core Researcher Award, Agency for Defense Development (2002) 
+1. Certificate of Appreciation, Aramco Americas (2025)
+2. 2nd place in the internal competition for the course of datadojo class (2017)
+3. Advanced Fuel Cycle Initiative  (AFCI) Annual Review Meeting Best Poster, Idaho Falls ID (2008) 
+4. Core Researcher Award, Agency for Defense Development (2002) 
