@@ -74,3 +74,9 @@ ExternalProject_Add(
 - Once built, recompiling source package will not rebuild external packages
   - If external packages need recompiling - due to any source code change - then use BUILD_ALWAYS 1
     - This will compile any changed code only - not building from scratch
+
+## Trouble-shooting in FindMPI
+1. cmake --trace-expand ..
+1.1 From screen log, grep "Could NOT find"
+2. strace cmake ..
+2.1 From screen log, grep "test_mpi.c"
