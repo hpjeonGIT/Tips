@@ -2,6 +2,23 @@
 - ~/.config/matplotlib/matplotlibrc
 - Save as `backend : TkAgg` 
 
+# Update of generator since Python 3.7
+- Older version
+```py
+def action():
+    while True:
+        yield do_something()
+```
+- New version:
+```py
+def action():
+    while True:
+        try:
+            yield do_something()
+        except StopIteration:
+            return
+````
+
 # Sample Python-C api code
 ```
 #include "Python.h"
