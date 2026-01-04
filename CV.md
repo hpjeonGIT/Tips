@@ -26,11 +26,12 @@ PROFESSIONAL EXPERIENCE
     - Visited Saudi R&D center to collaborate with developers
   - Managed HPC HW/SW environment for scientific computing
     - Trouble-shooted daily issues in SW development and HW maintenance, consulting developers
-    - Installed/managed open-source SW like Ollama, Qwen LLM, LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TexMaker, MVAPICH2, OSU benchmark, OpenPBS, Darshan, OpenMPI with UCX and gdrcopy, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, DDT, TotalView, providing module environment
+    - Installed/managed open-source SW like Ollama, Langchain, PyTorch, LLVM, PETSc, Scalapack, Trilinos, Deal.II, MOOSE, TexMaker, MVAPICH2, OSU benchmark, OpenPBS, Darshan, OpenMPI with UCX and gdrcopy, and commercial SW like Matlab, Mathematica, SLB Eclipse/IX/Visage, DDT, TotalView, providing module environment
     - Installed RHEL7/8, RockyOS8, Ubuntu20 on workstations, and managed Linux cluster using HP CMU and SLURM job scheduler
     - Installed/managed Ganglia/Nagios for Linux cluster monitoring such as ambient/CPU temperature, SLURM status, Infiniband connection, and workload
     - Provided/managed GRAV server for internal documentation of the best practice
     - Trained new hires/interns for Linux cluster environment and workflow
+    - Configured patch panels and assisted IT infra for office migration
 * Senior Computational Scientist, Corning Incorporated, Corning NY (May 2017 - July 2019)
   - Parallelized/optimized in-house/open-source/commercial applications over HPC clusters for machine learning and scientific computing
     - Accelerated DL/CNN image training of Keras/TensorFlow using distributed computing of Horovod, OpenMPI, and NCCL2 (30x speed-up using 32 GPUs)
@@ -129,6 +130,17 @@ EDUCATION
 CERTIFICATES
 ------------
 * Udemy certificate of completion
+  - Modern C++: From Intermediate to Advanced (2026)
+  - Modern C++ development with bazel, googletest and googlemock (2026)
+  - AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents (2026)
+  - Strategies for Parallelizing LLMs Masterclass (2026)
+  - Mathematics Behind Large Language Models and Transformers (2026)
+  - LLM Mastery: Hands-on Code, Align, and Master LLMs (2026)
+  - AI Application Boost with RAPIDS GPU Acceleration (2026)
+  - PyTorch for Deep Learning Bootcamp (2026)
+  - Mastering x86-64 Real Assembly Language from Zero | ASM+2025 (2026)
+  - ELF Tutorial (2026)
+  - SQLite DataBase | Python Programming: (Build App and API) (2026)
   - Fundamentals of Operating Systems (2025)
   - CUDA Parallel Programming on NVIDIA GPUs (2025)
   - Computer Science 101: Master the theory Behind Programming (2025)
