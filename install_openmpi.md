@@ -94,3 +94,5 @@ For fortran support, may use --enable-mpi-fortran=all
   - No solution is found yet
   - --mca coll ^hcoll will skip hcoll
   - Allreduce from Device pointer to hostmemory may have caused this issue - mpich runs OK though(?)
+- When hcoll yields 'mca_coll_hcoll_save_coll_handlers failed'
+  - Use `--mca coll hcoll,libnbc,basic`. This will use libnbc or basic when hcoll not working
