@@ -138,9 +138,11 @@ CERTIFICATES
   - LLM Mastery: Hands-on Code, Align, and Master LLMs (2026)
   - AI Application Boost with RAPIDS GPU Acceleration (2026)
   - PyTorch for Deep Learning Bootcamp (2026)
+  - Complete Tensorflow 2 and Keras Deep Learning Bootcamp (2026
   - Mastering x86-64 Real Assembly Language from Zero | ASM+2025 (2026)
   - ELF Tutorial (2026)
   - SQLite DataBase | Python Programming: (Build App and API) (2026)
+  - REST API vs GraphQL vs gRPC - The Complete Guide (2026)
   - Fundamentals of Operating Systems (2025)
   - CUDA Parallel Programming on NVIDIA GPUs (2025)
   - Computer Science 101: Master the theory Behind Programming (2025)
