@@ -1,0 +1,11 @@
+## license server installation at Ubuntu
+- sudo sh ./textinstall.sh
+- sudo useradd --system --user-group --no-create-home --home-dir /opt/linaro/licenceserver/25.1.1 allinea
+- sudo mkdir /var/log/linaro
+- sudo chown allinea: /var/log/linaro
+- sudo ln -s /opt/linaro/licenceserver/25.1.1/lib/systemd/system/allinea-licenceserver.service /etc/systemd/system/
+- sudo systemctl enable allinea-licenceserver
+- sudo systemctl start allinea-licenceserver
+- sudo systemctl status allinea-licenceserver
+- sudo ufw allow proto from x.x.x.x/y to any port 4241 "Allow XXX to DDT license server"
+- Put licencefiles at /opt/linaro/licenceserver/X.x.x/licences
