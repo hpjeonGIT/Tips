@@ -81,3 +81,7 @@ ExternalProject_Add(
 2. strace cmake ..
 2.1 From screen log, grep "test_mpi.c"
 3. Find CMakeFiles/CMakeConfigureLog.yaml for error message from test code like test_mpi.cpp
+
+## extrac cmake info from ccmake setup
+- Complete setup using `ccmake ..`
+- `cmake -L .`
