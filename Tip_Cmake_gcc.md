@@ -82,6 +82,8 @@ ExternalProject_Add(
 2.1 From screen log, grep "test_mpi.c"
 3. Find CMakeFiles/CMakeConfigureLog.yaml for error message from test code like test_mpi.cpp
 
-## extrac cmake info from ccmake setup
+## How to extract cmake info from ccmake setup
 - Complete setup using `ccmake ..`
 - `cmake -L .`
+- This will dump the changed (except default) cmake variables
+- To dump the entire variables, `cmake -LA .`
