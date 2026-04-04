@@ -10,16 +10,16 @@ TECHNICAL SKILLS
 * Software development using C/C++, Python, Fortran, R, MATLAB
 * Distributed Machine Learning and High Performance Data-Analytics (HPDA) using Python, Horovod, R, Rmpi
 * Training/consulting customers for technical topics
-* English, Japanese, Korean fluency. Basic Spanish/Arabic
+* English, Japanese, Korean fluency with basic Spanish/Arabic
 
 PROFESSIONAL EXPERIENCE
 ------------------------
 * Computational Modeling Engineer, Aramco Americas, Boston MA (July 2019 – present)
   - Developed in-house simulator suites
     - Implemented pre-conditioner, linear solver, IO, and framework using C++, OpenMP, MPI, HYPRE, AmgX, x86 intrinsics, SWIG, Python C-API, cereal, and HDF5
-    - CI/CD and test automation using Bash scripting, CMake, and Google test
-    - Debugging MPI code using Linaro DDT/gdb and profiling the performance using Cray Perftools, Intel VTune, AMD µProfiler, TAU, Nvidia ncu/nsys, and Linaro MAP
-    - Python and Bash scripting for the model/DSL conversion, unit-test, post-processing, and data analytics
+    - Performed CI/CD and test automation using Bash scripting, CMake, and Google test
+    - Delivered debugging MPI code using Linaro DDT/gdb and profiling the performance using Cray Perftools, Intel VTune, AMD µProfiler, TAU, Nvidia ncu/nsys, and Linaro MAP
+    - Developed Python and Bash scripts for the model/DSL conversion, unit-test, post-processing, and data analytics
     - Optimized and improved parallel computing algorithm for large-scale processing
     - Investigated Cray environment and optimized performance over cpu-binding and architecture, trouble-shooting MPI compatibility and MPMD hand-shaking
     - Converted CUDA code into ROCm/HIP for AMD GPUs
@@ -140,10 +140,14 @@ CERTIFICATES
   - PyTorch for Deep Learning Bootcamp (2026)
   - Complete Tensorflow 2 and Keras Deep Learning Bootcamp (2026)
   - Intermediate Python: Memory, Decorator, Async, Cython & more (2026)
+  - The Complete Guide to AI Infrastructure: Zero to Hero (2026)
+  - PINNs Using Physics-Nemo (Modulus) (2026)
+  - Intermediate Python: Memory, Decorator, Async, Cython & more (2026)
   - Mastering x86-64 Real Assembly Language from Zero | ASM+2025 (2026)
   - ELF Tutorial (2026)
   - SQLite DataBase | Python Programming: (Build App and API) (2026)
   - REST API vs GraphQL vs gRPC - The Complete Guide (2026)
+  - Observability with Grafana, Prometheus, Loki, Alloy and Tempo (2026)
   - Fundamentals of Operating Systems (2025)
   - CUDA Parallel Programming on NVIDIA GPUs (2025)
   - Computer Science 101: Master the theory Behind Programming (2025)
