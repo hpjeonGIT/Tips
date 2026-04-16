@@ -87,3 +87,8 @@ ExternalProject_Add(
 - `cmake -L .`
 - This will dump the changed (except default) cmake variables
 - To dump the entire variables, `cmake -LA .`
+
+## when some code file conflicts with compiling options
+- Ex: when ceres yields macro conflict with -DCUDA
+- Add `remove_definitions(-DCUDA)` in CMakeLists.txt
+  - This will remove -DCUDA in the corresponding source folder
