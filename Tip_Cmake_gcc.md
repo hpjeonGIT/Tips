@@ -100,7 +100,7 @@ ExternalProject_Add(
     DEPENDS GLOG_PROJECT EGEN33_PROJECT
     SOURCE_DIR "${CMASKE_SOURCE_DIR}/../externals/ceres/ceres-solver-2.2.0"
     URL "${CMAKE_SOURCE_DIR}/../externals/ceres-solver-2.2.0.zip"
-    PATCH_COMMAND sed -i "@CUDA,@//CUDA,@" include/ceres/types.h
+    PATCH_COMMAND sed -i "s@CUDA,@//CUDA,@" include/ceres/types.h
    ...
 )
 ```
