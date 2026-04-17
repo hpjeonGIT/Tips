@@ -38,10 +38,12 @@
 Description=Grav server
 After=network.target
 [Service]
+ExecStartPre=/bin/sleep 10
 Environment="LD_LIBRARY_PATH=/opt/libzip/1.9.2/lib64"
 ExecStart=/opt/php/8.1.7/bin/php -S  11.22.33.44:5909 system/router.php
 WorkingDirectory=/opt/grav/grav-admin
 Restart=always
+RestartSec=10s
 User=foo
 [Install]
 WantedBy=multi-user.target
