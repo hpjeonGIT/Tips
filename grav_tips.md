@@ -30,3 +30,23 @@
 - default webpage
   - When ip_address:port# yields 404 woops message
   - admin -> Configuration -> Content -> Redirect default route -> Yes
+
+- Adding Grav into systemd service
+    - /etc/systemd/system/grav.service
+```
+[Unit]
+Description=Grav server
+After=network.target
+[Service]
+Environment="LD_LIBRARY_PATH=/opt/libzip/1.9.2/lib64"
+ExecStart=/opt/php/8.1.7/bin/php -S  11.22.33.44:5909 system/router.php
+WorkingDirectory=/opt/grav/grav-admin
+Restart=always
+User=foo
+[Install]
+WantedBy=multi-user.target
+```
+  - sudo systemctl daemon-reload
+  - sudo systemctl start grav
+  - sudo systemctl enable grav
+  - sudo systemctl status grav
