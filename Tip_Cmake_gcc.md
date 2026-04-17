@@ -92,3 +92,15 @@ ExternalProject_Add(
 - Ex: when ceres yields macro conflict with -DCUDA
 - Add `remove_definitions(-DCUDA)` in CMakeLists.txt
   - This will remove -DCUDA in the corresponding source folder
+ 
+## edit source code in external project using PATCH_COMMAND
+```
+ExternalProject_Add(
+    CERES_PROJECT
+    DEPENDS GLOG_PROJECT EGEN33_PROJECT
+    SOURCE_DIR "${CMASKE_SOURCE_DIR}/../externals/ceres/ceres-solver-2.2.0"
+    URL "${CMAKE_SOURCE_DIR}/../externals/ceres-solver-2.2.0.zip"
+    PATCH_COMMAND sed -i "@CUDA,@//CUDA,@" include/ceres/types.h
+   ...
+)
+```
