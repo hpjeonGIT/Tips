@@ -93,7 +93,9 @@ ExternalProject_Add(
 - Add `remove_definitions(-DCUDA)` in CMakeLists.txt
   - This will remove -DCUDA in the corresponding source folder
  
-## edit source code in external project using PATCH_COMMAND
+## edit source code in external project
+- To edit the code before build, use PATCH_COMMAND
+- To edit the code/header files after inxtall, use execute_process(COMMAND sed -i  "s@CUDA,@//CUDA,@" ${INSTALL_FOLDER}/include/ceres/types.h)
 ```
 ExternalProject_Add(
     CERES_PROJECT
