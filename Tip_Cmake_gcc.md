@@ -95,14 +95,18 @@ ExternalProject_Add(
  
 ## edit source code in external project
 - To edit the code before build, use PATCH_COMMAND
-- To edit the code/header files after inxtall, use execute_process(COMMAND sed -i  "s@CUDA,@//CUDA,@" ${INSTALL_FOLDER}/include/ceres/types.h)
+- ~~To edit the code/header files after inxtall, use execute_process(COMMAND sed -i  "s@CUDA,@//CUDA,@" ${INSTALL_FOLDER}/include/ceres/types.h)~~
+  - execute_process() is executed when cmake command runs, not after installation
+- To edit the code/header files after build/install, add extra commands after INSTALL_COMMAND. See below:
 ```
 ExternalProject_Add(
     CERES_PROJECT
     DEPENDS GLOG_PROJECT EGEN33_PROJECT
     SOURCE_DIR "${CMASKE_SOURCE_DIR}/../externals/ceres/ceres-solver-2.2.0"
     URL "${CMAKE_SOURCE_DIR}/../externals/ceres-solver-2.2.0.zip"
-    PATCH_COMMAND sed -i "s@CUDA,@//CUDA,@" include/ceres/types.h
+    #PATCH_COMMAND sed -i "s@CUDA,@//CUDA,@" include/ceres/types.h # this breaks src build
    ...
+    INSTALL_COMMAND ${CMAKE_COMMAND} --build . --target install
+    COMMAND sed -i "s@CUDA,@//CUDA,@" ${LIB_INSTALL_TARGET}/include/ceres/types.h
 )
 ```
