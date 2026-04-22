@@ -269,3 +269,7 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 ## ntfs for usb drive
 - To have mkfs.ntfs, yum install ntfsprogs
 - Use gnome-disks to delete any existing partition and apply format
+
+## conflict of gdm with anaconda3
+- anaconda3 has components of X11/xkbcommon. This may conflict with gdm, when a user login through GUI
+- Do not load anaconda3 module through .bashrc
