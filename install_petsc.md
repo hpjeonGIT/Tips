@@ -31,3 +31,6 @@ make install
 
 ## GCC10 or higher
 - Fortran compiler option or fortran optimization option may need `-w -fallow-argument-mismatch`
+
+## Disabling cuda
+- When configure, use `--with-cuda=0 --with-cudac=0`
