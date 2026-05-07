@@ -273,3 +273,34 @@ Something has gone seriously wrong:  import_mok_state() failed: Out of Resources
 ## conflict of gdm with anaconda3
 - anaconda3 has components of X11/xkbcommon. This may conflict with gdm, when a user login through GUI
 - Do not load anaconda3 module through .bashrc
+
+## When 2nd monitor is not detected
+- Check cables
+- Check if display port/monitors are detected
+```bash
+$ xrandr --listmonitors
+Monitors: 1
+ 0: +*HDMI-1 3072/598x1728/336+0+0  HDMI-1
+$ xrandr -q
+Screen 0: minimum 320 x 200, current 3072 x 1728, maximum 16384 x 16384
+DP-1 disconnected (normal left inverted right x axis y axis)
+DP-2 disconnected (normal left inverted right x axis y axis)
+HDMI-1 connected primary 3072x1728+0+0 (normal left inverted right x axis y axis) 598mm x 336mm
+   1920x1080     60.00*+  50.00    59.94  
+   1680x1050     59.88  
+   1600x900      60.00  
+   1280x1024     75.02    60.02  
+   1440x900      59.90  
+   1280x800      59.91  
+   1152x864      75.00  
+   1280x720      60.00    50.00    59.94  
+   1024x768      75.03    70.07    60.00  
+   832x624       74.55  
+   800x600       72.19    75.00    60.32    56.25  
+   720x576       50.00  
+   720x480       60.00    59.94  
+   640x480       75.00    72.81    66.67    60.00    59.94  
+   720x400       70.08  
+HDMI-2 disconnected (normal left inverted right x axis y axis)
+```
+- May rewrite x11 configuration - cuda driver installer can re-write
