@@ -148,6 +148,8 @@ CERTIFICATES
   - SQLite DataBase | Python Programming: (Build App and API) (2026)
   - REST API vs GraphQL vs gRPC - The Complete Guide (2026)
   - Observability with Grafana, Prometheus, Loki, Alloy and Tempo (2026)
+  - Linux Debug Training (Part-1) (2026)
+  - NCURSES Tutorial (2026)
   - Fundamentals of Operating Systems (2025)
   - CUDA Parallel Programming on NVIDIA GPUs (2025)
   - Computer Science 101: Master the theory Behind Programming (2025)
