@@ -22,6 +22,12 @@
 ```
 - command to run: mpirun -configfile ./myjob.conf
 - For ddt: ddt mpirun -configfile ./myjob.conf
+- For GUI operation
+  - Application: first exe - actually this is dummy
+  - Arguments: empty
+  - Working directory must contain configfiles
+  - Implementation: MPICH 4
+  - mpiexec.hydra arguments: -configfile ./myjob.conf
 
 ## Change the location of cache or configuration
 - Open ~/.allinea/system.config
