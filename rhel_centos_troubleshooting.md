@@ -304,3 +304,7 @@ HDMI-1 connected primary 3072x1728+0+0 (normal left inverted right x axis y axis
 HDMI-2 disconnected (normal left inverted right x axis y axis)
 ```
 - May rewrite x11 configuration - cuda driver installer can re-write
+
+## when icons/fonts are crashed after 3D view
+- alt-F2 then 'r' enter to refresh gdm
+- May need to re-write /etc/X11/xorg.conf. CUDA driver installer may ask to re-write or not in the end.
