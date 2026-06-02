@@ -41,6 +41,22 @@ cudaEventDestroy(start);
 cudaEventDestroy(end);
 ```
 
+## In C++11
+```cpp
+#include <chrono>
+#include <unistd.h>
+#include <iostream>
+int main()
+{ 
+    auto t0 = std::chrono::high_resolution_clock::now();
+    sleep(1.0);
+    auto t1 = std::chrono::high_resolution_clock::now();
+    auto dt = std::chrono::duration_cast<std::chrono::milliseconds>(t1 - t0);
+    std::cout << "Wall time = " << dt.count() << "milliseconds" << std::endl;
+    return 0;
+}
+```
+
 ## In Fortran
 ```fortran
 real:: t0,t1,t2,secnds
