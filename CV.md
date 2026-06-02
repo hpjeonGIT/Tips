@@ -143,7 +143,8 @@ CERTIFICATES
   - The Complete Guide to AI Infrastructure: Zero to Hero (2026)
   - PINNs Using Physics-Nemo (Modulus) (2026)
   - Intermediate Python: Memory, Decorator, Async, Cython & more (2026)
-  - High Performance Python: Master Speed, Scale, and Efficiency (2026
+  - High Performance Python: Master Speed, Scale, and Efficiency (2026)
+  - Interactive Data Visualization with Python and Bokeh (2026)
   - Mastering x86-64 Real Assembly Language from Zero | ASM+2025 (2026)
   - ELF Tutorial (2026)
   - Linux Debug Training (Part-1) (2026)
