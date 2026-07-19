@@ -151,6 +151,7 @@ CERTIFICATES
   - NCURSES Tutorial (2026)
   - SQLite DataBase | Python Programming: (Build App and API) (2026)
   - REST API vs GraphQL vs gRPC - The Complete Guide (2026)
+  - Master Lua Programming and Create Amazing Games with LÖVE! (2026)
   - InfiniBand Deep Dive: Networking for AI focused Datacenters (2026)
   - Observability with Grafana, Prometheus, Loki, Alloy and Tempo (2026)
   - Fundamentals of Operating Systems (2025)
