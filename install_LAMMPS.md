@@ -149,3 +149,9 @@ KOKKOS_ARCH = Volta70
 		- `mpirun -np 2 --bind-to socket  ../../src/lmp_kokkos_cuda_mpi -k on g 2 t 4  -sf kk -in in.rhodo`
 			- Further optimization is necessary
 
+## July 2025
+- Using GNU compiler 11, cmake 3.28, and openmpi 5
+- mkdir build
+- cd build
+- cmake ../cmake -D BUILD_MPI=yes -D BUILD_OMP=yes -D CMAKE_BUILD_TYPE=Release
+- make -j 20
