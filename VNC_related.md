@@ -38,6 +38,12 @@ Registered connection with app
 - May need to update rdp?
 - Or run vncconfig
   - Disable 1) Also set primary selection 2) Send primary selection to viewers
+ 
+## when only :1 works
+- sudo yum install xorg-x11-fonts-ISO8859-1-{100dpi,75dpi}
+- sudo yum install xorg-x11-fonts-{Type1,misc,100dpi}
+- sudo fc-cache -f
+- reboot then check vncserver :2 works OK
 
 ## vnc setup using systemd
 - vncserver will be deprecated. Migration to system service is necessary in near future
