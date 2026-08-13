@@ -33,3 +33,7 @@
 - Open ~/.allinea/system.config
 - Change the default setup of shared_directory=~
   - Any network mounted storage
+
+## When ddt hangs
+- ddt --log logfile.xml --debug ./a.exe
+- Investigate the produced logfile.xml
