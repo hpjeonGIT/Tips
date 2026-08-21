@@ -11,13 +11,14 @@
 ### Edit Makefile.in # blas library is required
 - make
 
-# lapack
+# LAPACK
 #### Download http://www.netlib.org/lapack/lapack-3.8.0.tar.gz
 - cp make.inc.example make.inc; vi make.inc
 #### Edit BLAS and CBLAS location
 - make
 ## or use cmake 
 - mkdir build ; cd build ; ccmake .. # enable shared library
+- for CLI, use `-DLAPACKE=ON` to have lapacke.h 
 - make -j 32; make install
 
 # scalapack
