@@ -1,7 +1,8 @@
 Byoungseon Jeon, PhD
 ====================
 - HPC/ML Consultant
-- Application SW engineer
+- Solution Architect
+- Application SW Engineer
 
 TECHNICAL SKILLS
 ----------------
@@ -154,6 +155,8 @@ CERTIFICATES
   - Master Lua Programming and Create Amazing Games with LÖVE! (2026)
   - InfiniBand Deep Dive: Networking for AI focused Datacenters (2026)
   - Observability with Grafana, Prometheus, Loki, Alloy and Tempo (2026)
+  - Computer Architecture and Computer Organization Masterclass (2026)
+  - Erlang Masterclass: The Fundamentals (2026)
   - Fundamentals of Operating Systems (2025)
   - CUDA Parallel Programming on NVIDIA GPUs (2025)
   - Computer Science 101: Master the theory Behind Programming (2025)
