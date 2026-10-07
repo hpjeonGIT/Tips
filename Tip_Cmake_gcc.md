@@ -110,3 +110,20 @@ ExternalProject_Add(
     COMMAND sed -i "s@CUDA,@//CUDA,@" ${LIB_INSTALL_TARGET}/include/ceres/types.h
 )
 ```
+
+## Using CPack
+- In CMakeLists.txt:
+```cmake
+...
+set(CPACK_GENERATOR "TGZ") # may choose BZ2 or ZIP or TBZ2
+set(CPACK_SOURCE_GENERATOR "TGZ")
+include(CPack)
+```
+- Steps
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make -j 3
+  - make install
+  - make package # Produced *.tgz file is empty?
+  - make package_source # includes src/build folders
