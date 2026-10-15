@@ -105,10 +105,25 @@ ExternalProject_Add(
     SOURCE_DIR "${CMASKE_SOURCE_DIR}/../externals/ceres/ceres-solver-2.2.0"
     URL "${CMAKE_SOURCE_DIR}/../externals/ceres-solver-2.2.0.zip"
     #PATCH_COMMAND sed -i "s@CUDA,@//CUDA,@" include/ceres/types.h # this breaks src build
+    CMAKE_ARGS
+      -DCMAkE_C_COMPILER=${CMAKE_C_COMPILER}
    ...
+      -DBUILD_TESTING:BOOL=OFF
+    BUILD_IN_SOURCE 0
+    BUILD_COMMAMD make -j 5
+    BINARY_DIR ...
+    INSTALL_DIR ...
     INSTALL_COMMAND ${CMAKE_COMMAND} --build . --target install
     COMMAND sed -i "s@CUDA,@//CUDA,@" ${LIB_INSTALL_TARGET}/include/ceres/types.h
 )
+IF($BUILD_SHARED_BUILD)
+  add_library(ceres SHARED IMPORTED GLOBAL)
+  set_target_libraries(ceres PROPERTIES IMPORTED_LOCATION ${INSTALL_DIR}/lib/libceres.so)
+ELSE()
+  add_library(ceres STATIC IMPORTED GLOBAL)
+  set_target_libraries(ceres PROPERTIES IMPORTED_LOCATION ${INSTALL_DIR}/lib/libeceres.a)
+ENDIF()
+add_dependencies(ceres CERES_PROJECT)
 ```
 
 ## Using CPack
