@@ -66,5 +66,9 @@ unset DBUS_SESSION_BUS_ADDRESS
 # when x11 forward not working
 - strace xeyes
   - Found it hangs at connect()
+ 
+# Empty /boot
+- sudo apt autoremove --purge --dry-run # this shows the list of files which will be removed
+- sudo apt autoremove --purge
   - IP address seems odd
   - /etc/hosts had old IP address. Update resolves the issue
