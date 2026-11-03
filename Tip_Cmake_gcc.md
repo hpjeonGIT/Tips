@@ -24,7 +24,7 @@ $ nm libvtkCommonDataModel-9.1.so
 - How to enforce T, not t, in the library?
   - In Cmake files, add_library(someLib SHARED IMPORTED GLOBAL) will enforce global symbol -> but not working?
   - Comparing CMakeCache.txt by gcc8.4 vs 10.3, COMPILER_HAS_DEPRECATED:INTERNAL=1 is found at gcc8.4. 10.3 has no value.
-  - ~~Needs newer version of cmake? This is 3.20.5
+  - ~~Needs newer version of cmake? This is 3.20.5~~
   - Tried vtk 9.1 and worked OK. But this will need the higher version of CMake (> 3.12)
 
 ## setting system variable within cmake
@@ -142,3 +142,27 @@ include(CPack)
   - make install
   - make package # Produced *.tgz file is empty?
   - make package_source # includes src/build folders
+
+## copy a library in the middle of build
+```cmake
+add_library(libA ${list_src})         # original libA
+target_link_libraries(libA libX libY) # libA += libX + libY
+```
+- What if I need the original libA and updated libA (at different location)?
+1. Using INTERFACE
+```cmake
+add_library(libA ${list_src})
+add_library(libA_core INTERFACE)
+target_link_libraries(libA_core INTERFACE libA) # libA_core has the original libA
+target_link_libraries(libA libX libY)           # libA += libX + libY
+```
+  - After build, libA_core.a is not found
+  - Just CMake handles the process as backend
+2. Using Object libraries
+```cmake
+add_library(libA_objs OBJECT ${list_src})
+add_library(libA STATIC $<TARGET_OBJECTS:libA_objs>) # STATIC for *.a/SHARED for *.so
+add_library(libA_core   $<TARGET_OBJECTS:libA_objs>)
+target_link_libraries(libA libX libY)
+```
+  - After build, libA.a/libA_core.a (or *.so) are found in the build folder
