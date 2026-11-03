@@ -149,20 +149,27 @@ add_library(libA ${list_src})         # original libA
 target_link_libraries(libA libX libY) # libA += libX + libY
 ```
 - What if I need the original libA and updated libA (at different location)?
-1. Using INTERFACE
+~~1. Using INTERFACE~~
 ```cmake
 add_library(libA ${list_src})
 add_library(libA_core INTERFACE)
 target_link_libraries(libA_core INTERFACE libA) # libA_core has the original libA
-target_link_libraries(libA libX libY)           # libA += libX + libY
+target_link_libraries(libA libX libY)           # libA += libX + libY -> at this point, libA_core is sync with libA anyway
 ```
   - After build, libA_core.a is not found
-  - Just CMake handles the process as backend
-2. Using Object libraries
+  - ~~Just CMake handles the process as backend~~
+  - This method doesn't work as expected
+2. Using Object libraries ------- this would be only way at this moment
 ```cmake
 add_library(libA_objs OBJECT ${list_src})
 add_library(libA STATIC $<TARGET_OBJECTS:libA_objs>) # STATIC for *.a/SHARED for *.so
 add_library(libA_core   $<TARGET_OBJECTS:libA_objs>)
 target_link_libraries(libA libX libY)
+3. using add_librar() per each name
+```cmake
+add_library(libA ${list_src})
+add_library(libB ${list_src})
+```
+- However, this method will compile ${list_src} files 2x, which is computationally expensive, costing 2x disk space as well
 ```
   - After build, libA.a/libA_core.a (or *.so) are found in the build folder
