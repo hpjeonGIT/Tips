@@ -143,7 +143,7 @@ include(CPack)
   - make package # Produced *.tgz file is empty?
   - make package_source # includes src/build folders
 
-## copy a library in the middle of build
+## Making two library objects of same source files in the middle of build
 ```cmake
 add_library(libA ${list_src})         # original libA
 target_link_libraries(libA libX libY) # libA += libX + libY
@@ -159,12 +159,14 @@ target_link_libraries(libA libX libY)           # libA += libX + libY -> at this
   - After build, libA_core.a is not found
   - ~~Just CMake handles the process as backend~~
   - This method doesn't work as expected
-2. Using Object libraries ------- this would be only way at this moment
+2. Using Object libraries
 ```cmake
 add_library(libA_objs OBJECT ${list_src})
 add_library(libA STATIC $<TARGET_OBJECTS:libA_objs>) # STATIC for *.a/SHARED for *.so
 add_library(libA_core   $<TARGET_OBJECTS:libA_objs>)
 target_link_libraries(libA libX libY)
+```
+- But this method may break add_dependency()
 3. using add_librar() per each name
 ```cmake
 add_library(libA ${list_src})
