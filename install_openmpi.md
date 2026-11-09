@@ -94,5 +94,10 @@ For fortran support, may use --enable-mpi-fortran=all
   - No solution is found yet
   - --mca coll ^hcoll will skip hcoll
   - Allreduce from Device pointer to hostmemory may have caused this issue - mpich runs OK though(?)
+
+## gdrcopy + ucx + openmpi 5.0.11
+- gdrcopy: make prefix=/opt/... CUDA=/usr/local/cuda-13.3
+- ucx: ./autogen.sh; ./configure --prefix=/opt/... --with-knem=/opt/knem-1.1.4.90mlnx3 --with-mlx5=/opt/mellanox --with-gdrcopy=/opt/gdrcopy --with-verbs=/usr/lib64 --with-cuda=/usr/local/cuda-13.3 --without-gda # to enable GDA, NVIDIA DOCA-SDK is necessary; make -j 20; make install
+- openmpi: ./configure --prefix=/opt/... --with-cuda=/usr/local/cuda-13.3 --disable-silent-rules --enable-binaries --enable-shared --enable-fast-install --with-devel-headers --with-hwloc=internal --with-platfrom=contrib/platform/optimized --with-knem=/opt/knem-1.1.14.90mlnx3 --with-hcoll=/opt/Mellanox/hcoll --with-ucx=/opt/ucx --enable-mpi1-compatibility CC=gcc CXX=g++ F77=gfortran F90=gfortran; make -j 20; make install
 - When hcoll yields 'mca_coll_hcoll_save_coll_handlers failed'
   - Use `--mca coll hcoll,libnbc,basic`. This will use libnbc or basic when hcoll not working
