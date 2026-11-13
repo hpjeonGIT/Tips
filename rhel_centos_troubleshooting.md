@@ -308,3 +308,12 @@ HDMI-2 disconnected (normal left inverted right x axis y axis)
 ## when icons/fonts are crashed after 3D view
 - alt-F2 then 'r' enter to refresh gdm
 - May need to re-write /etc/X11/xorg.conf. CUDA driver installer may ask to re-write or not in the end.
+
+## Scaling display
+- Only 100% or 200% scaling is available. To have 125% or 150%:
+1. Wayland
+  - Note that vncserver may not run
+  - `gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"`
+  - Log-out and re-login. Find 150% scaling from display setting
+2. X11
+  - `gsettings set org.gnome.desktop.interface text-scaling-factor 1.5`
