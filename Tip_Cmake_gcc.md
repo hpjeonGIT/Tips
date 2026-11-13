@@ -173,5 +173,8 @@ add_library(libA ${list_src})
 add_library(libB ${list_src})
 ```
 - However, this method will compile ${list_src} files 2x, which is computationally expensive, costing 2x disk space as well
+4. Using SET()
+```cmake
+add_library(libA ${list_src})
+SET(libB libA)
 ```
-  - After build, libA.a/libA_core.a (or *.so) are found in the build folder
