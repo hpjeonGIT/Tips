@@ -151,6 +151,16 @@ target_link_libraries(libA PRIVATE libX libY)
 - PRIVATE/PUBLIC: when libA needs libX/libY for compilation
 - INTERFACE: when libA doesn't need libX/libY
 
+## Ignoring undefined calls
+- When my.exe links with libA, containing funcA() and funcB(). While funcB() needs libB
+- nm liblibA will yield U for funcB()
+- Linking libA with my.exe will yield undefined references
+- To ignore such undefined calls:
+```cmake
+add_executable(a.exe main.cpp)
+target_link_libraries(a.exe libA)
+target_link_options(a.exe PRIVATE "LINKER:--unresolved-symbols=ignore-all")
+```
 
 ## Making two library objects of same source files in the middle of build
 ```cmake
